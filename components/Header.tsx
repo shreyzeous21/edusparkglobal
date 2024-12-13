@@ -368,7 +368,7 @@ export function Header() {
                         src="/ad.jpg"
                         alt="Featured Course"
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-cover  rounded-lg"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 rounded-lg" />
                       <div className="absolute bottom-4 left-4 right-4 text-white">
