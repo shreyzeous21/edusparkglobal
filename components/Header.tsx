@@ -89,7 +89,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-lg border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className=" max-w-6xl mx-auto justify-center items-center flex h-16 ">
+      <div className=" max-w-6xl mx-auto justify-center items-center flex h-24 ">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon" className="mr-2">
@@ -115,6 +115,7 @@ export function Header() {
                   className="h-20 w-auto"
                 />
               </Link>
+              {/* phone content */}
               <nav>
                 <ul className="space-y-2">
                   <li>
@@ -259,11 +260,14 @@ export function Header() {
                       className="w-full justify-start"
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href="/contact">Contact Us</Link>
+                      <Link href="/contact" className="">
+                        Contact Us
+                      </Link>
                     </Button>
                   </li>
                 </ul>
               </nav>
+              {/* phone content */}
             </div>
           </SheetContent>
         </Sheet>
@@ -280,25 +284,33 @@ export function Header() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                >
                   Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                >
                   About Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
+              <NavigationMenuTrigger>
+                <Link href="/courses" legacyBehavior passHref>
+                  Courses
+                </Link>
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[800px] grid-cols-4 p-4">
-                  <div className="space-y-2">
+                <div className="grid w-[1000px] grid-cols-4 p-4">
+                  <div className="space-y-3">
                     <h4 className="font-medium leading-none">MBA</h4>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {mbaComponents.map((component) => (
                         <Link
                           key={component.title}
@@ -310,9 +322,9 @@ export function Header() {
                       ))}
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <h4 className="font-medium leading-none">BBA</h4>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {bbaComponents.map((component) => (
                         <Link
                           key={component.title}
@@ -324,7 +336,7 @@ export function Header() {
                       ))}
                     </div>
                     <h4 className="font-medium leading-none pt-4">BCA</h4>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {bcaComponents.map((component) => (
                         <Link
                           key={component.title}
@@ -336,9 +348,9 @@ export function Header() {
                       ))}
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <h4 className="font-medium leading-none">Certifications</h4>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {certifications.map((component) => (
                         <Link
                           key={component.title}
@@ -353,7 +365,7 @@ export function Header() {
                   <div className="row-span-3">
                     <div className="relative h-full w-full">
                       <Image
-                        src="/placeholder.svg"
+                        src="/ad.jpg"
                         alt="Featured Course"
                         fill
                         className="object-cover rounded-lg"
@@ -370,14 +382,18 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/blog" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                >
                   Blog
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                >
                   Contact Us
                 </NavigationMenuLink>
               </Link>
