@@ -40,8 +40,8 @@ const HomeBand: React.FC = () => {
   }, [coursesTarget, alumniTarget]);
 
   return (
-    <div className="flex justify-center items-center mx-auto w-full">
-      <div className="flex lg:flex-row gap-10 flex-col max-w-6xl w-full bg-slate-800/100 items-center h-[50vh] rounded-lg mx-auto justify-center px-10">
+    <div className="flex  justify-center items-center mx-auto w-full">
+      <div className="flex shadow-xl lg:flex-row gap-10 flex-col max-w-6xl w-full bg-slate-800/100 items-center h-[50vh] rounded-lg mx-auto justify-center px-10">
         <h1 className="lg:text-4xl text-3xl lg:w-1/3 text-white font-bold">
           Thousands of courses authored by industry experts
         </h1>

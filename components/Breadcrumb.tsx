@@ -28,7 +28,7 @@ const Breadcrumb = () => {
               <li key={index} className="flex items-center space-x-2">
                 <span>/</span>
                 {isLast ? (
-                  <span className="text-[#b8967e]">
+                  <span className="text-orange-500">
                     {decodeURIComponent(segment)}
                   </span>
                 ) : (

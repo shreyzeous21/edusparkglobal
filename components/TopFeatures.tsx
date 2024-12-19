@@ -39,7 +39,7 @@ const TopFeatures = () => {
           <Button variant={"outline"} className="w-1/3">
             Our Top Features
           </Button>
-          <span className="lg:text-4xl font-bold text-5xl">
+          <span className="lg:text-4xl font-bold text-3xl">
             Achieve Your Goal With EduSpark
           </span>
           <p className="text-sm/normal text-gray-600">

@@ -1,0 +1,420 @@
+{
+  "bba_courses": [
+    {
+      "image": "/bba/bbaom.jpg",
+      "title": "Operations Management",
+      "duration": "36 months",
+      "fee": "Rs 4,617/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bba/operations-management",
+      "marks": "60"
+    },
+    {
+      "image": "/bba/bbafm.jpg",
+      "title": "Financial Management",
+      "duration": "36 months",
+      "fee": "Rs 4,617/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bba/financial-management",
+      "marks": "60"
+    },
+    {
+      "image": "/bba/bbahr.jpg",
+      "title": "Human Resource",
+      "duration": "36 months",
+      "fee": "Rs 4,617/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bba/human-resource",
+      "marks": "60"
+    },
+    {
+      "image": "/bba/bbamm.jpg",
+      "title": "Marketing Management",
+      "duration": "36 months",
+      "fee": "Rs 4,617/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bba/marketing-Management",
+      "marks": "60"
+    }
+  ],
+  "mba_courses": [
+    {
+      "image": "/mba/mbaom.jpg",
+      "title": "Operations Management",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/operations-management",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbaim.jpg",
+      "title": "Infrastructure Management",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "internship": "24 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/infrastructure-management",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbaog.jpg",
+      "title": "Oil & Gas",
+      "duration": "24 months",
+      "fee": "Rs 9,167/-",
+      "admissionStatus": "Admission Started",
+      "internship": "24 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/oil-and-gas",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbapm.jpg",
+      "title": "Power Management",
+      "duration": "24 months",
+      "fee": "Rs 9,167/-",
+      "admissionStatus": "Admission Started",
+      "internship": "24 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/power-management",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbafm.jpg",
+      "title": "Financial Management",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "internship": "6 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/financial-management",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbalsc.jpg",
+      "title": "Logistics & Supply Chain",
+      "duration": "24 months",
+      "fee": "Rs 8,125/-",
+      "admissionStatus": "Admission Started",
+      "internship": "24 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/Logistics-and-supply-chain",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbaib.jpg",
+      "title": "International Business",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "internship": "24 Months",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/international-business",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbahr.jpg",
+      "title": "Human Resource",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/human-resource",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbamm.jpg",
+      "title": "Business Analytics",
+      "duration": "36 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/business-analytics",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbadb.jpg",
+      "title": "Digital Business",
+      "duration": "36 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/digital-business",
+      "marks": "50"
+    },
+    {
+      "image": "/mba/mbamm.jpg",
+      "title": "Marketing Management",
+      "duration": "24 months",
+      "fee": "Rs 7,292/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mba/marketing-management",
+      "marks": "50"
+    }
+  ],
+  "ug": [
+    {
+      "image": "/ug/under-graduate.jpg",
+      "title": "Under Graduate Work-Integrated",
+      "duration": "3 Years",
+      "mode": "Hybrid",
+      "admissionStatus": "Admission Started",
+      "internship": "6 Months",
+      "school": "Aimer B School",
+      "schoolLogo": "/aimer-logo.png",
+      "link": "/courses/under-graduate-work-integrated-program",
+      "marks": "55"
+    }
+  ],
+  "pg": [
+    {
+      "image": "/pg/post-graduate.png",
+      "title": "Post Graduate Work-Integrated",
+      "duration": "2 Years",
+      "mode": "Hybrid",
+      "admissionStatus": "Admission Started",
+      "internship": "6 Months",
+      "school": "Aimer B School",
+      "schoolLogo": "/aimer-logo.png",
+      "link": "/courses/post-graduate-work-integrated-program",
+      "marks": "50",
+      "eligibility": "Graduation"
+    }
+  ],
+  "certifications": [
+    {
+      "image": "/certifications/clsc.jpg",
+      "title": "Logistic and Supply Chain",
+      "duration": "10 months",
+      "fee": "Rs 8,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/logistic-and-supply-chain",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cis.jpg",
+      "title": "Industrial Safety",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/industrial-safety",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cre.jpg",
+      "title": "Renewable Energy",
+      "duration": "10 months",
+      "fee": "Rs 9,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/renewable-energy",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/chr.jpg",
+      "title": "Human Resource",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/human-resource",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cba.jpg",
+      "title": "Business Analytics",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/business-analytics",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cmm.jpg",
+      "title": "Marketing Management",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/marketing-management",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/com.jpg",
+      "title": "Operations Management",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/operations-management",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cfm.jpg",
+      "title": "Financial Management",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/financial-management",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cog.jpg",
+      "title": "Oil & Gas",
+      "duration": "10 months",
+      "fee": "Rs 9,000/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/oil-and-gas",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cpm.jpg",
+      "title": "Project Management",
+      "duration": "3 months",
+      "fee": "Rs 8,333/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/project-management",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cabm.jpg",
+      "title": "Air Business Management",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/air-business-management",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cds.jpg",
+      "title": "Data Science",
+      "duration": "10 months",
+      "fee": "Rs 1,50,000/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/data-science",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cib.jpg",
+      "title": "International Business",
+      "duration": "10 months",
+      "fee": "Rs 7,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/international-business",
+      "marks": "60"
+    },
+    {
+      "image": "/certifications/cpom.jpg",
+      "title": "Power Management",
+      "duration": "10 months",
+      "fee": "Rs 8,500/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/certification/power-management",
+      "marks": "60"
+    }
+  ],
+  "bca_courses": [
+    {
+      "image": "/bca/bc.jpg",
+      "title": "Cloud Computing & Cyber Security",
+      "duration": "36 Months",
+      "fee": "Rs 4,167/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bca/cloud-computing-cyber-security"
+    },
+    {
+      "image": "/bca/nat.jpg",
+      "title": "New Age Technology",
+      "duration": "36 months",
+      "fee": "Rs 4,167/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bca/new-age-technology"
+    },
+    {
+      "image": "/bca/da.png",
+      "title": "Data Analytics",
+      "duration": "36 Months",
+      "fee": "Rs 4,167/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/bca/data-analytics"
+    }
+  ]
+}

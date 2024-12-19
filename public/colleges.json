@@ -1,0 +1,204 @@
+{
+  "colleges": [
+    {
+      "name": "Aimer B School",
+      "established": "Since 2021",
+      "location": "Kerala",
+      "image": "/aimerbschool.png",
+      "link": "/college/aimer-b-school",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "Online Masters/ Bachelors"
+        },
+        {
+          "title": "Accreditation",
+          "description": "UGC-entitled degree programme"
+        },
+        {
+          "title": "Ranking",
+          "description": "A+ grade NAAC accredited"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 10,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "UPES Online",
+      "established": "Since 2007",
+      "location": "Dehradun",
+      "image": "/upes.png",
+      "link": "/college/upes-online",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "Online Masters/ Bachelors"
+        },
+        {
+          "title": "Accreditation",
+          "description": "UGC-entitled degree programme"
+        },
+        {
+          "title": "Ranking",
+          "description": "NAAC A Grade"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 7,500/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "IIM Bangalore",
+      "established": "Since 1973",
+      "location": "Bangalore",
+      "image": "/aimerbschool.png",
+      "link": "/college/iim-bangalore",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "MBA & Executive Programs"
+        },
+        {
+          "title": "Accreditation",
+          "description": "Triple Crown Accreditation"
+        },
+        {
+          "title": "Ranking",
+          "description": "#1 in India"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 25,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "ISB Hyderabad",
+      "established": "Since 2001",
+      "location": "Hyderabad",
+      "image": "/upes.png",
+      "link": "/college/isb-hyderabad",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "PGP & Executive Education"
+        },
+        {
+          "title": "Accreditation",
+          "description": "AACSB and EQUIS Accredited"
+        },
+        {
+          "title": "Ranking",
+          "description": "Global Top 25"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 35,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "XLRI Jamshedpur",
+      "established": "Since 1949",
+      "location": "Jamshedpur",
+      "image": "/aimerbschool.png",
+      "link": "/college/xlri",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "PGDM & Executive Programs"
+        },
+        {
+          "title": "Accreditation",
+          "description": "AACSB Accredited"
+        },
+        {
+          "title": "Ranking",
+          "description": "Top 5 in India"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 30,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "MDI Gurgaon",
+      "established": "Since 1973",
+      "location": "Gurgaon",
+      "image": "/upes.png",
+      "link": "/college/mdi-gurgaon",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "PGPM & Executive Programs"
+        },
+        {
+          "title": "Accreditation",
+          "description": "AMBA Accredited"
+        },
+        {
+          "title": "Ranking",
+          "description": "Top 10 in India"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 28,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "NMIMS Mumbai",
+      "established": "Since 1981",
+      "location": "Mumbai",
+      "image": "/aimerbschool.png",
+      "link": "/college/nmims-mumbai",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "MBA & Integrated Programs"
+        },
+        {
+          "title": "Accreditation",
+          "description": "NAAC A+ Grade"
+        },
+        {
+          "title": "Ranking",
+          "description": "Top 15 in India"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 22,000/- Per Month"
+        }
+      ]
+    },
+    {
+      "name": "SPJIMR Mumbai",
+      "established": "Since 1981",
+      "location": "Mumbai",
+      "image": "/upes.png",
+      "link": "/college/spjimr-mumbai",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "PGDM & Global Programs"
+        },
+        {
+          "title": "Accreditation",
+          "description": "AACSB Accredited"
+        },
+        {
+          "title": "Ranking",
+          "description": "Top 8 in India"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "Rs 26,000/- Per Month"
+        }
+      ]
+    }
+  ]
+}

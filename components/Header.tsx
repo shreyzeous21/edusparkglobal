@@ -24,9 +24,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { EnrollmentModal } from "./EnrollmentModal";
 
 const mbaComponents: { title: string; href: string }[] = [
-  { title: "Logistic And Supply Chain", href: "/courses/mba/logistics" },
+  {
+    title: "Logistic And Supply Chain",
+    href: "/upes-online/mba/logistics-and-supply-chain",
+  },
   {
     title: "International Business",
     href: "/courses/mba/international-business",
@@ -53,6 +57,16 @@ const bcaComponents: { title: string; href: string }[] = [
   { title: "Cloud Computing & Cyber Security", href: "/courses/bca/cloud" },
   { title: "New Age Technology", href: "/courses/bca/new-tech" },
   { title: "Data Analytics", href: "/courses/bca/data-analytics" },
+];
+const graduationComponents: { title: string; href: string }[] = [
+  {
+    title: "Under Graduate Work-Integrated",
+    href: "/courses/under-graduate-work-integrated-program",
+  },
+  {
+    title: "Post Graduate Work-Integrated",
+    href: "/courses/post-graduate-work-integrated-program",
+  },
 ];
 
 const certifications: { title: string; href: string }[] = [
@@ -88,7 +102,7 @@ export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full shadow-lg border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky  top-0 z-50 w-full shadow-lg border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className=" max-w-6xl mx-auto justify-center items-center flex h-24 ">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="lg:hidden">
@@ -260,6 +274,16 @@ export function Header() {
                       className="w-full justify-start"
                       onClick={() => setIsOpen(false)}
                     >
+                      <Link href="/college">Colleges</Link>
+                    </Button>
+                  </li>
+                  <li>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="w-full justify-start"
+                      onClick={() => setIsOpen(false)}
+                    >
                       <Link href="/contact" className="">
                         Contact Us
                       </Link>
@@ -280,12 +304,12 @@ export function Header() {
             className="h-20 w-auto"
           />
         </Link>
-        <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
+        <NavigationMenu className="hidden  lg:flex">
+          <NavigationMenuList className="">
+            <NavigationMenuItem className="">
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                  className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
                   Home
                 </NavigationMenuLink>
@@ -294,15 +318,20 @@ export function Header() {
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                  className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
                   About Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <Link href="/courses" legacyBehavior passHref>
+              <NavigationMenuTrigger className="bg-transparent">
+                <Link
+                  href="/courses"
+                  legacyBehavior
+                  passHref
+                  className=""
+                >
                   Courses
                 </Link>
               </NavigationMenuTrigger>
@@ -315,7 +344,7 @@ export function Header() {
                         <Link
                           key={component.title}
                           href={component.href}
-                          className="block text-sm leading-none text-muted-foreground hover:text-primary"
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
                           {component.title}
                         </Link>
@@ -329,7 +358,7 @@ export function Header() {
                         <Link
                           key={component.title}
                           href={component.href}
-                          className="block text-sm leading-none text-muted-foreground hover:text-primary"
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
                           {component.title}
                         </Link>
@@ -341,7 +370,21 @@ export function Header() {
                         <Link
                           key={component.title}
                           href={component.href}
-                          className="block text-sm leading-none text-muted-foreground hover:text-primary"
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
+                        >
+                          {component.title}
+                        </Link>
+                      ))}
+                    </div>
+                    <h4 className="font-medium leading-none pt-4">
+                      Graduation Program
+                    </h4>
+                    <div className="space-y-3">
+                      {graduationComponents.map((component) => (
+                        <Link
+                          key={component.title}
+                          href={component.href}
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
                           {component.title}
                         </Link>
@@ -355,7 +398,7 @@ export function Header() {
                         <Link
                           key={component.title}
                           href={component.href}
-                          className="block text-sm leading-none text-muted-foreground hover:text-primary"
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
                           {component.title}
                         </Link>
@@ -383,16 +426,25 @@ export function Header() {
             <NavigationMenuItem>
               <Link href="/blog" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                  className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
                   Blog
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <Link href="/college" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
+                >
+                  Colleges
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} text-lg`}
+                  className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
                   Contact Us
                 </NavigationMenuLink>
@@ -411,9 +463,9 @@ export function Header() {
               />
             </div>
           </form>
-          <Button className="bg-orange-500 hover:bg-orange-600">
-            Enroll Now
-          </Button>
+          <div className="">
+            <EnrollmentModal />
+          </div>
         </div>
       </div>
     </header>

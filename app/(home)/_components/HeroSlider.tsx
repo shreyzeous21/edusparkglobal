@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface SlideContent {
   title: string;
@@ -26,21 +27,21 @@ const slides: SlideContent[] = [
     subtitle: "Explore industry-leading courses designed for your success.",
     image: "/slider_bg01.jpg",
     ctaText: "Browse Courses",
-    ctaLink: "#",
+    ctaLink: "/course",
   },
   {
     title: "Learn from the Best",
     subtitle: "Join expert-led online classes and gain practical skills.",
     image: "/slider_bg02.jpg",
     ctaText: "Discover More",
-    ctaLink: "#",
+    ctaLink: "/course",
   },
   {
     title: "Upskill with EduSpack",
     subtitle: "Enhance your expertise with our tailored learning paths.",
     image: "/slider_bg03.jpg",
     ctaText: "Start Learning",
-    ctaLink: "#",
+    ctaLink: "/course",
   },
 ];
 
@@ -48,7 +49,7 @@ const MotionCarouselItem = motion(CarouselItem);
 
 export default function HeroSlider() {
   return (
-    <div className="relative w-full bg-black">
+    <div className="relative w-full ">
       <div className="relative inset-0 flex flex-row items-center justify-center px-2">
         <Carousel
           className="max-w-6xl h-[calc(100vh-4rem)] sm:h-screen items-center mx-auto w-full justify-center"
@@ -83,7 +84,7 @@ export default function HeroSlider() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                           >
-                            <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-black leading-tight">
+                            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-black leading-tight">
                               {slide.title}
                             </h2>
                           </motion.div>
@@ -104,10 +105,10 @@ export default function HeroSlider() {
                             className="sm:opacity-0 sm:group-hover:opacity-100 sm:transition-opacity sm:duration-300"
                           >
                             <Button
-                              size="sm"
-                              className="bg-orange-600 text-white  px-4 sm:px-8 text-sm sm:text-base"
+                              className="bg-orange-600 text-white"
+                              asChild
                             >
-                              {slide.ctaText}
+                              <Link href={slide.ctaLink}>{slide.ctaText}</Link>
                             </Button>
                           </motion.div>
                         </div>
