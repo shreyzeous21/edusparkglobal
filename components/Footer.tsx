@@ -104,7 +104,7 @@ const Footer = () => {
 
   const cap: CapabilitiesSection[] = [
     {
-      title: "Partners",
+      title: "MBA",
       links: [
         { text: "ITE & Solutions Provider Partners", href: "/" },
         { text: "ElectroSafe Fluid Partner Program", href: "/" },
