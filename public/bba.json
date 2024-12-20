@@ -212,9 +212,9 @@
       "eligibility": "Graduation"
     }
   ],
-  "certifications": [
+  "Certifications": [
     {
-      "image": "/certifications/clsc.jpg",
+      "image": "/Certifications/clsc.jpg",
       "title": "Logistic and Supply Chain",
       "duration": "10 months",
       "fee": "Rs 8,500/-",
@@ -226,7 +226,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cis.jpg",
+      "image": "/Certifications/cis.jpg",
       "title": "Industrial Safety",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -238,7 +238,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cre.jpg",
+      "image": "/Certifications/cre.jpg",
       "title": "Renewable Energy",
       "duration": "10 months",
       "fee": "Rs 9,500/-",
@@ -250,7 +250,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/chr.jpg",
+      "image": "/Certifications/chr.jpg",
       "title": "Human Resource",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -262,7 +262,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cba.jpg",
+      "image": "/Certifications/cba.jpg",
       "title": "Business Analytics",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -274,7 +274,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cmm.jpg",
+      "image": "/Certifications/cmm.jpg",
       "title": "Marketing Management",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -286,7 +286,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/com.jpg",
+      "image": "/Certifications/com.jpg",
       "title": "Operations Management",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -298,7 +298,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cfm.jpg",
+      "image": "/Certifications/cfm.jpg",
       "title": "Financial Management",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -310,7 +310,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cog.jpg",
+      "image": "/Certifications/cog.jpg",
       "title": "Oil & Gas",
       "duration": "10 months",
       "fee": "Rs 9,000/-",
@@ -322,7 +322,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cpm.jpg",
+      "image": "/Certifications/cpm.jpg",
       "title": "Project Management",
       "duration": "3 months",
       "fee": "Rs 8,333/-",
@@ -334,7 +334,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cabm.jpg",
+      "image": "/Certifications/cabm.jpg",
       "title": "Air Business Management",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -346,7 +346,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cds.jpg",
+      "image": "/Certifications/cds.jpg",
       "title": "Data Science",
       "duration": "10 months",
       "fee": "Rs 1,50,000/-",
@@ -358,7 +358,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cib.jpg",
+      "image": "/Certifications/cib.jpg",
       "title": "International Business",
       "duration": "10 months",
       "fee": "Rs 7,500/-",
@@ -370,7 +370,7 @@
       "marks": "60"
     },
     {
-      "image": "/certifications/cpom.jpg",
+      "image": "/Certifications/cpom.jpg",
       "title": "Power Management",
       "duration": "10 months",
       "fee": "Rs 8,500/-",
