@@ -212,7 +212,7 @@
       "eligibility": "Graduation"
     }
   ],
-  "Certifications": [
+  "certifications": [
     {
       "image": "/Certifications/clsc.jpg",
       "title": "Logistic and Supply Chain",
