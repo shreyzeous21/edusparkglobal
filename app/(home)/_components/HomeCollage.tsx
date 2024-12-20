@@ -136,10 +136,10 @@ const HomeCollage = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute -left-4 top-1/2 -translate-y-1/2">
+          <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2">
             <CarouselPrevious className="relative" />
           </div>
-          <div className="absolute -right-4 top-1/2 -translate-y-1/2">
+          <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2">
             <CarouselNext className="relative" />
           </div>
         </Carousel>
