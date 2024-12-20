@@ -244,159 +244,185 @@ const SemesterSubjects: Record<
       {
         code: "FND101",
         name: "Accounting",
-        description: "Fundamental principles of financial accounting and record-keeping for business"
+        description:
+          "Fundamental principles of financial accounting and record-keeping for business",
       },
       {
         code: "FND103",
         name: "Business Economics",
-        description: "Introduction to economic principles and their application in business decision-making"
+        description:
+          "Introduction to economic principles and their application in business decision-making",
       },
       {
         code: "FND107",
         name: "Communication and Networking",
-        description: "Developing effective communication skills and professional networking strategies"
+        description:
+          "Developing effective communication skills and professional networking strategies",
       },
       {
         code: "FND109",
         name: "Creativity and Innovation",
-        description: "Fostering creative thinking and innovative approaches to business challenges"
+        description:
+          "Fostering creative thinking and innovative approaches to business challenges",
       },
       {
         code: "FND110",
         name: "Emotional Intelligence",
-        description: "Understanding and developing emotional intelligence in professional contexts"
+        description:
+          "Understanding and developing emotional intelligence in professional contexts",
       },
       {
         code: "FND111",
         name: "Fundamentals of Management",
-        description: "Core principles of management theory and organizational behavior"
+        description:
+          "Core principles of management theory and organizational behavior",
       },
       {
         code: "FND113",
         name: "Introduction to Business",
-        description: "Comprehensive overview of business concepts, structures, and environments"
-      }
+        description:
+          "Comprehensive overview of business concepts, structures, and environments",
+      },
     ],
     2: [
       {
         code: "FND102",
         name: "Advanced Communication",
-        description: "Advanced techniques in professional communication and interpersonal skills"
+        description:
+          "Advanced techniques in professional communication and interpersonal skills",
       },
       {
         code: "FND104",
         name: "Business English",
-        description: "Enhancing English language skills specific to business communication and professional contexts"
+        description:
+          "Enhancing English language skills specific to business communication and professional contexts",
       },
       {
         code: "FND105",
         name: "Business Law and Ethics",
-        description: "Comprehensive study of legal frameworks, corporate governance, and ethical considerations in business"
+        description:
+          "Comprehensive study of legal frameworks, corporate governance, and ethical considerations in business",
       },
       {
         code: "FND106",
         name: "Business Statistics",
-        description: "Statistical methods and data analysis techniques for business decision-making"
+        description:
+          "Statistical methods and data analysis techniques for business decision-making",
       },
       {
         code: "FND108",
         name: "Computer Applications in Business",
-        description: "Practical application of computer technologies and software in business processes"
+        description:
+          "Practical application of computer technologies and software in business processes",
       },
       {
         code: "FND112",
         name: "Human Resource Management",
-        description: "Fundamental principles of managing human resources and organizational talent"
+        description:
+          "Fundamental principles of managing human resources and organizational talent",
       },
       {
         code: "FND114",
         name: "Organisational Behaviour",
-        description: "Study of individual and group behavior within organizational settings"
-      }
+        description:
+          "Study of individual and group behavior within organizational settings",
+      },
     ],
     3: [
       {
         code: "ITP101",
         name: "Internship",
-        description: "Practical industry exposure and professional work experience"
-      }
+        description:
+          "Practical industry exposure and professional work experience",
+      },
     ],
     4: [
       {
         code: "INT101",
         name: "Essentials of Marketing",
-        description: "Comprehensive study of marketing principles, strategies, and consumer behavior"
+        description:
+          "Comprehensive study of marketing principles, strategies, and consumer behavior",
       },
       {
         code: "INT102",
         name: "Financial Management",
-        description: "Advanced financial planning, analysis, and strategic financial decision-making"
+        description:
+          "Advanced financial planning, analysis, and strategic financial decision-making",
       },
       {
         code: "INT103",
         name: "Operations Management",
-        description: "Techniques for efficient management of business operations and processes"
+        description:
+          "Techniques for efficient management of business operations and processes",
       },
       {
         code: "SPE101",
         name: "Specialisation 1",
-        description: "Specialized elective course focusing on advanced business concepts"
+        description:
+          "Specialized elective course focusing on advanced business concepts",
       },
       {
         code: "SPE102",
         name: "Specialisation 2",
-        description: "Advanced specialization course tailored to specific business domains"
+        description:
+          "Advanced specialization course tailored to specific business domains",
       },
       {
         code: "SPE103",
         name: "Specialisation 3",
-        description: "In-depth exploration of specialized business topics"
+        description: "In-depth exploration of specialized business topics",
       },
       {
         code: "SPE104",
         name: "Specialisation 4",
-        description: "Advanced elective course exploring emerging business trends"
-      }
+        description:
+          "Advanced elective course exploring emerging business trends",
+      },
     ],
     5: [
       {
         code: "ADV101",
         name: "Business Research Methods",
-        description: "Advanced research techniques and methodologies in business contexts"
+        description:
+          "Advanced research techniques and methodologies in business contexts",
       },
       {
         code: "ADV102",
         name: "International Business",
-        description: "Global business strategies, cross-cultural management, and international trade"
+        description:
+          "Global business strategies, cross-cultural management, and international trade",
       },
       {
         code: "ADV103",
         name: "Project Management",
-        description: "Advanced project planning, execution, and strategic management techniques"
+        description:
+          "Advanced project planning, execution, and strategic management techniques",
       },
       {
         code: "SPE105",
         name: "Specialisation 5",
-        description: "Specialized advanced course focusing on cutting-edge business concepts"
+        description:
+          "Specialized advanced course focusing on cutting-edge business concepts",
       },
       {
         code: "SPE106",
         name: "Specialisation 6",
-        description: "Advanced elective exploring complex business domains"
+        description: "Advanced elective exploring complex business domains",
       },
       {
         code: "SPE107",
         name: "Specialisation 7",
-        description: "Specialized course tailored to emerging industry trends"
-      }
+        description: "Specialized course tailored to emerging industry trends",
+      },
     ],
     6: [
       {
         code: "ITP102",
         name: "Internship & Capstone Project",
-        description: "Comprehensive industry internship combined with a strategic capstone project"
-      }
-    ]
+        description:
+          "Comprehensive industry internship combined with a strategic capstone project",
+      },
+    ],
   },
   "post-graduate-work-integrated-program": {
     1: [
@@ -707,7 +733,8 @@ const Page = ({ params }: { params: { slug: string } }) => {
                                 Semester {semester}
                               </span>
                               <span className="text-muted-foreground text-sm mr-4">
-                                {params.slug === "under-graduate-work-integrated-program"
+                                {params.slug ===
+                                "under-graduate-work-integrated-program"
                                   ? semester <= 3
                                     ? "Foundational and core subjects"
                                     : semester <= 6
