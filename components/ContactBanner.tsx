@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Card, CardHeader } from "./ui/card";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -83,12 +84,12 @@ export default function ContactBanner() {
   }
 
   return (
-    <div className="w-full ">
-      <div className="max-w-6xl mx-auto">
+    <Card className="w-full py-4 bg-slate-600 px-4">
+      <div className="max-w-6xl mx-auto x">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-wrap gap-2 items-end justify-center"
+            className="flex flex-wrap gap-2  items-end justify-center"
           >
             <FormField
               control={form.control}
@@ -96,7 +97,7 @@ export default function ContactBanner() {
               render={({ field }) => (
                 <FormItem className="flex-1 min-w-[200px]">
                   <FormControl>
-                    <Input placeholder="Name" {...field} className="h-10" />
+                    <Input placeholder="Name" {...field} className="h-10 bg-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -111,7 +112,7 @@ export default function ContactBanner() {
                     <Input
                       placeholder="Phone Number"
                       {...field}
-                      className="h-10"
+                      className="h-10 bg-white"
                     />
                   </FormControl>
                   <FormMessage />
@@ -124,7 +125,7 @@ export default function ContactBanner() {
               render={({ field }) => (
                 <FormItem className="flex-1 min-w-[200px]">
                   <FormControl>
-                    <Input placeholder="Email" {...field} className="h-10" />
+                    <Input placeholder="Email" {...field} className="h-10 bg-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -140,7 +141,7 @@ export default function ContactBanner() {
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger className="h-10">
+                      <SelectTrigger className="h-10 bg-white ">
                         <SelectValue placeholder="Select State" />
                       </SelectTrigger>
                     </FormControl>
@@ -165,6 +166,6 @@ export default function ContactBanner() {
           </form>
         </Form>
       </div>
-    </div>
+    </Card>
   );
 }

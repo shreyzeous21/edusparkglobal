@@ -27,21 +27,21 @@ const slides: SlideContent[] = [
     subtitle: "Explore industry-leading courses designed for your success.",
     image: "/slider_bg01.jpg",
     ctaText: "Browse Courses",
-    ctaLink: "/course",
+    ctaLink: "/courses",
   },
   {
     title: "Learn from the Best",
     subtitle: "Join expert-led online classes and gain practical skills.",
     image: "/slider_bg02.jpg",
     ctaText: "Discover More",
-    ctaLink: "/course",
+    ctaLink: "/courses",
   },
   {
     title: "Upskill with EduSpack",
     subtitle: "Enhance your expertise with our tailored learning paths.",
     image: "/slider_bg03.jpg",
     ctaText: "Start Learning",
-    ctaLink: "/course",
+    ctaLink: "/courses",
   },
 ];
 
