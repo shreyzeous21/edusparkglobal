@@ -4,6 +4,7 @@ import React from "react";
 import UoTitle from "./_components/UoTitle";
 import UoContent from "./_components/UoContent";
 import UoCourses from "./_components/UoCourses";
+import UoRanking from "./_components/UoRanking";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -34,6 +35,7 @@ const page = () => {
       <div className="w-full px-4 flex justify-center flex-col gap-10">
         <UoTitle />
         <UoContent />
+        <UoRanking/>
         <UoCourses />
       </div>
     </div>
