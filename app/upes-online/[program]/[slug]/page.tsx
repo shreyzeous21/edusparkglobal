@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import courseDetailsData from "@/public/course-details.json";
+import { Trophy, ExternalLink, ChevronDown } from "lucide-react";
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -124,11 +125,7 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
             <Link
               href={item.href}
               className={`
-                ${
-                  index === breadcrumbItems.length - 1
-                    ? "text-gray-900 font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                }
+                ${index === breadcrumbItems.length - 1 ? "text-orange-500" : ""}
               `}
             >
               {item.label}
@@ -183,7 +180,7 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 bg-white">
+      <Card className="max-w-6xl px-4 mx-auto py-4  bg-white">
         <div className="grid md:grid-cols-1 gap-8 items-center">
           <div className="space-y-6 w-full">
             <h2 className="text-3xl font-bold">
@@ -222,16 +219,16 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
             </div>
           </div>
         </div>
-      </section>
+      </Card>
 
       {/* Curriculum Section */}
       {additionalDetails.curriculum && (
-        <section className="container mx-auto px-4 py-12 bg-white">
+        <Card className="max-w-6xl w-full mx-auto px-4 py-4  bg-white">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-center">
               Curriculum Structure
             </h2>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-gray-600 ">
               Comprehensive semester-wise breakdown of the program
             </p>
           </div>
@@ -270,17 +267,17 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
               )
             )}
           </Accordion>
-        </section>
+        </Card>
       )}
 
       {/* Career Prospects Section */}
       {additionalDetails.careerProspects && (
-        <section className="container mx-auto px-4 py-12 bg-white">
+        <Card className="max-w-6xl mx-auto px-4 py-4 w-full bg-white">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-center">
               {additionalDetails.careerProspects.title}
             </h2>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-gray-600 mt-2">
               {additionalDetails.careerProspects.description}
             </p>
           </div>
@@ -314,17 +311,17 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
               )
             )}
           </Accordion>
-        </section>
+        </Card>
       )}
 
       {/* Career Services Section */}
       {additionalDetails.careerServices && (
-        <section className="container mx-auto px-4 py-12 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+        <Card className="max-w-6xl mx-auto px-4 py-4 w-full bg-white">
+          <div className=" mx-auto text-center flex flex-col gap-4">
+            <h2 className="text-3xl font-bold ">
               {additionalDetails.careerServices.title}
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600">
               {additionalDetails.careerServices.description}
             </p>
 
@@ -342,14 +339,14 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
               )}
             </div>
           </div>
-        </section>
+        </Card>
       )}
 
       {/* Fees and Financing Section */}
       {additionalDetails.feesAndFinancing && (
-        <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+        <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-gradient-to-br from-blue-50 to-white">
+          <div className=" mx-auto">
+            <div className="text-center mb-4">
               <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
                 {additionalDetails.feesAndFinancing.title}
               </h2>
@@ -406,32 +403,88 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
             </div>
 
             <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+              <button className="bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg hover:shadow-xl">
                 Explore Payment Options
               </button>
             </div>
           </div>
-        </section>
+        </Card>
       )}
 
       {/* Opportunities and Advantages Section */}
-      <section className="container mx-auto px-4 py-12 bg-gray-50">
+      <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-gray-50">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-primary mb-4">
+            A Booming Sector With Growth & Promising Opportunities
+          </h2>
+        </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {additionalDetails.opportunities?.map((opportunity:{title:string, cardDescription:string, description:string, source:string}, index:{ index: number}) => (
-            <Card key={index.index}>
-              <CardHeader>
-                <CardTitle>{opportunity.title}</CardTitle>
-                <CardDescription>{opportunity.cardDescription}</CardDescription>
+          {additionalDetails.opportunities?.map((opportunity, index) => (
+            <Card
+              key={index}
+              className="hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 border-border"
+            >
+              <CardHeader className="pb-2">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Trophy className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-foreground">
+                      {opportunity.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground">
+                      {opportunity.cardDescription}
+                    </CardDescription>
+                  </div>
+                </div>
               </CardHeader>
-              <CardContent>
-                <p>
-                  {opportunity.description} (Source: {opportunity.source})
+              <CardContent className="pt-4">
+                <p className="text-sm text-muted-foreground mb-2">
+                  {opportunity.description}
                 </p>
+                <div className="text-xs text-muted-foreground italic flex items-center">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  Source: {opportunity.source}
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
-      </section>
+      </Card>
+
+      {/* FAQs Section */}
+      {additionalDetails.faqs && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-primary mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Find answers to the most common questions about the program
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              {additionalDetails.faqs.map((faq, index) => (
+                <Card key={index} className="border-border">
+                  <CardHeader>
+                    <AccordionItem value={`item-${index}`} className="w-full">
+                      <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors flex justify-between items-center">
+                        <span>{faq.question}</span>
+                        <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200" />
+                      </AccordionTrigger>
+                      <AccordionContent className="pt-4 text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </CardHeader>
+                </Card>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+      )}
 
       {/* Faculty Section */}
       {additionalDetails.faculties && (
@@ -468,39 +521,6 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
                 )
               )}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* FAQs Section */}
-      {additionalDetails.faqs && (
-        <section className="container mx-auto px-4 py-12 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Get answers to common questions about the program
-            </p>
-
-            <Accordion type="single" collapsible className="w-full">
-              {additionalDetails.faqs.map((faq: any, index: number) => (
-                <AccordionItem value={`faq-${index}`} key={index}>
-                  <AccordionTrigger>
-                    <div className="flex items-center">
-                      <span className="mr-4 text-xl font-semibold text-primary">
-                        {faq.question}
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                      <p className="text-gray-600">{faq.answer}</p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
           </div>
         </section>
       )}
