@@ -13,7 +13,7 @@ export async function generateMetadata({
 }: {
   params: { program: string; slug: string };
 }): Promise<Metadata> {
-  let courses;
+  let courses: any[] = [];
   switch (params.program) {
     case "bba":
       courses = bbaCourses.bba_courses;
@@ -167,7 +167,7 @@ const courseDetailsMap: { [key: string]: any } = {
 };
 
 const Page = ({ params }: { params: { program: string; slug: string } }) => {
-  let courses;
+  let courses: any[] = [];
   switch (params.program) {
     case "bba":
       courses = bbaCourses.bba_courses;
