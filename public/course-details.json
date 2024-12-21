@@ -10,24 +10,24 @@
           "Final Semester: Mandatory Dissertation project"
         ]
       },
-      "opportunities": [
-        {
-          "title": "A Booming Sector",
-          "description": "Operations has huge future in India, poised to become global manufacturing hub.",
-          "source": "India Brand Equity Foundation",
-          "cardDescription": "Growth & Promising Opportunities"
-        },
+     "opportunities": [
         {
           "title": "Expert Tutors",
-          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives.",
-          "source": "India Brand Equity Foundation",
-          "cardDescription": "Skill Development"
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
         },
         {
           "title": "Earn Certificate",
-          "description": "Industry 4.0 tech innovations will increase demand for operations professionals.",
-          "source": "India Brand Equity Foundation",
-          "cardDescription": "Career Advantage"
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
         }
       ],
       "curriculum": [
@@ -218,20 +218,20 @@
       },
       "opportunities": [
         {
-          "title": "High Demand",
-          "description": "Operations management professionals are in high demand across various industries, including manufacturing, retail, logistics, and consulting.",
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
           "source": "Indeed",
           "cardDescription": "Job Prospects"
         },
         {
-          "title": "Career Growth",
-          "description": "MBA in Operations Management can lead to career growth and higher salary potential, with median salaries ranging from INR 8-15 lakhs per annum.",
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
           "source": "Glassdoor",
           "cardDescription": "Career Advancement"
         },
         {
-          "title": "Industry Recognition",
-          "description": "Our MBA in Operations Management program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
           "source": "NASSCOM",
           "cardDescription": "Industry Recognition"
         }
@@ -403,20 +403,20 @@
       },
       "opportunities": [
         {
-          "title": "High Demand",
-          "description": "Logistics and supply chain professionals are in high demand across various industries, including manufacturing, retail, logistics, and consulting.",
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
           "source": "Indeed",
           "cardDescription": "Job Prospects"
         },
         {
-          "title": "Career Growth",
-          "description": "This certification program can lead to career growth and higher salary potential, with median salaries ranging from INR 5-10 lakhs per annum.",
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
           "source": "Glassdoor",
           "cardDescription": "Career Advancement"
         },
         {
-          "title": "Industry Recognition",
-          "description": "Our certification program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
           "source": "NASSCOM",
           "cardDescription": "Industry Recognition"
         }
@@ -580,22 +580,22 @@
           "Final Year: Specialization in cloud computing and cyber security"
         ]
       },
-      "opportunities": [
+     "opportunities": [
         {
-          "title": "High Demand",
-          "description": "Cloud computing and cyber security professionals are in high demand across various industries, including IT, finance, healthcare, and government.",
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
           "source": "Indeed",
           "cardDescription": "Job Prospects"
         },
         {
-          "title": "Career Growth",
-          "description": "BCA in Cloud Computing and Cyber Security can lead to career growth and higher salary potential, with median salaries ranging from INR 6-12 lakhs per annum.",
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
           "source": "Glassdoor",
           "cardDescription": "Career Advancement"
         },
         {
-          "title": "Industry Recognition",
-          "description": "Our BCA in Cloud Computing and Cyber Security program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
           "source": "NASSCOM",
           "cardDescription": "Industry Recognition"
         }

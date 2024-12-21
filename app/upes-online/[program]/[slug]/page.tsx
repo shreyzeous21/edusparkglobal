@@ -1,4 +1,3 @@
-import Breadcrumb from "@/components/Breadcrumb";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import courseDetailsData from "@/public/course-details.json";
-import { Trophy, ExternalLink, ChevronDown } from "lucide-react";
+import { Trophy, ExternalLink } from "lucide-react";
+import NetworkStripe from "../../_components/Network";
+import { CompanyStripe } from "../../_components/Company";
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -220,6 +221,8 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
           </div>
         </div>
       </Card>
+
+      <CompanyStripe />
 
       {/* Curriculum Section */}
       {additionalDetails.curriculum && (
@@ -453,38 +456,6 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
         </div>
       </Card>
 
-      {/* FAQs Section */}
-      {additionalDetails.faqs && (
-        <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
-          <div className=" mx-auto">
-            <div className="text-center mb-2">
-              <h2 className="text-3xl font-bold text-primary ">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Find answers to the most common questions about the program
-              </p>
-            </div>
-            <Accordion type="single" collapsible className="">
-              {additionalDetails.faqs.map((faq, index) => (
-                <div key={index} className="border-border">
-                  <div>
-                    <AccordionItem value={`item-${index}`} className="w-full">
-                      <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors flex justify-between items-center">
-                        <span>{faq.question}</span>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </div>
-                </div>
-              ))}
-            </Accordion>
-          </div>
-        </Card>
-      )}
-
       {/* Faculty Section */}
       {additionalDetails.faculties && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
@@ -520,6 +491,38 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
                 )
               )}
             </div>
+          </div>
+        </Card>
+      )}
+      <NetworkStripe />
+      {/* FAQs Section */}
+      {additionalDetails.faqs && (
+        <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
+          <div className=" mx-auto">
+            <div className="text-center mb-2">
+              <h2 className="text-3xl font-bold text-primary ">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Find answers to the most common questions about the program
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="">
+              {additionalDetails.faqs.map((faq, index) => (
+                <div key={index} className="border-border">
+                  <div>
+                    <AccordionItem value={`item-${index}`} className="w-full">
+                      <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors flex justify-between items-center">
+                        <span>{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </div>
+                </div>
+              ))}
+            </Accordion>
           </div>
         </Card>
       )}
