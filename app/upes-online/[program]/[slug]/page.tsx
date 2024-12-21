@@ -455,35 +455,34 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
 
       {/* FAQs Section */}
       {additionalDetails.faqs && (
-        <section className="container mx-auto px-4 py-12 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-primary mb-4">
+        <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
+          <div className=" mx-auto">
+            <div className="text-center mb-2">
+              <h2 className="text-3xl font-bold text-primary ">
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-muted-foreground">
                 Find answers to the most common questions about the program
               </p>
             </div>
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="">
               {additionalDetails.faqs.map((faq, index) => (
-                <Card key={index} className="border-border">
-                  <CardHeader>
+                <div key={index} className="border-border">
+                  <div>
                     <AccordionItem value={`item-${index}`} className="w-full">
                       <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors flex justify-between items-center">
                         <span>{faq.question}</span>
-                        <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200" />
                       </AccordionTrigger>
-                      <AccordionContent className="pt-4 text-muted-foreground">
+                      <AccordionContent className="text-muted-foreground">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
-                  </CardHeader>
-                </Card>
+                  </div>
+                </div>
               ))}
             </Accordion>
           </div>
-        </section>
+        </Card>
       )}
 
       {/* Faculty Section */}
