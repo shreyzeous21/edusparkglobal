@@ -52,14 +52,14 @@
     },
     {
       "name": "University of Rochester Medical Center (URMC)",
-      "established": "Since 1973",
-      "location": "Bangalore",
-      "image": "/aimerbschool.png",
-      "link": "/college/university-of-rochester-medical-center-urmc",
+      "established": "Since 1972",
+      "location": "Rochester",
+      "image": "/university-rochester.jpg",
+      "link": "/college/rochester-medical-center",
       "details": [
         {
           "title": "Course Offered",
-          "description": "MBA & Executive Programs"
+          "description": "Nursing"
         },
         {
           "title": "Accreditation",
@@ -67,11 +67,11 @@
         },
         {
           "title": "Ranking",
-          "description": "#1 in India"
+          "description": "#44 in United States"
         },
         {
           "title": "Fee Starting",
-          "description": "Rs 25,000/- Per Month"
+          "description": "$50,000 - $60,000/- Per Year"
         }
       ]
     },
