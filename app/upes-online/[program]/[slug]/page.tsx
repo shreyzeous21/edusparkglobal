@@ -487,8 +487,8 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
 
       {/* Faculty Section */}
       {additionalDetails.faculties && (
-        <section className="container mx-auto px-4 py-12 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
+        <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
+          <div className=" mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Meet Our Faculty</h2>
             <p className="text-gray-600 mb-8">
               Our faculty members are experts in their fields and are dedicated
@@ -521,7 +521,7 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
               )}
             </div>
           </div>
-        </section>
+        </Card>
       )}
     </div>
   );
