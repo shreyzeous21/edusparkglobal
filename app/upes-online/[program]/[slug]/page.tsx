@@ -417,8 +417,8 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
       {/* Opportunities and Advantages Section */}
       <section className="container mx-auto px-4 py-12 bg-gray-50">
         <div className="grid md:grid-cols-3 gap-6">
-          {additionalDetails.opportunities?.map((opportunity, index) => (
-            <Card key={index}>
+          {additionalDetails.opportunities?.map((opportunity:{title:string, cardDescription:string, description:string, source:string}, index:{ index: number}) => (
+            <Card key={index.index}>
               <CardHeader>
                 <CardTitle>{opportunity.title}</CardTitle>
                 <CardDescription>{opportunity.cardDescription}</CardDescription>
