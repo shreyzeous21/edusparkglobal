@@ -2,10 +2,23 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Check } from "lucide-react";
 import bbaCourses from "@/public/bba.json";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import courseDetailsData from "@/public/course-details.json";
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -46,125 +59,7 @@ export async function generateMetadata({
   };
 }
 
-// Course details mapping
-const courseDetailsMap: { [key: string]: any } = {
-  // BBA Courses (from previous implementation)
-  "bba/operations-management": {
-    highlights: [
-      "Comprehensive curriculum covering core business processes",
-      "Skills in people management and strategic operations",
-      "First-hand business world experience through dissertation project",
-      "Aligned with 'Make in India' and 'Skill India' initiatives",
-      "Preparation for Industry 4.0 technological innovations",
-    ],
-    curriculum: [
-      "Fundamentals of Management",
-      "Business Economics",
-      "Business Communication",
-      "Accounting",
-      "Operations-Specific Skills",
-      "Big Data and AI Applications",
-      "Dissertation Project",
-    ],
-    whyChooseThisCourse: {
-      title: "Why BBA in Operations Management",
-      description:
-        "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
-      programStructure: [
-        "First Year: Foundations of management, business economics, business communication, and accounting",
-        "Second Year: Operations-specific skills and knowledge",
-        "Final Semester: Mandatory Dissertation project",
-      ],
-    },
-  },
-  // MBA Courses
-  "mba/operations-management": {
-    highlights: [
-      "Advanced operations management strategies",
-      "Industry-aligned curriculum",
-      "Practical business problem-solving skills",
-      "Comprehensive understanding of global business operations",
-      "Preparation for leadership roles",
-    ],
-    curriculum: [
-      "Strategic Operations Management",
-      "Supply Chain Analytics",
-      "Process Optimization",
-      "Technology Management",
-      "Global Operations Strategy",
-      "Project Management",
-      "Operational Leadership",
-    ],
-    whyChooseThisCourse: {
-      title: "Why MBA in Operations Management",
-      description:
-        "Our MBA in Operations Management is designed to equip professionals with advanced skills in managing complex business operations, leveraging technology, and driving organizational efficiency.",
-      programStructure: [
-        "Foundational Business Management Modules",
-        "Advanced Operations and Technology Courses",
-        "Industry Internship and Capstone Project",
-      ],
-    },
-  },
-  // Certification Courses
-  "certifications/logistics-and-supply-chain": {
-    highlights: [
-      "Comprehensive supply chain management skills",
-      "Industry-recognized certification",
-      "Practical logistics strategies",
-      "Technology-driven approach",
-      "Career advancement opportunities",
-    ],
-    curriculum: [
-      "Supply Chain Fundamentals",
-      "Logistics Planning",
-      "Inventory Management",
-      "Procurement Strategies",
-      "Transportation and Distribution",
-      "Supply Chain Technology",
-      "Global Supply Chain Trends",
-    ],
-    whyChooseThisCourse: {
-      title: "Why Certification in Logistics and Supply Chain",
-      description:
-        "This certification provides professionals with cutting-edge skills in supply chain management, preparing them for dynamic roles in logistics and global business operations.",
-      programStructure: [
-        "Theoretical Foundations",
-        "Practical Case Studies",
-        "Industry Project and Certification",
-      ],
-    },
-  },
-  // BCA Courses
-  "bca/cloud-computing-cyber-security": {
-    highlights: [
-      "Comprehensive cloud and cybersecurity skills",
-      "Hands-on technical training",
-      "Industry-relevant certifications",
-      "Cutting-edge technology exposure",
-      "Career-ready skill set",
-    ],
-    curriculum: [
-      "Cloud Computing Fundamentals",
-      "Cybersecurity Principles",
-      "Network Security",
-      "Cloud Infrastructure",
-      "Ethical Hacking",
-      "Data Protection Strategies",
-      "Emerging Tech in Cloud Security",
-    ],
-    whyChooseThisCourse: {
-      title: "Why BCA in Cloud Computing & Cyber Security",
-      description:
-        "Our BCA program specializing in Cloud Computing and Cyber Security prepares students for the most in-demand tech careers, combining cloud technologies with robust security expertise.",
-      programStructure: [
-        "Foundational Computer Science Modules",
-        "Specialized Cloud and Security Courses",
-        "Practical Projects and Internships",
-      ],
-    },
-  },
-};
+const courseDetailsMap = courseDetailsData.courses;
 
 const Page = ({ params }: { params: { program: string; slug: string } }) => {
   let courses: any[] = [];
@@ -195,8 +90,7 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
   const additionalDetails = courseDetailsMap[
     `${params.program}/${params.slug}`
   ] || {
-    highlights: [],
-    curriculum: [],
+    whyChooseThisCourse: null,
   };
 
   // If no course found, return not found
@@ -266,110 +160,350 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
         </h1>
       </section>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Course Image */}
-          <div className="relative w-full h-[400px]">
-            <Image
-              src={course.image}
-              alt={`${params.program.toUpperCase()} in ${course.title}`}
-              fill
-              className="object-cover rounded-lg shadow-lg"
-            />
-          </div>
-
-          {/* Course Details */}
-          <div>
-            <Card>
-              <CardHeader>
-                <CardTitle>Course Overview</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Duration:</span>
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Fee:</span>
-                    <span>{course.fee}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Admission Status:</span>
-                    <span className="text-green-600">
-                      {course.admissionStatus}
-                    </span>
-                  </div>
-                  {course.eligibility && (
-                    <div className="flex justify-between">
-                      <span className="font-semibold">Eligibility:</span>
-                      <span>{course.eligibility}</span>
-                    </div>
-                  )}
-                </div>
-                <Button className="w-full mt-6" variant="default">
-                  Apply Now
-                </Button>
-              </CardContent>
-            </Card>
+      <section className="container-fluid px-0 py-0 bg-white">
+        <div className="relative w-full h-[70vh] overflow-hidden">
+          <Image
+            src={course.image}
+            alt={`${params.program.toUpperCase()} in ${course.title}`}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-center w-full h-full"
+            style={{
+              filter: "brightness(0.8)", // Slightly darken the image
+            }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center text-center">
+            <div className="bg-black/40 p-6 rounded-lg">
+              <h1 className="text-4xl md:text-5xl font-bold text-white">
+                {params.program.toUpperCase()} in {course.title}
+              </h1>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Course Highlights */}
-        <section className="mt-12">
-          <h2 className="text-3xl font-bold mb-6">Course Highlights</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {additionalDetails.highlights.map(
-              (highlight: string, index: number) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <Check className="text-green-500" />
-                  <span>{highlight}</span>
-                </div>
-              )
-            )}
-          </div>
-        </section>
-
-        {/* Curriculum */}
-        <section className="mt-12">
-          <h2 className="text-3xl font-bold mb-6">Curriculum</h2>
-          <div className="grid md:grid-cols-2 gap-4 bg-gray-50 p-6 rounded-lg">
-            {additionalDetails.curriculum.map(
-              (subject: string, index: number) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <Check className="text-blue-500" />
-                  <span>{subject}</span>
-                </div>
-              )
-            )}
-          </div>
-        </section>
-
-        {/* Why Choose This Course */}
-        {additionalDetails.whyChooseThisCourse && (
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold mb-6">
-              {additionalDetails.whyChooseThisCourse.title}
+      <section className="container mx-auto px-4 py-12 bg-white">
+        <div className="grid md:grid-cols-1 gap-8 items-center">
+          <div className="space-y-6 w-full">
+            <h2 className="text-3xl font-bold">
+              {additionalDetails.whyChooseThisCourse?.title ||
+                `${params.program.toUpperCase()} in ${course.title}`}
             </h2>
-            <p className="text-lg mb-6">
-              {additionalDetails.whyChooseThisCourse.description}
+
+            <div className="space-y-4 text-gray-700">
+              <p>
+                {params.program.toUpperCase()} is one of the most popular and
+                sought-after bachelor's degree programs pursued by students
+                after Grade 12. The {params.program.toUpperCase()} with
+                specialization in {course.title}
+                offers students the skills and knowledge needed to understand
+                core business processes, people management, and strategies. The
+                program will equip the learner with the expertise needed to
+                excel in the dynamic world of business and operations.
+              </p>
+
+              <p>
+                The first year of the degree will lay the foundations of
+                management, business economics, business communication, and
+                accounting. In the second year of the program, you will learn
+                Operations-specific skills and knowledge. In the final semester,
+                the learners will complete the mandatory Dissertation project,
+                which provides firsthand experience in the business world.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <Link href="/contact" className="w-full block">
+                <Button className="w-full" variant="default" size="lg">
+                  Get the Course
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Curriculum Section */}
+      {additionalDetails.curriculum && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-center">
+              Curriculum Structure
+            </h2>
+            <p className="text-center text-gray-600 mt-4">
+              Comprehensive semester-wise breakdown of the program
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+            {additionalDetails.curriculum.map(
+              (semester: any, index: number) => (
+                <AccordionItem
+                  value={`semester-${semester.semester}`}
+                  key={index}
+                >
+                  <AccordionTrigger>
+                    <div className="flex items-center">
+                      <span className="mr-4 text-xl font-semibold text-primary">
+                        Semester {semester.semester}
+                      </span>
+                      <span className="text-gray-600">{semester.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
+                      {semester.subjects.map(
+                        (subject: string, subIndex: number) => (
+                          <div
+                            key={subIndex}
+                            className="flex items-center space-x-2"
+                          >
+                            <Check className="text-green-500 w-5 h-5" />
+                            <span>{subject}</span>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            )}
+          </Accordion>
+        </section>
+      )}
+
+      {/* Career Prospects Section */}
+      {additionalDetails.careerProspects && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-center">
+              {additionalDetails.careerProspects.title}
+            </h2>
+            <p className="text-center text-gray-600 mt-4">
+              {additionalDetails.careerProspects.description}
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+            {Object.entries(additionalDetails.careerProspects.careerLevels).map(
+              ([level, data], index) => (
+                <AccordionItem value={`career-${level}`} key={index}>
+                  <AccordionTrigger>
+                    <div className="flex items-center">
+                      <span className="mr-4 text-xl font-semibold text-primary capitalize">
+                        {level} Level
+                      </span>
+                      <span className="text-gray-600">{data.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="grid md:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg">
+                      {data.roles.map((role: string, roleIndex: number) => (
+                        <div
+                          key={roleIndex}
+                          className="flex items-center space-x-2"
+                        >
+                          <Check className="text-green-500 w-5 h-5" />
+                          <span>{role}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            )}
+          </Accordion>
+        </section>
+      )}
+
+      {/* Career Services Section */}
+      {additionalDetails.careerServices && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              {additionalDetails.careerServices.title}
+            </h2>
+            <p className="text-gray-600 mb-8">
+              {additionalDetails.careerServices.description}
             </p>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Program Structure</h3>
-              <ul className="list-disc list-inside space-y-2">
-                {additionalDetails.whyChooseThisCourse.programStructure.map(
-                  (item: string, index: number) => (
-                    <li key={index} className="text-base">
-                      {item}
-                    </li>
-                  )
-                )}
-              </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              {additionalDetails.careerServices.services.map(
+                (service: string, index: number) => (
+                  <div
+                    key={index}
+                    className="bg-gray-100 p-6 rounded-lg flex items-center space-x-4 hover:bg-gray-200 transition-colors"
+                  >
+                    <Check className="text-green-500 w-6 h-6 flex-shrink-0" />
+                    <span className="text-gray-800 text-lg">{service}</span>
+                  </div>
+                )
+              )}
             </div>
-          </section>
-        )}
-      </div>
+          </div>
+        </section>
+      )}
+
+      {/* Fees and Financing Section */}
+      {additionalDetails.feesAndFinancing && (
+        <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                {additionalDetails.feesAndFinancing.title}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                {additionalDetails.feesAndFinancing.description}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {additionalDetails.feesAndFinancing.options.map(
+                (option: any, index: number) => (
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-gray-100"
+                  >
+                    <div className="flex items-center mb-6">
+                      <div className="bg-green-100 text-green-600 p-3 rounded-full mr-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-8 w-8"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          {index === 0 ? (
+                            // EMI Plan Icon
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                          ) : (
+                            // Semester Fee Icon
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                            />
+                          )}
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        {option.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-base leading-relaxed">
+                      {option.details}
+                    </p>
+                  </div>
+                )
+              )}
+            </div>
+
+            <div className="text-center mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+                Explore Payment Options
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Opportunities and Advantages Section */}
+      <section className="container mx-auto px-4 py-12 bg-gray-50">
+        <div className="grid md:grid-cols-3 gap-6">
+          {additionalDetails.opportunities?.map((opportunity, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle>{opportunity.title}</CardTitle>
+                <CardDescription>{opportunity.cardDescription}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  {opportunity.description} (Source: {opportunity.source})
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Faculty Section */}
+      {additionalDetails.faculties && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Meet Our Faculty</h2>
+            <p className="text-gray-600 mb-8">
+              Our faculty members are experts in their fields and are dedicated
+              to providing students with a world-class education.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {additionalDetails.faculties.map(
+                (faculty: any, index: number) => (
+                  <div
+                    key={index}
+                    className="bg-gray-100 p-6 rounded-lg flex items-center space-x-4 hover:bg-gray-200 transition-colors"
+                  >
+                    <Image
+                      src={faculty.image}
+                      alt={faculty.name}
+                      width={60}
+                      height={60}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800">
+                        {faculty.name}
+                      </h3>
+                      <p className="text-gray-600">{faculty.designation}</p>
+                      <p className="text-gray-600">{faculty.expertise}</p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs Section */}
+      {additionalDetails.faqs && (
+        <section className="container mx-auto px-4 py-12 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Get answers to common questions about the program
+            </p>
+
+            <Accordion type="single" collapsible className="w-full">
+              {additionalDetails.faqs.map((faq: any, index: number) => (
+                <AccordionItem value={`faq-${index}`} key={index}>
+                  <AccordionTrigger>
+                    <div className="flex items-center">
+                      <span className="mr-4 text-xl font-semibold text-primary">
+                        {faq.question}
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="p-4 bg-gray-50 rounded-lg">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

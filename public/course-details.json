@@ -1,0 +1,780 @@
+{
+  "courses": {
+    "bba/operations-management": {
+      "whyChooseThisCourse": {
+        "title": "Why BBA in Operations Management",
+        "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
+        "programStructure": [
+          "First Year: Foundations of management, business economics, business communication, and accounting",
+          "Second Year: Operations-specific skills and knowledge",
+          "Final Semester: Mandatory Dissertation project"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "A Booming Sector",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub.",
+          "source": "India Brand Equity Foundation",
+          "cardDescription": "Growth & Promising Opportunities"
+        },
+        {
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives.",
+          "source": "India Brand Equity Foundation",
+          "cardDescription": "Skill Development"
+        },
+        {
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals.",
+          "source": "India Brand Equity Foundation",
+          "cardDescription": "Career Advantage"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundation of Management",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Business Communication",
+            "Accounting Fundamentals",
+            "Mathematics for Business"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Business Dynamics",
+          "subjects": [
+            "Organizational Behavior",
+            "Marketing Management",
+            "Financial Accounting",
+            "Business Statistics",
+            "Computer Applications"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Operations Fundamentals",
+          "subjects": [
+            "Production and Operations Management",
+            "Cost Accounting",
+            "Business Law",
+            "Managerial Economics",
+            "Research Methodology"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Advanced Operations",
+          "subjects": [
+            "Supply Chain Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Business Intelligence",
+            "Operations Strategy"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Strategic Management",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "International Business",
+            "Entrepreneurship",
+            "Operations Research"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Junior Operations Coordinator",
+              "Business Support Associate",
+              "Supply Chain Trainee",
+              "Operations Data Analyst",
+              "Procurement Assistant"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 25,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Rajesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/rajesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Anita Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/anita-sharma.jpg"
+        },
+        {
+          "name": "Dr. Vikram Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/vikram-singh.jpg"
+        },
+        {
+          "name": "Ms. Priya Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/priya-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Coordinator, Supply Chain Analyst, Business Consultant, and Procurement Specialist in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a business background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in business operations. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core business concepts."
+        },
+        {
+          "question": "What makes this BBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BBA in Operations Management program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of business operations."
+        }
+      ]
+    },
+    "mba/operations-management": {
+      "whyChooseThisCourse": {
+        "title": "Why MBA in Operations Management",
+        "description": "MBA in Operations Management is a 2-year postgraduate degree program that equips students with the skills and knowledge required to manage and optimize business operations, supply chains, and logistics.",
+        "programStructure": [
+          "First Year: Core management courses and operations-specific skills",
+          "Second Year: Specialization in operations management and industry projects"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "High Demand",
+          "description": "Operations management professionals are in high demand across various industries, including manufacturing, retail, logistics, and consulting.",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career Growth",
+          "description": "MBA in Operations Management can lead to career growth and higher salary potential, with median salaries ranging from INR 8-15 lakhs per annum.",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Industry Recognition",
+          "description": "Our MBA in Operations Management program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Core Management Courses",
+          "subjects": [
+            "Principles of Management",
+            "Marketing Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Operations Management"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Operations Management Specialization",
+          "subjects": [
+            "Supply Chain Management",
+            "Logistics and Transportation Management",
+            "Operations Strategy",
+            "Quality Management",
+            "Project Management"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Industry Projects and Electives",
+          "subjects": [
+            "Industry Project",
+            "Elective 1: Business Analytics",
+            "Elective 2: Digital Marketing",
+            "Elective 3: Entrepreneurship"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Operations Coordinator",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Manager",
+              "Business Development Manager",
+              "Procurement Manager",
+              "Logistics Manager"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 50,000 per semester (total 4 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Ramesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/ramesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Suresh Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/suresh-sharma.jpg"
+        },
+        {
+          "name": "Dr. Ravi Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/ravi-singh.jpg"
+        },
+        {
+          "name": "Ms. Ritu Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/ritu-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing MBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Manager, Supply Chain Manager, Business Development Manager, and Procurement Manager in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without an operations background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in operations management. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core operations concepts."
+        },
+        {
+          "question": "What makes this MBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the MBA in Operations Management program?",
+          "answer": "The program is a 2-year full-time postgraduate degree, divided into 4 semesters, with a comprehensive curriculum covering various aspects of operations management."
+        }
+      ]
+    },
+    "certifications/logistics-and-supply-chain": {
+      "whyChooseThisCourse": {
+        "title": "Why Certification in Logistics and Supply Chain",
+        "description": "This certification program is designed to equip students with the skills and knowledge required to manage and optimize logistics and supply chain operations.",
+        "programStructure": [
+          "Module 1: Introduction to Logistics and Supply Chain",
+          "Module 2: Logistics and Supply Chain Management",
+          "Module 3: Supply Chain Analytics",
+          "Module 4: Logistics and Supply Chain Strategy"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "High Demand",
+          "description": "Logistics and supply chain professionals are in high demand across various industries, including manufacturing, retail, logistics, and consulting.",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career Growth",
+          "description": "This certification program can lead to career growth and higher salary potential, with median salaries ranging from INR 5-10 lakhs per annum.",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Industry Recognition",
+          "description": "Our certification program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "module": 1,
+          "title": "Introduction to Logistics and Supply Chain",
+          "topics": [
+            "Overview of Logistics and Supply Chain",
+            "Logistics and Supply Chain Management",
+            "Supply Chain Strategy",
+            "Logistics and Supply Chain Analytics"
+          ]
+        },
+        {
+          "module": 2,
+          "title": "Logistics and Supply Chain Management",
+          "topics": [
+            "Logistics and Supply Chain Operations",
+            "Inventory Management",
+            "Transportation Management",
+            "Warehouse Management"
+          ]
+        },
+        {
+          "module": 3,
+          "title": "Supply Chain Analytics",
+          "topics": [
+            "Supply Chain Data Analysis",
+            "Supply Chain Performance Metrics",
+            "Supply Chain Optimization Techniques"
+          ]
+        },
+        {
+          "module": 4,
+          "title": "Logistics and Supply Chain Strategy",
+          "topics": [
+            "Logistics and Supply Chain Strategy Development",
+            "Logistics and Supply Chain Implementation",
+            "Logistics and Supply Chain Monitoring and Control"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Logistics and Supply Chain",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Logistics Coordinator",
+              "Supply Chain Analyst",
+              "Operations Assistant",
+              "Procurement Assistant",
+              "Inventory Manager"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Logistics Manager",
+              "Supply Chain Manager",
+              "Operations Manager",
+              "Procurement Manager",
+              "Inventory Control Manager"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Logistics Manager",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Logistics Consultant",
+              "Enterprise Logistics Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 12 months."
+          },
+          {
+            "title": "Module-wise Fee",
+            "details": "Opt for our straightforward module-wise fee structure and pay just INR 15,000 per module (total 4 modules)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Suresh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Logistics and Supply Chain Management",
+          "image": "/faculty/suresh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Ramesh Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Analytics",
+          "image": "/faculty/ramesh-sharma.jpg"
+        },
+        {
+          "name": "Dr. Ravi Kumar",
+          "designation": "Associate Professor",
+          "expertise": "Logistics and Supply Chain Strategy",
+          "image": "/faculty/ravi-kumar.jpg"
+        },
+        {
+          "name": "Ms. Priya Singh",
+          "designation": "Industry Expert",
+          "expertise": "Logistics and Supply Chain Operations",
+          "image": "/faculty/priya-singh.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing Certification in Logistics and Supply Chain?",
+          "answer": "Graduates can pursue roles like Logistics Coordinator, Supply Chain Analyst, Operations Assistant, Procurement Assistant, and Inventory Manager in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a logistics background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in logistics and supply chain management. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core logistics and supply chain concepts."
+        },
+        {
+          "question": "What makes this certification program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in logistics and supply chain management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the Certification in Logistics and Supply Chain program?",
+          "answer": "The program is a 6-month certification program, divided into 4 modules, with a comprehensive curriculum covering various aspects of logistics and supply chain management."
+        }
+      ]
+    },
+    "bca/cloud-computing-cyber-security": {
+      "whyChooseThisCourse": {
+        "title": "Why BCA in Cloud Computing and Cyber Security",
+        "description": "BCA in Cloud Computing and Cyber Security is a 3-year undergraduate degree program that equips students with the skills and knowledge required to design, develop, and manage cloud-based systems and ensure their security.",
+        "programStructure": [
+          "First Year: Foundations of computer science, programming, and data structures",
+          "Second Year: Cloud computing and cyber security fundamentals",
+          "Final Year: Specialization in cloud computing and cyber security"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "High Demand",
+          "description": "Cloud computing and cyber security professionals are in high demand across various industries, including IT, finance, healthcare, and government.",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career Growth",
+          "description": "BCA in Cloud Computing and Cyber Security can lead to career growth and higher salary potential, with median salaries ranging from INR 6-12 lakhs per annum.",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Industry Recognition",
+          "description": "Our BCA in Cloud Computing and Cyber Security program is recognized by industry leaders and provides students with a competitive edge in the job market.",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundations of Computer Science",
+          "subjects": [
+            "Introduction to Computer Science",
+            "Programming Fundamentals",
+            "Data Structures",
+            "Discrete Mathematics",
+            "Computer Systems"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Programming and Data Structures",
+          "subjects": [
+            "Programming in Python",
+            "Data Structures and Algorithms",
+            "Computer Networks",
+            "Database Management Systems",
+            "Operating Systems"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Cloud Computing Fundamentals",
+          "subjects": [
+            "Introduction to Cloud Computing",
+            "Cloud Infrastructure",
+            "Cloud Security",
+            "Cloud Storage",
+            "Cloud Networking"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Cyber Security Fundamentals",
+          "subjects": [
+            "Introduction to Cyber Security",
+            "Network Security",
+            "Cryptography",
+            "Web Security",
+            "Cloud Security"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Cloud Computing and Cyber Security Specialization",
+          "subjects": [
+            "Cloud Computing Architecture",
+            "Cloud Security Architecture",
+            "Cyber Security Analytics",
+            "Cloud Computing and Cyber Security Project"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Cloud Computing and Cyber Security Capstone",
+            "Industry Internship",
+            "Advanced Cloud Computing and Cyber Security Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Cloud Computing and Cyber Security",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Cloud Computing Engineer",
+              "Cyber Security Analyst",
+              "Cloud Security Engineer",
+              "Network Security Engineer",
+              "Cloud Architect"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Cloud Computing Architect",
+              "Cyber Security Consultant",
+              "Cloud Security Consultant",
+              "Network Security Consultant",
+              "Cloud Security Architect"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Cloud Computing Architect",
+              "Senior Cyber Security Consultant",
+              "Senior Cloud Security Consultant",
+              "Senior Network Security Consultant",
+              "Senior Cloud Security Architect"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 30,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Ramesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Cloud Computing Architecture",
+          "image": "/faculty/ramesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Suresh Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Cyber Security",
+          "image": "/faculty/suresh-sharma.jpg"
+        },
+        {
+          "name": "Dr. Ravi Singh",
+          "designation": "Associate Professor",
+          "expertise": "Cloud Security",
+          "image": "/faculty/ravi-singh.jpg"
+        },
+        {
+          "name": "Ms. Ritu Patel",
+          "designation": "Industry Expert",
+          "expertise": "Network Security",
+          "image": "/faculty/ritu-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BCA in Cloud Computing and Cyber Security?",
+          "answer": "Graduates can pursue roles like Cloud Computing Engineer, Cyber Security Analyst, Cloud Security Engineer, Network Security Engineer, and Cloud Architect in various industries including IT, finance, healthcare, and government."
+        },
+        {
+          "question": "Is this program suitable for students without a technical background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in cloud computing and cyber security. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core technical concepts."
+        },
+        {
+          "question": "What makes this BCA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in cloud computing and cyber security."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading IT companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BCA in Cloud Computing and Cyber Security program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of cloud computing and cyber security."
+        }
+      ]
+    }
+  }
+}
