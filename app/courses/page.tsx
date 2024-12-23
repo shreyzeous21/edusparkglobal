@@ -1,5 +1,11 @@
 "use client";
 
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
 import AllCourses from "./_components/AllCourses";
@@ -110,21 +116,113 @@ const CoursesPage = () => {
           </span>
         </h1>
       </section>
-      <div className="flex max-w-6xl px-4 w-full mx-auto flex-col gap-10 py-8">
-        <Tabs defaultValue="All" className="w-full">
-          <TabsList className="w-full justify-start overflow-x-auto">
+      <div className="flex max-w-6xl px-4 w-full mx-auto gap-1 py-8">
+        <Tabs
+          defaultValue="All"
+          className="w-full lg:justify-start justify-center lg:mx-0 mx-auto flex lg:flex-row flex-col"
+        >
+          {/* Desktop View */}
+          <TabsList
+            className="
+              hidden 
+              lg:flex 
+              flex-col 
+              items-start 
+              bg-gray-100 
+              p-2 
+              rounded-lg 
+              w-64 
+              mr-8 
+              h-fit 
+              sticky 
+              top-[20vh] 
+              z-40
+            "
+          >
             {schools.map((school) => (
-              <TabsTrigger key={school} value={school}>
+              <TabsTrigger
+                key={school}
+                value={school}
+                className="
+                  w-full 
+                  text-left 
+                  px-4 
+                  py-2 
+                  rounded-md 
+                  data-[state=active]:bg-orange-500 
+                  data-[state=active]:text-white 
+                  hover:bg-gray-200 
+                  transition-colors 
+                  duration-300 
+                  mb-2
+                "
+              >
                 {school}
               </TabsTrigger>
             ))}
           </TabsList>
 
-          {schools.map((school) => (
-            <TabsContent key={school} value={school} className="space-y-6">
-              <AllCourses courses={getCoursesBySchool(school)} />
-            </TabsContent>
-          ))}
+          {/* Mobile View - Accordion */}
+          <Accordion 
+            type="single" 
+            collapsible 
+            defaultValue="All"
+            className="w-full lg:hidden"
+          >
+            <AccordionItem value="All">
+              <AccordionTrigger 
+                className="
+                  bg-orange-500 
+                  text-white 
+                  px-4 
+                  py-2 
+                  rounded-md 
+                  hover:bg-orange-600 
+                  transition-colors 
+                  duration-300
+                "
+              >
+                All Courses
+              </AccordionTrigger>
+              <AccordionContent>
+                <AllCourses courses={courseData} />
+              </AccordionContent>
+            </AccordionItem>
+
+            {schools.filter(school => school !== "All").map((school) => (
+              <AccordionItem key={school} value={school}>
+                <AccordionTrigger 
+                  className="
+                    bg-gray-100 
+                    px-4 
+                    py-2 
+                    rounded-md 
+                    hover:bg-gray-200 
+                    transition-colors 
+                    duration-300
+                  "
+                >
+                  {school}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <AllCourses courses={getCoursesBySchool(school)} />
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          {/* Desktop View - Tabs Content */}
+          <div className="hidden lg:flex-grow lg:block">
+            {schools.map((school) => (
+              <TabsContent 
+                key={school} 
+                value={school} 
+                className="space-y-6"
+              >
+                <AllCourses courses={getCoursesBySchool(school)} />
+              </TabsContent>
+            ))}
+          </div>
         </Tabs>
       </div>
     </div>
