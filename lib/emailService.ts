@@ -1,13 +1,6 @@
 "use client";
 
 import emailjs from '@emailjs/browser';
-
-// Configure EmailJS with your service details
-// emailjs.init({
-//   publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
-//   privateKey: process.env.EMAILJS_PRIVATE_KEY || '',
-// });
-
 export interface EnrollmentData {
   fullName: string;
   email: string;
