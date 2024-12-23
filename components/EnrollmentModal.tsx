@@ -13,6 +13,8 @@ import {
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X, ArrowRight } from "lucide-react";
 import { VisuallyHidden } from "./ui/VisuallyHiddenEnroll";
+import { sendEnrollmentEmail } from "@/lib/emailService";
+import { toast } from "sonner";
 
 // Import the components from Header
 const mbaComponents: { title: string; href: string }[] = [
@@ -194,13 +196,15 @@ export function EnrollmentModal() {
   const [selectedCollege, setSelectedCollege] = useState("");
   const [selectedProgram, setSelectedProgram] = useState("");
   const [availablePrograms, setAvailablePrograms] = useState<string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted");
-    setIsOpen(false);
-  };
+  // Form state
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    mobileNumber: "",
+    specialization: "",
+  });
 
   // Update available programs when college is selected
   const handleCollegeChange = (collegeValue: string) => {
@@ -212,6 +216,61 @@ export function EnrollmentModal() {
 
     // Reset program and specialization when college changes
     setSelectedProgram("");
+    setFormData((prev) => ({
+      ...prev,
+      specialization: "",
+    }));
+  };
+
+  // Handle input changes
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Validate form
+    if (!formData.fullName || !formData.email || !formData.mobileNumber) {
+      toast.error("Please fill in all required fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendEnrollmentEmail({
+        ...formData,
+        college: selectedCollege,
+        program: selectedProgram,
+        specialization: formData.specialization,
+      });
+
+      if (result.success) {
+        toast.success("Enrollment inquiry sent successfully!");
+        setIsOpen(false);
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          mobileNumber: "",
+          specialization: "",
+        });
+        setSelectedCollege("");
+        setSelectedProgram("");
+      } else {
+        toast.error("Failed to send enrollment inquiry. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -241,26 +300,38 @@ export function EnrollmentModal() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
+                name="fullName"
                 placeholder="Enter Full Name"
                 className="w-full border-gray-200"
+                value={formData.fullName}
+                onChange={handleInputChange}
                 required
               />
 
               <Input
+                name="email"
                 type="email"
                 placeholder="Enter Your Email"
                 className="w-full border-gray-200"
+                value={formData.email}
+                onChange={handleInputChange}
                 required
               />
 
               <Input
+                name="mobileNumber"
                 type="tel"
                 placeholder="Enter Mobile Number"
                 className="w-full border-gray-200"
+                value={formData.mobileNumber}
+                onChange={handleInputChange}
                 required
               />
 
-              <Select onValueChange={handleCollegeChange}>
+              <Select
+                onValueChange={handleCollegeChange}
+                value={selectedCollege}
+              >
                 <SelectTrigger className="w-full border-gray-200">
                   <SelectValue placeholder="Choose College" />
                 </SelectTrigger>
@@ -290,7 +361,16 @@ export function EnrollmentModal() {
                 </SelectContent>
               </Select>
 
-              <Select disabled={!selectedProgram}>
+              <Select
+                disabled={!selectedProgram}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    specialization: value,
+                  }))
+                }
+                value={formData.specialization}
+              >
                 <SelectTrigger className="w-full border-gray-200">
                   <SelectValue placeholder="Select Specialization" />
                 </SelectTrigger>
@@ -343,8 +423,9 @@ export function EnrollmentModal() {
               <Button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-6 mt-6"
+                disabled={isSubmitting}
               >
-                Submit Now
+                {isSubmitting ? "Submitting..." : "Submit Now"}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </form>
