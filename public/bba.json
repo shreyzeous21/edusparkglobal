@@ -416,5 +416,40 @@
       "schoolLogo": "/upes-logo.png",
       "link": "/upes-online/bca/data-analytics"
     }
+  ],
+  "mca_courses": [
+    {
+      "image": "/mca/aiml.png",
+      "title": "Artificial Intelligence & Machine Learning",
+      "duration": "24 Months",
+      "fee": "Rs 7,083/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mca/artificial-intelligence-and-machine-learning"
+    },
+    {
+      "image": "/mca/csf.png",
+      "title": "Cyber Security and Forensics",
+      "duration": "24 Months",
+      "fee": "Rs 7,083/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mca/cyber-security-and-forensics"
+    },
+    {
+      "image": "/mca/ds.png",
+      "title": "Data Science",
+      "duration": "24 Months",
+      "fee": "Rs 7,083/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "Graduation",
+      "school": "UPES Online",
+      "schoolLogo": "/upes-logo.png",
+      "link": "/upes-online/mca/data-science"
+    }
   ]
 }

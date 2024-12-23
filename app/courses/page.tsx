@@ -1,11 +1,9 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
 import AllCourses from "./_components/AllCourses";
 import Breadcrumb from "@/components/Breadcrumb";
-import Metadata from "next";
 
 interface Course {
   image: string;
@@ -30,6 +28,7 @@ interface CourseData {
   pg: Course[];
   certifications: Course[];
   bca_courses: Course[];
+  mca_courses: Course[];
 }
 
 const CoursesPage = () => {
@@ -40,6 +39,7 @@ const CoursesPage = () => {
     pg: [],
     certifications: [],
     bca_courses: [],
+    mca_courses: [],
   });
 
   const [schools, setSchools] = useState<string[]>(["All"]);
@@ -60,6 +60,7 @@ const CoursesPage = () => {
           ...data.pg,
           ...data.certifications,
           ...data.bca_courses,
+          ...data.mca_courses,
         ].forEach((course) => uniqueSchools.add(course.school));
         setSchools(["All", ...Array.from(uniqueSchools)]);
       } catch (error) {
@@ -83,6 +84,7 @@ const CoursesPage = () => {
       pg: filterBySchool(courseData.pg),
       certifications: filterBySchool(courseData.certifications),
       bca_courses: filterBySchool(courseData.bca_courses),
+      mca_courses: filterBySchool(courseData.mca_courses),
     };
   };
 

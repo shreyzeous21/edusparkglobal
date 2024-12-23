@@ -25,12 +25,28 @@ interface AllCoursesProps {
     pg: Course[];
     certifications: Course[];
     bca_courses: Course[];
+    mca_courses: Course[];
   };
 }
 
 const AllCourses = ({ courses }: AllCoursesProps) => {
   return (
     <div className="space-y-8">
+      {/* MCA Courses */}
+      {courses.mca_courses?.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-semibold">MCA Programs</h2>
+            <Separator className="flex-1" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {courses.mca_courses.map((course, index) => (
+              <CourseCard key={index} course={course} />
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* BCA Courses */}
       {courses.bca_courses?.length > 0 && (
         <div className="space-y-4">

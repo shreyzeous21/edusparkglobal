@@ -43,6 +43,9 @@ export async function generateMetadata({
     case "bca":
       courses = bbaCourses.bca_courses;
       break;
+    case "mca":
+      courses = bbaCourses.mca_courses;
+      break;
     default:
       courses = [];
   }
@@ -63,7 +66,7 @@ export async function generateMetadata({
 
 const courseDetailsMap = courseDetailsData.courses;
 
-const Page = ({ params }: { params: { program: string; slug: string } }) => {
+const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
   let courses: any[] = [];
   switch (params.program) {
     case "bba":
@@ -78,6 +81,9 @@ const Page = ({ params }: { params: { program: string; slug: string } }) => {
       break;
     case "bca":
       courses = bbaCourses.bca_courses;
+      break;
+    case "mca":
+      courses = bbaCourses.mca_courses;
       break;
     default:
       courses = [];
