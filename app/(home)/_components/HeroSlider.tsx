@@ -66,18 +66,18 @@ export default function HeroSlider() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="relative rounded-md mx-auto lg:h-[calc(100vh-4rem)] h-screen max-w-6xl w-full items-center justify-center group">
+                <div className="relative rounded-md mx-auto lg:h-[calc(100vh-4rem)] h-screen max-w-7xl w-full items-center justify-center group">
                   <Image
                     src={slide.image}
                     alt={slide.title}
                     fill
-                    className="object-cover"
+                    className="object-cover w-full"
                     priority={index === 0}
                   />
                   <div className="absolute inset-0">
                     <div className="relative h-full flex flex-col">
                       {/* Main Content */}
-                      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
+                      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-24 max-w-6xl mx-auto w-full">
                         <div className="max-w-4xl space-y-4 sm:space-y-6">
                           <motion.div
                             initial={{ opacity: 0, y: 20 }}
