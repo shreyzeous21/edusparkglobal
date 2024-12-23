@@ -138,7 +138,7 @@ export default function TestimonialsSection() {
                         ))}
                       </div>
                       <blockquote className="text-muted-foreground mb-6">
-                        {truncateText(testimonial.content, 500)}
+                        {truncateText(testimonial.content)}
                       </blockquote>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
