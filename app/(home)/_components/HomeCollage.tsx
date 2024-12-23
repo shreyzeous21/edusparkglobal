@@ -61,7 +61,7 @@ const HomeCollage = () => {
   }, []);
 
   return (
-    <div className="flex justify-center flex-col gap-8 items-center lg:px-0 px-4 mx-auto w-full py-12">
+    <div className="flex justify-center flex-col gap-8 items-center lg:px-0 px-4 mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ const HomeCollage = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="flex p-4 gap-4 flex-col items-center w-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border h-auto my-4  ">
+                  <Card className="flex p-4 gap-4 flex-col items-center w-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border h-auto ">
                     <Link href={college.link} className="w-full">
                       <img
                         src={college.image}
