@@ -98,99 +98,167 @@ const Footer = () => {
 
   // Footer links array
   const footerLinks: FooterLink[] = [
-    { text: "Privacy Policy", href: "/" },
+    { text: "Home", href: "/" },
+    { text: "About Us", href: "/about" },
+    { text: "Courses", href: "/courses" },
+    { text: "Blog", href: "/blog" },
+    { text: "Colleges", href: "/college" },
+    { text: "Contact Us", href: "/contact" },
+    { text: "Privacy Policy", href: "/p&p" },
     { text: "Terms of Use", href: "/terms" },
   ];
 
-  const cap: CapabilitiesSection[] = [
+  const mbaComponents: { title: string; href: string }[] = [
     {
-      title: "MBA",
-      links: [
-        { text: "ITE & Solutions Provider Partners", href: "/" },
-        { text: "ElectroSafe Fluid Partner Program", href: "/" },
-      ],
+      title: "Logistic And Supply Chain",
+      href: "/upes-online/mba/logistics-and-supply-chain",
+    },
+    {
+      title: "International Business",
+      href: "/upes-online/mba/international-business",
+    },
+    {
+      title: "Business Analytics",
+      href: "/upes-online/mba/business-analytics",
+    },
+    { title: "Digital Business", href: "/upes-online/mba/digital-business" },
+    { title: "Human Resource", href: "/upes-online/mba/human-resource" },
+    {
+      title: "Marketing Management",
+      href: "/upes-online/mba/marketing-management",
+    },
+    {
+      title: "Operations Management",
+      href: "/upes-online/mba/operations-management",
+    },
+    {
+      title: "Infrastructure Management",
+      href: "/upes-online/mba/infrastructure-management",
+    },
+    { title: "Oil And Gas", href: "/upes-online/mba/oil-and-gas" },
+    { title: "Power Management", href: "/upes-online/mba/power-management" },
+    {
+      title: "Financial Management",
+      href: "/upes-online/mba/finance-management",
     },
   ];
 
-  const ind: IndSection[] = [
+  const bbaComponents: { title: string; href: string }[] = [
     {
-      title: "Solutions",
-      links: [
-        { text: "AI and Machine Learning", href: "/" },
-        { text: "Blockchain Computing", href: "/" },
-        { text: "Enterprise / Cloud / Hyperscale", href: "/" },
-        { text: "Edge", href: "/" },
-        { text: "High-Performance Computing", href: "/" },
-      ],
+      title: "Operations Management",
+      href: "/upes-online/bba/operations-management",
     },
-  ];
-  const about: AboutSection[] = [
     {
-      title: "Products",
-      links: [
-        { text: "ICEraQ®", href: "/" },
-        { text: "ICEtank®", href: "/" },
-        { text: "HashRaQ® MAX", href: "/" },
-        { text: "HashTank®", href: "/" },
-        { text: "ElectroSafe® Fluids", href: "/" },
-        { text: "Systems Manager", href: "/" },
-        { text: "Server Compatibility", href: "/" },
-      ],
+      title: "Financial Management",
+      href: "/upes-online/bba/finance-management",
     },
-  ];
-  const res: ReSection[] = [
+    { title: "Human Resource", href: "/upes-online/bba/human-resource" },
     {
-      title: "Resources",
-      links: [
-        { text: "Support", href: "/" },
-        { text: "Blog Library", href: "/" },
-        { text: "Learning Center", href: "/" },
-        { text: "Contact", href: "/" },
-        { text: "Customer Login", href: "/" },
-      ],
+      title: "Marketing Management",
+      href: "/upes-online/bba/marketing-management",
     },
   ];
 
-  const careers: CareerSection[] = [
+  const mcaComponents: { title: string; href: string }[] = [
     {
-      title: "News",
-      href: "/",
-      subTitle: "News / Events",
-      links: [
-        {
-          region: "Events",
-          href: "/americas",
-        },
-        {
-          region: "Press",
-          href: "/asia-pacific",
-        },
-        {
-          region: "newsletter",
-          href: "/europe",
-        },
-      ],
+      title: "Artificial Intelligence And Machine Learning",
+      href: "/upes-online/mca/artificial-intelligence-and-machine-learning",
+    },
+    {
+      title: "Cyber Security And Forensics",
+      href: "/upes-online/mca/cyber-security-and-forensics",
+    },
+    { title: "Data Science", href: "/upes-online/mca/data-science" },
+  ];
+
+  const nursingComponents: { title: string; href: string }[] = [
+    {
+      title:
+        "Accelerated Bachelor of Nursing Program (Rochester Medical Center)",
+      href: "/nursing/rochester/accelerated-bachelor-of-nursing-program",
+    },
+    {
+      title:
+        "Accelerated Bachelor of Nursing Program (Oklahoma City University)",
+      href: "/nursing/oklahoma/accelerated-bachelor-of-nursing-program",
+    },
+    {
+      title: "Accelerated Bachelor of Nursing Program (MGH Institute)",
+      href: "/nursing/mgh/accelerated-bachelor-of-nursing-program",
     },
   ];
 
-  const globalPresence: GlobalSection[] = [
+  const bcaComponents: { title: string; href: string }[] = [
     {
-      title: "Company",
-      links: [
-        {
-          region: "About GRC",
-          href: "/",
-        },
-        {
-          region: "Our Team",
-          href: "/",
-        },
-        {
-          region: "Our Promise of Quality",
-          href: "/",
-        },
-      ],
+      title: "Cloud Computing & Cyber Security",
+      href: "/upes-online/bca/cloud-computing-and-cyber-security",
     },
+    {
+      title: "New Age Technology",
+      href: "/upes-online/bca/new-age-technology",
+    },
+    { title: "Data Analytics", href: "/upes-online/bca/data-analytics" },
+  ];
+  const graduationComponents: { title: string; href: string }[] = [
+    {
+      title: "Under Graduate Work-Integrated",
+      href: "/courses/under-graduate-work-integrated-program",
+    },
+    {
+      title: "Post Graduate Work-Integrated",
+      href: "/courses/post-graduate-work-integrated-program",
+    },
+  ];
+
+  const certifications: { title: string; href: string }[] = [
+    {
+      title: "Logistic & Supply Chain",
+      href: "/upes-online/certifications/logistics-and-supply-chain",
+    },
+    {
+      title: "Industrial Safety",
+      href: "/upes-online/certifications/industry-safety",
+    },
+    {
+      title: "Renewable Energy",
+      href: "/upes-online/certifications/renewable-energy",
+    },
+    {
+      title: "Human Resource",
+      href: "/upes-online/certifications/human-resource",
+    },
+    {
+      title: "Business Analytics",
+      href: "/upes-online/certifications/business-analytics",
+    },
+    {
+      title: "Marketing Management",
+      href: "/upes-online/certifications/marketing-management",
+    },
+    {
+      title: "Operations Management",
+      href: "/upes-online/certifications/operations-management",
+    },
+    {
+      title: "Financial Management",
+      href: "/upes-online/certifications/finance-management",
+    },
+    {
+      title: "Project Management",
+      href: "/upes-online/certifications/project-management",
+    },
+    {
+      title: "Air Business Management",
+      href: "/upes-online/certifications/air-business-management",
+    },
+  ];
+
+  const quickLinks: { title: string; href: string }[] = [
+    { title: "Home", href: "/" },
+    { title: "About Us", href: "/about" },
+    { title: "Blog", href: "/blog" },
+    { title: "Colleges", href: "/college" },
+    { title: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -199,17 +267,17 @@ const Footer = () => {
         {/* 1 - Home Link */}
         <hr className="font-semibold text-sm py-5" />
         {/* 2 - Capabilities Grid */}
-        <div className="grid grid-cols-1  lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-1  lg:grid-cols-5 gap-4 mb-6">
           {/* col 1 */}
-
           <div className="">
             <div className="flex flex-col w-full">
               <img src="/logo-footer.png" alt="" className="w-[15vw] h-auto" />
               <Separator />
               <div className="py-2 w-full flex gap-4  flex-col">
                 <p className="w-full text-sm">
-                  <strong>Bangalore:</strong> Chikkagubbi Main Rd, Chikkagubbi
-                  Village, Bengaluru, Karnataka 560077
+                  <strong>Bangalore:</strong> Guru Krupa, No 1, 6th Cross, Civil
+                  Aviation Road, Konena Agrahara, HAL Post Bangalore,
+                  Karnataka 560017
                 </p>
                 <p className="w-full text-sm">
                   <strong>Noida:</strong> 338, Tower C, Bhutani Cyber Park, Sec
@@ -221,7 +289,7 @@ const Footer = () => {
                 </Link>
                 <Link
                   href={"mailto:info@edusparkglobal.com"}
-                  className="text-black hover:text-orange-500 text-sm"
+                  className=" hover:text-orange-500 text-sm"
                 >
                   info@edusparkglobal.com
                 </Link>
@@ -229,148 +297,146 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* col 2 */}
-          {/* <div className="text-sm ">
-            {emp.map((emp, index) => (
-              <div key={index} className="mb-4 ">
-                <h1 className="mb-2 text-xl text-[#0b0a23]">{emp.title}</h1>
-                <ul>aaa
-                  {emp.links.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href}>
-                      <li className="">{link.text}</li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div> */}
-
-          {/* col 3 */}
-          <div className="text-sm ">
-            {ind.map((ind, index) => (
-              <div key={index} className="mb-4 ">
-                <h1 className="mb-2 text-xl font-bold">{ind.title}</h1>
-                <ul>
-                  {ind.links.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href}>
-                      <li className="hover:text-orange-600 gap-4">
-                        {link.text}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            <Separator />
-            {about.map((about, index) => (
-              <div key={index} className="mb-4 ">
-                <h1 className="mb-2 text-lg font-semibold">{about.title}</h1>
-                <ul>
-                  {about.links.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href}>
-                      <li className="text-sm gap-4 hover:text-orange-600">
-                        {link.text}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          {/* col 2 - MBA, MCA */}
+          <div className="text-sm">
+            <h1 className="mb-2 text-xl font-bold">Master's</h1>
+            <Separator className="mb-2" />
+            <div>
+              <h2 className="mb-1 text-xl font-semibold flex items-center gap-2">
+                MBA <Separator className="bg-white w-10" />
+              </h2>
+              <ul>
+                {mbaComponents.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+              <h2 className="mt-2 mb-1 text-xl font-semibold flex items-center gap-2">
+                MCA <Separator className="bg-white w-10" />
+              </h2>
+              <ul>
+                {mcaComponents.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* col 4 */}
-          <div className="text-sm ">
-            <Link
-              href={"/"}
-              className="font-bold hover:text-orange-600 text-lg"
-            >
-              Customers
-            </Link>
-            <Separator />
-            {/* partners */}
-            {cap.map((cap, index) => (
-              <div key={index} className="mb-4">
-                <h1 className="mb-2 font-semibold text-lg">{cap.title}</h1>
-                <ul>
-                  {cap.links.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href}>
-                      <li className="gap-3 hover:text-orange-600">
-                        {link.text}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            <Separator />
-            {res.map((res, index) => (
-              <div key={index} className="my-3">
-                <h1 className="mb-2 text-lg font-bold">{res.title}</h1>
-                <ul>
-                  {res.links.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href}>
-                      <li className="hover:text-orange-600 gap-3">
-                        {link.text}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          {/* col 3 - BBA, BCA */}
+          <div className="text-sm">
+            <h1 className="mb-2 text-xl font-bold">Bachelor's</h1>
+            <Separator className="mb-2" />
+            <div>
+              <h2 className="mb-1 text-xl flex items-center font-semibold gap-2">
+                BBA <Separator className="bg-white w-10" />
+              </h2>
+              <ul>
+                {bbaComponents.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+              <h2 className="mt-2 text-xl mb-1 flex items-center font-semibold gap-2">
+                BCA <Separator className="bg-white w-10" />
+              </h2>
+              <ul>
+                {bcaComponents.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* col 5 */}
-          <div className="text-sm ">
-            <div className="flex flex-col gap-4">
-              <div>
-                {careers.map((careers, index) => (
-                  <div key={index} className="mb-4 ">
-                    {/* <h1 className="mb-2 text-xl font-bold">{careers.title}</h1> */}
-                    <h2 className="mb-2 text-lg font-semibold">
-                      {careers.subTitle}
-                    </h2>
-                    <ul>
-                      {careers.links.map((link, linkIndex) => (
-                        <Link key={linkIndex} href={link.href}>
-                          <li className="hover:text-orange-600 gap-3">
-                            {link.region}
-                          </li>
-                        </Link>
-                      ))}
-                    </ul>
-                  </div>
+          {/* col 3 - Nursing */}
+          <div className="text-sm">
+            <h1 className="mb-2 text-xl font-bold">Nursing</h1>
+            <Separator className="mb-2" />
+            <ul>
+              {nursingComponents.map((component, index) => (
+                <Link key={index} href={component.href}>
+                  <li className="hover:text-orange-600 mb-1">
+                    {component.title}
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </div>
+
+          {/* col 4 - Certifications & Graduation & Quick Links */}
+          <div className="text-sm">
+            <h1 className="mb-2 text-xl font-bold">Learning Paths</h1>
+            <Separator className="mb-2" />
+            <div>
+              <h2 className="mb-1 text-xl flex items-center gap-2 font-semibold">Graduation <Separator className="bg-white w-10" /></h2>
+              <ul>
+                {graduationComponents.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
                 ))}
-                <Separator />
-              </div>
-              <div className="">
-                {globalPresence.map((globalPresence, index) => (
-                  <div key={index} className="mb-4">
-                    <h1 className="mb-2 font-semibold text-lg">
-                      {globalPresence.title}
-                    </h1>
-                    <ul>
-                      {globalPresence.links.map((link, linkIndex) => (
-                        <Link key={linkIndex} href={link.href}>
-                          <li className="gap-3 hover:text-orange-600">
-                            {link.region}
-                          </li>
-                        </Link>
-                      ))}
-                    </ul>
-                  </div>
+              </ul>
+              <h2 className="mt-2 mb-1 text-xl gap-2 flex items-center font-semibold">
+                Certifications <Separator className="bg-white w-10" />
+              </h2>
+              <ul>
+                {certifications.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
                 ))}
-                {/* <Separator/> */}
-              </div>
+              </ul>
+              {/* <h2 className="mt-2 mb-1 font-semibold">Quick Links</h2>
+              <ul>
+                {quickLinks.map((component, index) => (
+                  <Link key={index} href={component.href}>
+                    <li className="hover:text-orange-600 mb-1">
+                      {component.title}
+                    </li>
+                  </Link>
+                ))}
+              </ul> */}
             </div>
           </div>
         </div>
+
         {/* 2 - Capabilities Grid */}
-        <div className="mt-10 text-sm flex justify-center flex-col">
-          <p className="text-white text-center">
-            EduSpark Global Makes Learning An Exciting Journey Of Discovery And
-            Growth. At Eduspark Global, we are dedicated to revolutionizing
-            education through innovative technology and a commitment to
-            excellence.
+        <div className="flex flex-col gap-5 text-sm py-4 text-center justify-center ">
+          <p className="text-white">
+            <strong>EduSpark Global</strong> Makes Learning An Exciting Journey
+            Of Discovery And Growth. At Eduspark Global, we are dedicated to
+            revolutionizing education through innovative technology and a
+            commitment to excellence. Our goal is to empower professionals and
+            lifelong learners with cutting-edge educational opportunities that
+            drive career advancement and personal growth. Founded by a team of
+            passionate Edtech leaders, we believe in the power of customized
+            learning to unlock every student's potential.
+          </p>
+          <p>
+            Our courses are designed to be flexible, allowing you to study at
+            your own pace with support from industry-leading experts. Whether
+            you're looking to advance in Business Analytics, Human Resources,
+            Marketing, or other fields, EduSpark Global offers tailored learning
+            solutions to meet your needs. With live classes, recorded video
+            content, and placement assistance, we ensure that every learner has
+            the opportunity to succeed.
           </p>
         </div>
 
@@ -407,7 +473,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center flex-row gap-2 text-center py-4">
             <p>
-              © 2024{" "}
+              &copy; 2024{" "}
               <Link href={"/"} className="text-orange-600">
                 EduSpark Global
               </Link>

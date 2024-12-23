@@ -29,6 +29,7 @@ interface CourseData {
   certifications: Course[];
   bca_courses: Course[];
   mca_courses: Course[];
+  nursing: Course[];
 }
 
 const CoursesPage = () => {
@@ -40,6 +41,7 @@ const CoursesPage = () => {
     certifications: [],
     bca_courses: [],
     mca_courses: [],
+    nursing: [],
   });
 
   const [schools, setSchools] = useState<string[]>(["All"]);
@@ -61,6 +63,7 @@ const CoursesPage = () => {
           ...data.certifications,
           ...data.bca_courses,
           ...data.mca_courses,
+          ...data.nursing,
         ].forEach((course) => uniqueSchools.add(course.school));
         setSchools(["All", ...Array.from(uniqueSchools)]);
       } catch (error) {
@@ -85,6 +88,7 @@ const CoursesPage = () => {
       certifications: filterBySchool(courseData.certifications),
       bca_courses: filterBySchool(courseData.bca_courses),
       mca_courses: filterBySchool(courseData.mca_courses),
+      nursing: filterBySchool(courseData.nursing),
     };
   };
 

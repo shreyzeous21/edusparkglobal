@@ -33,30 +33,81 @@ const mbaComponents: { title: string; href: string }[] = [
   },
   {
     title: "International Business",
-    href: "/courses/mba/international-business",
+    href: "/upes-online/mba/international-business",
   },
-  { title: "Business Analytics", href: "/courses/mba/business-analytics" },
-  { title: "Digital Business", href: "/courses/mba/digital-business" },
-  { title: "Human Resource", href: "/courses/mba/human-resource" },
-  { title: "Marketing Management", href: "/courses/mba/marketing" },
-  { title: "Operations Management", href: "/courses/mba/operations" },
-  { title: "Infrastructure Management", href: "/courses/mba/infrastructure" },
-  { title: "Oil And Gas", href: "/courses/mba/oil-and-gas" },
-  { title: "Power Management", href: "/courses/mba/power" },
-  { title: "Financial Management", href: "/courses/mba/finance" },
+  { title: "Business Analytics", href: "/upes-online/mba/business-analytics" },
+  { title: "Digital Business", href: "/upes-online/mba/digital-business" },
+  { title: "Human Resource", href: "/upes-online/mba/human-resource" },
+  {
+    title: "Marketing Management",
+    href: "/upes-online/mba/marketing-management",
+  },
+  {
+    title: "Operations Management",
+    href: "/upes-online/mba/operations-management",
+  },
+  {
+    title: "Infrastructure Management",
+    href: "/upes-online/mba/infrastructure-management",
+  },
+  { title: "Oil And Gas", href: "/upes-online/mba/oil-and-gas" },
+  { title: "Power Management", href: "/upes-online/mba/power-management" },
+  {
+    title: "Financial Management",
+    href: "/upes-online/mba/finance-management",
+  },
 ];
 
 const bbaComponents: { title: string; href: string }[] = [
-  { title: "Operations Management", href: "/courses/bba/operations" },
-  { title: "Financial Management", href: "/courses/bba/finance" },
-  { title: "Human Resource", href: "/courses/bba/hr" },
-  { title: "Marketing Management", href: "/courses/bba/marketing" },
+  {
+    title: "Operations Management",
+    href: "/upes-online/bba/operations-management",
+  },
+  {
+    title: "Financial Management",
+    href: "/upes-online/bba/finance-management",
+  },
+  { title: "Human Resource", href: "/upes-online/bba/human-resource" },
+  {
+    title: "Marketing Management",
+    href: "/upes-online/bba/marketing-management",
+  },
+];
+
+const mcaComponents: { title: string; href: string }[] = [
+  {
+    title: "Artificial Intelligence And Machine Learning",
+    href: "/upes-online/mca/artificial-intelligence-and-machine-learning",
+  },
+  {
+    title: "Cyber Security And Forensics",
+    href: "/upes-online/mca/cyber-security-and-forensics",
+  },
+  { title: "Data Science", href: "/upes-online/mca/data-science" },
+];
+
+const nursingComponents: { title: string; href: string }[] = [
+  {
+    title: "Accelerated Bachelor of Nursing Program (Rochester Medical Center)",
+    href: "/nursing/rochester/accelerated-bachelor-of-nursing-program",
+  },
+  {
+    title: "Accelerated Bachelor of Nursing Program (Oklahoma City University)",
+    href: "/nursing/oklahoma/accelerated-bachelor-of-nursing-program",
+  },
+  {
+    title: "Accelerated Bachelor of Nursing Program (MGH Institute)",
+    href: "/nursing/mgh/accelerated-bachelor-of-nursing-program",
+  },
 ];
 
 const bcaComponents: { title: string; href: string }[] = [
-  { title: "Cloud Computing & Cyber Security", href: "/courses/bca/cloud" },
-  { title: "New Age Technology", href: "/courses/bca/new-tech" },
-  { title: "Data Analytics", href: "/courses/bca/data-analytics" },
+  {
+    title: "Cloud Computing & Cyber Security",
+    href: "/upes-online/bca/cloud-computing-and-cyber-security",
+  },
+  { title: "New Age Technology", href: "/upes-online/bca/new-age-technology" },
+  { title: "Data Analytics", href: "/upes-online/bca/data-analytics" },
 ];
 const graduationComponents: { title: string; href: string }[] = [
   {
@@ -70,16 +121,46 @@ const graduationComponents: { title: string; href: string }[] = [
 ];
 
 const certifications: { title: string; href: string }[] = [
-  { title: "Logistic & Supply Chain", href: "/certifications/logistics" },
-  { title: "Industrial Safety", href: "/certifications/safety" },
-  { title: "Renewable Energy", href: "/certifications/energy" },
-  { title: "Human Resource", href: "/certifications/hr" },
-  { title: "Business Analytics", href: "/certifications/analytics" },
-  { title: "Marketing Management", href: "/certifications/marketing" },
-  { title: "Operations Management", href: "/certifications/operations" },
-  { title: "Financial Management", href: "/certifications/finance" },
-  { title: "Project Management", href: "/certifications/project" },
-  { title: "Air Business Management", href: "/certifications/air-business" },
+  {
+    title: "Logistic & Supply Chain",
+    href: "/upes-online/certifications/logistics-and-supply-chain",
+  },
+  {
+    title: "Industrial Safety",
+    href: "/upes-online/certifications/industry-safety",
+  },
+  {
+    title: "Renewable Energy",
+    href: "/upes-online/certifications/renewable-energy",
+  },
+  {
+    title: "Human Resource",
+    href: "/upes-online/certifications/human-resource",
+  },
+  {
+    title: "Business Analytics",
+    href: "/upes-online/certifications/business-analytics",
+  },
+  {
+    title: "Marketing Management",
+    href: "/upes-online/certifications/marketing-management",
+  },
+  {
+    title: "Operations Management",
+    href: "/upes-online/certifications/operations-management",
+  },
+  {
+    title: "Financial Management",
+    href: "/upes-online/certifications/finance-management",
+  },
+  {
+    title: "Project Management",
+    href: "/upes-online/certifications/project-management",
+  },
+  {
+    title: "Air Business Management",
+    href: "/upes-online/certifications/air-business-management",
+  },
 ];
 
 const scrollbarStyles = `
@@ -97,6 +178,14 @@ const scrollbarStyles = `
     border: transparent;
   }
 `;
+
+const highlightBrackets = (text: string) => {
+  return text.replace(
+    /\(([^)]+)\)/g,
+    (match, p1) =>
+      `(${p1 ? `<span class=" text-orange-800 ">${p1}</span>` : match})`
+  );
+};
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -178,7 +267,13 @@ export function Header() {
                                           onClick={() => setIsOpen(false)}
                                         >
                                           <Link href={component.href}>
-                                            {component.title}
+                                            <div
+                                              dangerouslySetInnerHTML={{
+                                                __html: highlightBrackets(
+                                                  component.title
+                                                ),
+                                              }}
+                                            />
                                           </Link>
                                         </Button>
                                       </li>
@@ -199,7 +294,13 @@ export function Header() {
                                           onClick={() => setIsOpen(false)}
                                         >
                                           <Link href={component.href}>
-                                            {component.title}
+                                            <div
+                                              dangerouslySetInnerHTML={{
+                                                __html: highlightBrackets(
+                                                  component.title
+                                                ),
+                                              }}
+                                            />
                                           </Link>
                                         </Button>
                                       </li>
@@ -220,7 +321,13 @@ export function Header() {
                                           onClick={() => setIsOpen(false)}
                                         >
                                           <Link href={component.href}>
-                                            {component.title}
+                                            <div
+                                              dangerouslySetInnerHTML={{
+                                                __html: highlightBrackets(
+                                                  component.title
+                                                ),
+                                              }}
+                                            />
                                           </Link>
                                         </Button>
                                       </li>
@@ -243,7 +350,13 @@ export function Header() {
                                           onClick={() => setIsOpen(false)}
                                         >
                                           <Link href={component.href}>
-                                            {component.title}
+                                            <div
+                                              dangerouslySetInnerHTML={{
+                                                __html: highlightBrackets(
+                                                  component.title
+                                                ),
+                                              }}
+                                            />
                                           </Link>
                                         </Button>
                                       </li>
@@ -326,12 +439,7 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent">
-                <Link
-                  href="/courses"
-                  legacyBehavior
-                  passHref
-                  className=""
-                >
+                <Link href="/courses" legacyBehavior passHref className="">
                   Courses
                 </Link>
               </NavigationMenuTrigger>
@@ -346,7 +454,11 @@ export function Header() {
                           href={component.href}
                           className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
-                          {component.title}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
                         </Link>
                       ))}
                     </div>
@@ -360,7 +472,11 @@ export function Header() {
                           href={component.href}
                           className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
-                          {component.title}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
                         </Link>
                       ))}
                     </div>
@@ -372,7 +488,11 @@ export function Header() {
                           href={component.href}
                           className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
-                          {component.title}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
                         </Link>
                       ))}
                     </div>
@@ -386,7 +506,11 @@ export function Header() {
                           href={component.href}
                           className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
-                          {component.title}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
                         </Link>
                       ))}
                     </div>
@@ -400,24 +524,47 @@ export function Header() {
                           href={component.href}
                           className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
                         >
-                          {component.title}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
                         </Link>
                       ))}
                     </div>
                   </div>
-                  <div className="row-span-3">
-                    <div className="relative h-full w-full">
-                      <Image
-                        src="/ad.jpg"
-                        alt="Featured Course"
-                        fill
-                        className="object-cover  rounded-lg"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0 rounded-lg" />
-                      <div className="absolute bottom-4 left-4 right-4 text-white">
-                        <h3 className="font-bold">Featured Course</h3>
-                        <p className="text-sm">Explore our top programs</p>
-                      </div>
+                  <div className="space-y-3">
+                    <h4 className="font-medium leading-none">MCA</h4>
+                    <div className="space-y-3">
+                      {mcaComponents.map((component) => (
+                        <Link
+                          key={component.title}
+                          href={component.href}
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
+                        </Link>
+                      ))}
+                    </div>
+                    <h4 className="font-medium leading-none">Nursing</h4>
+                    <div className="space-y-3">
+                      {nursingComponents.map((component) => (
+                        <Link
+                          key={component.title}
+                          href={component.href}
+                          className="block text-sm leading-none text-muted-foreground hover:text-orange-600"
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: highlightBrackets(component.title),
+                            }}
+                          />
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>

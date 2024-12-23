@@ -26,6 +26,7 @@ interface AllCoursesProps {
     certifications: Course[];
     bca_courses: Course[];
     mca_courses: Course[];
+    nursing: Course[];
   };
 }
 
@@ -131,6 +132,21 @@ const AllCourses = ({ courses }: AllCoursesProps) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courses.certifications.map((course, index) => (
+              <CourseCard key={index} course={course} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Nursing Courses */}
+      {courses.nursing?.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-semibold">Nursing Programs</h2>
+            <Separator className="flex-1" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {courses.nursing.map((course, index) => (
               <CourseCard key={index} course={course} />
             ))}
           </div>

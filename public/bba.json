@@ -451,5 +451,40 @@
       "schoolLogo": "/upes-logo.png",
       "link": "/upes-online/mca/data-science"
     }
+  ],
+  "nursing": [
+    {
+      "image": "/nursing/r.jpg",
+      "title": "Accelerated  Bachelor of Nursing Program",
+      "duration": "12 Months",
+      "fee": "$ 5,685.83/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "University MRC",
+      "schoolLogo": "/r-logo.svg",
+      "link": "/nursing/rochester/accelerated-bachelor-of-nursing-program"
+    },
+    {
+      "image": "/nursing/o.jpg",
+      "title": "Accelerated  Bachelor of Nursing Program",
+      "duration": "12 Months",
+      "fee": "$ 3,963/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "OC University",
+      "schoolLogo": "/o-logo.png",
+      "link": "/nursing/oklahoma/accelerated-bachelor-of-nursing-program"
+    },
+    {
+      "image": "/nursing/mgh.webp",
+      "title": "Accelerated  Bachelor of Nursing Program",
+      "duration": "12 Months",
+      "fee": "$ 5,685/-",
+      "admissionStatus": "Admission Started",
+      "eligibility": "10+2",
+      "school": "MGH Institute",
+      "schoolLogo": "/mgh-logo.png",
+      "link": "/nursing/mgh/accelerated-bachelor-of-nursing-program"
+    }
   ]
 }

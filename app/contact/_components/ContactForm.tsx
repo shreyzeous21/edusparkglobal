@@ -20,8 +20,7 @@ const ContactForm = () => {
               </h4>
               <Separator />
               <p className="text-sm ml-2 text-gray-600">
-                <strong>Banglore:</strong> Chikkagubbi Main Rd, Chikkagubbi
-                Village, Bengaluru, Karnataka 560077
+                <strong>Banglore:</strong> Guru Krupa, No 1, 6th Cross, Civil Aviation Road, Konena Agrahara, HAL Post Bangalore, Karnataka 560017
                 <br />
                 <strong>Noida:</strong> 338, Tower C, Bhutani Cyber Park, Sec
                 62, Noida, U.P 201301
@@ -85,7 +84,7 @@ const ContactForm = () => {
               />
               <Input
                 type="text"
-                placeholder="Website *"
+                placeholder="Phone Number *"
                 className="border border-gray-300 rounded-md"
               />
             </div>

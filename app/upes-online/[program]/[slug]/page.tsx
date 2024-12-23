@@ -122,17 +122,18 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
     ];
 
     return (
-      <nav
-        aria-label="Breadcrumb"
-        className="flex items-center space-x-2 text-sm"
-      >
+      <nav aria-label="Breadcrumb" className="flex items-center  text-sm">
         {breadcrumbItems.map((item, index) => (
-          <div key={index} className="flex items-center">
+          <div key={index} className="flex items-center font-normal">
             {index > 0 && <span className="mx-2 text-gray-500">/</span>}
             <Link
               href={item.href}
               className={`
-                ${index === breadcrumbItems.length - 1 ? "text-orange-500" : ""}
+                ${
+                  index === breadcrumbItems.length - 1
+                    ? "text-orange-500"
+                    : "text-sm"
+                }
               `}
             >
               {item.label}
@@ -164,7 +165,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
         </h1>
       </section>
 
-      <section className="container-fluid px-0 py-0 bg-white">
+      <Card className=" max-w-6xl rounded-md mx-auto w-full justify-center">
         <div className="relative w-full h-[70vh] overflow-hidden">
           <Image
             src={course.image}
@@ -185,7 +186,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
             </div>
           </div>
         </div>
-      </section>
+      </Card>
 
       <Card className="max-w-6xl px-4 mx-auto py-4  bg-white">
         <div className="grid md:grid-cols-1 gap-8 items-center">
