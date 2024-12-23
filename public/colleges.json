@@ -63,7 +63,7 @@
         },
         {
           "title": "Accreditation",
-          "description": "Higher Learning Commission (HLC)"
+          "description": "Higher Learning Commission"
         },
         {
           "title": "Ranking",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "name": "University of Rochester Medical Center (URMC)",
+      "name": "Rochester Medical Center (URMC)",
       "established": "Since 1972",
       "location": "Rochester",
       "image": "/university-rochester.jpg",
