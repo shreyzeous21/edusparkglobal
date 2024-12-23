@@ -66,7 +66,7 @@ export default function HeroSlider() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="relative rounded-md mx-auto h-[calc(100vh-4rem)] sm:h-screen max-w-6xl w-full items-center justify-center group">
+                <div className="relative rounded-md mx-auto lg:h-[calc(100vh-4rem)] h-screen max-w-6xl w-full items-center justify-center group">
                   <Image
                     src={slide.image}
                     alt={slide.title}
