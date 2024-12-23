@@ -45,7 +45,7 @@ const CourseCard = ({ course }: CourseCardProps) => {
             {course.admissionStatus}
           </Label>
         </div>
-        <CardTitle className="text-lg text-center pb-3">
+        <CardTitle className="text-lg text-center pb-3 whitespace-nowrap px-4 overflow-hidden text-ellipsis">
           {course.title}
         </CardTitle>
       </div>
