@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardHeader } from "./ui/card";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -83,89 +84,115 @@ export default function ContactBanner() {
     // Here you can handle the form submission
   }
 
+  useEffect(() => {
+    // Add padding to the body to prevent content from being hidden
+    const contactBanner = document.getElementById("contact-banner");
+    if (contactBanner) {
+      document.body.style.paddingBottom = `${contactBanner.offsetHeight}px`;
+
+      // Clean up the padding when component unmounts
+      return () => {
+        document.body.style.paddingBottom = "0";
+      };
+    }
+  }, []);
+
   return (
-    <Card className="w-full py-4 bg-slate-600 px-4">
-      <div className="max-w-6xl mx-auto x">
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-wrap gap-2  items-end justify-center"
-          >
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem className="flex-1 min-w-[200px]">
-                  <FormControl>
-                    <Input placeholder="Name" {...field} className="h-10 bg-white" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem className="flex-1 min-w-[200px]">
-                  <FormControl>
-                    <Input
-                      placeholder="Phone Number"
-                      {...field}
-                      className="h-10 bg-white"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="flex-1 min-w-[200px]">
-                  <FormControl>
-                    <Input placeholder="Email" {...field} className="h-10 bg-white" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="state"
-              render={({ field }) => (
-                <FormItem className="flex-1 min-w-[200px]">
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className="h-10 bg-white ">
-                        <SelectValue placeholder="Select State" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {states.map((state) => (
-                        <SelectItem key={state} value={state}>
-                          {state}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button
-              type="submit"
-              className="bg-orange-600 hover:bg-orange-700 text-white h-10 px-8 whitespace-nowrap"
+    <div
+      id="contact-banner"
+      className="fixed bottom-0 left-0 right-0 z-50 w-full"
+    >
+      <div className="w-full bg-orange-500 py-4 px-2">
+        <div className="max-w-6xl mx-auto ">
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-wrap gap-2 items-end justify-center"
             >
-              Get Free Counselling
-            </Button>
-          </form>
-        </Form>
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="flex-1 min-w-[200px]">
+                    <FormControl>
+                      <Input
+                        placeholder="Name"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem className="flex-1 min-w-[200px]">
+                    <FormControl>
+                      <Input
+                        placeholder="Phone Number"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="flex-1 min-w-[200px]">
+                    <FormControl>
+                      <Input
+                        placeholder="Email"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="state"
+                render={({ field }) => (
+                  <FormItem className="flex-1 min-w-[200px]">
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="h-10 bg-white ">
+                          <SelectValue placeholder="Select State" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {states.map((state) => (
+                          <SelectItem key={state} value={state}>
+                            {state}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button
+                type="submit"
+                className="bg-black hover:bg-black-700 text-white h-10 px-8 whitespace-nowrap"
+              >
+                Get Free Counselling
+              </Button>
+            </form>
+          </Form>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }

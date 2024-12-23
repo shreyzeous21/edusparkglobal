@@ -21,6 +21,7 @@ import courseDetailsData from "@/public/course-details.json";
 import { Trophy, ExternalLink } from "lucide-react";
 import NetworkStripe from "../../_components/Network";
 import { CompanyStripe } from "../../_components/Company";
+import ContactBanner from "@/components/ContactBanner";
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -146,6 +147,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
 
   return (
     <div className="flex flex-col gap-10">
+      <ContactBanner/>
       <section className="flex flex-col">
         <h1
           className="h-auto text-black text-4xl font-bold flex items-center justify-center"

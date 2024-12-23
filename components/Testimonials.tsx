@@ -11,47 +11,43 @@ import { Button } from "@/components/ui/button";
 interface Testimonial {
   id: number;
   name: string;
-  date: string;
+  // date: string;
   content: string;
-  image: string;
+  // image: string;
   rating: number;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Alex Stokes",
-    date: "10 October 2024",
+    name: "Umesh Mishra",
     content:
-      "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
-    image: "/upes.png",
+      "I recently used EduSpark Global to research various colleges and courses, and I must say, the platform exceeded my expectations. It provided accurate, up-to-date information, and the details were precise, enabling me to make well-informed decisions. The user-friendly interface and well-organized content made it easy to compare different institutions and programs effortlessly.",
+
     rating: 5,
   },
   {
     id: 2,
-    name: "Ben Stokes",
-    date: "10 October 2024",
+    name: "Vaishnavi Kumari",
     content:
-      "I can't thank Your Law Firm Name enough for their unwavering support during my divorce. Their team of lawyers guided me with compassion and expertise, making a challenging process feel manageable. I highly recommend their services to & lawyer.",
-    image: "/placeholder.svg?height=64&width=64",
+      "EduSpark Global is an excellent platform for students seeking information about colleges and courses. It offers detailed college profiles, including admission requirements, available courses, and placement statistics. The site is intuitive and easy to navigate, allowing students to quickly find the information they need. EduSpark Global also provides expert counseling services to help students choose the right course and institution.",
+
     rating: 5,
   },
   {
     id: 3,
-    name: "Charlie Stokes",
-    date: "11 October 2024",
+    name: "Deepak Kumar",
     content:
-      "Exceptional service from Your Law Firm Name during my property dispute. Their attention to detail and strategic approach led to a favorable outcome. Highly recommended for anyone needing expert legal assistance.",
-    image: "/placeholder.svg?height=64&width=64",
+      "EduSpark Global is the best platform for easily finding the right online university. The counselors are incredibly polite and supportive, guiding me through every step of the MBA admission process. They stay in touch throughout the entire duration of the program, offering continuous support. I highly recommend EduSpark Global!",
+
     rating: 5,
   },
   {
     id: 4,
-    name: "Dana Stokes",
-    date: "12 October 2024",
+    name: "John Oliver",
     content:
-      "Your Law Firm Name provided outstanding support during my business litigation. Their team's expertise and dedication were crucial in resolving the case efficiently. I'm grateful for their professional and personalized service.",
-    image: "/placeholder.svg?height=64&width=64",
+      "EduSpark Global has been an absolute game-changer in my college application journey. From personalized advice to meticulous essay editing, they provided exceptional service every step of the way. The consultants are not only highly knowledgeable but also incredibly supportive.Thanks to EduSpark Global, I wholeheartedly recommend their services to anyone navigating the college application process!",
+
     rating: 5,
   },
 ];
@@ -66,6 +62,11 @@ const OPTIONS: EmblaOptionsType = {
 const SLIDE_COUNT = testimonials.length;
 const SLIDES_PER_VIEW_MOBILE = 1;
 const SLIDES_PER_VIEW_DESKTOP = 2;
+
+const truncateText = (text: string, maxLength: number = 500) => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength) + "...";
+};
 
 export default function TestimonialsSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
@@ -137,24 +138,24 @@ export default function TestimonialsSection() {
                         ))}
                       </div>
                       <blockquote className="text-muted-foreground mb-6">
-                        "{testimonial.content}"
+                        {truncateText(testimonial.content, 500)}
                       </blockquote>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <Image
+                          {/* <Image
                             src={testimonial.image}
                             alt={testimonial.name}
                             width={40}
                             height={40}
                             className="rounded-full"
-                          />
+                          /> */}
                           <div>
                             <div className="font-semibold">
                               {testimonial.name}
                             </div>
-                            <div className="text-sm text-muted-foreground">
+                            {/* <div className="text-sm text-muted-foreground">
                               {testimonial.date}
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         <div className="text-4xl text-muted-foreground/20">
