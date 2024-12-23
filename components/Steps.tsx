@@ -57,8 +57,8 @@ const Steps = () => {
   ];
 
   return (
-    <div className="flex h-auto justify-center py-8 items-center mx-auto px-4 w-full bg-gradient-to-r from-slate-600 via-slate-700 to-gray-800">
-      <div className="max-w-6xl w-full h-auto flex flex-col items-center gap-4">
+    <div className="flex h-auto justify-center py-8 items-center mx-auto  w-full bg-gradient-to-r from-slate-600 via-slate-700 to-gray-800">
+      <div className="max-w-6xl px-4 w-full h-auto flex flex-col items-center gap-4">
         {/* Section Header */}
         <Button variant="outline" className="">
           How We Start Your Journey

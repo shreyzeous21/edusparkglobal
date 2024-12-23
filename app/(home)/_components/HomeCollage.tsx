@@ -108,7 +108,7 @@ const HomeCollage = () => {
                         className="rounded-lg h-[30vh] w-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </Link>
-                    <div className="flex w-full text-sm flex-row justify-between px-4">
+                    <div className="flex w-full  text-sm flex-row justify-between px-4">
                       <span className="text-gray-600">
                         {college.established}
                       </span>
@@ -127,13 +127,15 @@ const HomeCollage = () => {
                       {college.details.map((detail, detailIndex) => (
                         <div
                           key={detailIndex}
-                          className="flex items-center gap-3"
+                          className="flex items-center gap-3 w-full justify-between"
                         >
-                          <span>{getIcon(detail.title)}</span>
-                          <span>
-                            <span className="font-semibold text-orange-600">
+                          <div className="flex items-center gap-3">
+                            <span>{getIcon(detail.title)}</span>
+                            <span className="font-semibold text-orange-600 whitespace-nowrap">
                               {detail.title}:
-                            </span>{" "}
+                            </span>
+                          </div>
+                          <span className="text-gray-600 text-right">
                             {detail.description}
                           </span>
                         </div>
