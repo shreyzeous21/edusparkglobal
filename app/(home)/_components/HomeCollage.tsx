@@ -48,12 +48,12 @@ const HomeCollage = () => {
   useEffect(() => {
     const fetchColleges = async () => {
       try {
-        const response = await fetch('/colleges.json');
+        const response = await fetch("/colleges.json");
         const data = await response.json();
         // Only take the first 6 colleges for the home page
         setColleges(data.colleges.slice(0, 6));
       } catch (error) {
-        console.error('Error fetching colleges:', error);
+        console.error("Error fetching colleges:", error);
       }
     };
 
@@ -91,13 +91,16 @@ const HomeCollage = () => {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {colleges.map((college, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                key={index}
+                className="pl-2 auto md:pl-4 md:basis-1/2 lg:basis-1/3"
+              >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="flex p-4 gap-4 flex-col items-center w-full shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-lg border">
+                  <Card className="flex p-4 gap-4 flex-col items-center w-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border h-auto my-4  ">
                     <Link href={college.link} className="w-full">
                       <img
                         src={college.image}
@@ -106,7 +109,9 @@ const HomeCollage = () => {
                       />
                     </Link>
                     <div className="flex w-full text-sm flex-row justify-between px-4">
-                      <span className="text-gray-600">{college.established}</span>
+                      <span className="text-gray-600">
+                        {college.established}
+                      </span>
                       <span className="flex items-center text-gray-600">
                         <MapPin className="text-orange-600 h-4 w-4 mr-1" />
                         {college.location}
@@ -114,13 +119,16 @@ const HomeCollage = () => {
                     </div>
                     <Link
                       href={college.link}
-                      className="font-bold text-xl hover:underline transition-all duration-500 ease-in-out text-gray-800"
+                      className="font-bold text-xl text-center hover:underline transition-all duration-500 ease-in-out text-gray-800"
                     >
                       {college.name}
                     </Link>
                     <CardContent className="text-xs text-gray-600 px-4 flex flex-col gap-1">
                       {college.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-center gap-3">
+                        <div
+                          key={detailIndex}
+                          className="flex items-center gap-3"
+                        >
                           <span>{getIcon(detail.title)}</span>
                           <span>
                             <span className="font-semibold text-orange-600">

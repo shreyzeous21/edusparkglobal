@@ -51,6 +51,31 @@
       ]
     },
     {
+      "name": "Oklahoma City University",
+      "established": "Since 1904",
+      "location": "Oklahoma City",
+      "image": "/oklahome-city.jpeg",
+      "link": "/college/oklahoma-city-university",
+      "details": [
+        {
+          "title": "Course Offered",
+          "description": "Nursing"
+        },
+        {
+          "title": "Accreditation",
+          "description": "Higher Learning Commission (HLC)"
+        },
+        {
+          "title": "Ranking",
+          "description": "#296 in National University"
+        },
+        {
+          "title": "Fee Starting",
+          "description": "$44,000 - $57,000/- Per Year"
+        }
+      ]
+    },
+    {
       "name": "University of Rochester Medical Center (URMC)",
       "established": "Since 1972",
       "location": "Rochester",
@@ -76,127 +101,27 @@
       ]
     },
     {
-      "name": "ISB Hyderabad",
-      "established": "Since 2001",
-      "location": "Hyderabad",
-      "image": "/upes.png",
-      "link": "/college/isb-hyderabad",
+      "name": "MGH Institute of Health Professions",
+      "established": "Since 1873",
+      "location": "Rochester",
+      "image": "/MGH.jpeg",
+      "link": "/college/mgh-institute-of-health-professions",
       "details": [
         {
           "title": "Course Offered",
-          "description": "PGP & Executive Education"
+          "description": "Nursing"
         },
         {
           "title": "Accreditation",
-          "description": "AACSB and EQUIS Accredited"
+          "description": "BSN Program "
         },
         {
           "title": "Ranking",
-          "description": "Global Top 25"
+          "description": "#2 in New England"
         },
         {
           "title": "Fee Starting",
-          "description": "Rs 35,000/- Per Month"
-        }
-      ]
-    },
-    {
-      "name": "XLRI Jamshedpur",
-      "established": "Since 1949",
-      "location": "Jamshedpur",
-      "image": "/aimerbschool.png",
-      "link": "/college/xlri",
-      "details": [
-        {
-          "title": "Course Offered",
-          "description": "PGDM & Executive Programs"
-        },
-        {
-          "title": "Accreditation",
-          "description": "AACSB Accredited"
-        },
-        {
-          "title": "Ranking",
-          "description": "Top 5 in India"
-        },
-        {
-          "title": "Fee Starting",
-          "description": "Rs 30,000/- Per Month"
-        }
-      ]
-    },
-    {
-      "name": "MDI Gurgaon",
-      "established": "Since 1973",
-      "location": "Gurgaon",
-      "image": "/upes.png",
-      "link": "/college/mdi-gurgaon",
-      "details": [
-        {
-          "title": "Course Offered",
-          "description": "PGPM & Executive Programs"
-        },
-        {
-          "title": "Accreditation",
-          "description": "AMBA Accredited"
-        },
-        {
-          "title": "Ranking",
-          "description": "Top 10 in India"
-        },
-        {
-          "title": "Fee Starting",
-          "description": "Rs 28,000/- Per Month"
-        }
-      ]
-    },
-    {
-      "name": "NMIMS Mumbai",
-      "established": "Since 1981",
-      "location": "Mumbai",
-      "image": "/aimerbschool.png",
-      "link": "/college/nmims-mumbai",
-      "details": [
-        {
-          "title": "Course Offered",
-          "description": "MBA & Integrated Programs"
-        },
-        {
-          "title": "Accreditation",
-          "description": "NAAC A+ Grade"
-        },
-        {
-          "title": "Ranking",
-          "description": "Top 15 in India"
-        },
-        {
-          "title": "Fee Starting",
-          "description": "Rs 22,000/- Per Month"
-        }
-      ]
-    },
-    {
-      "name": "SPJIMR Mumbai",
-      "established": "Since 1981",
-      "location": "Mumbai",
-      "image": "/upes.png",
-      "link": "/college/spjimr-mumbai",
-      "details": [
-        {
-          "title": "Course Offered",
-          "description": "PGDM & Global Programs"
-        },
-        {
-          "title": "Accreditation",
-          "description": "AACSB Accredited"
-        },
-        {
-          "title": "Ranking",
-          "description": "Top 8 in India"
-        },
-        {
-          "title": "Fee Starting",
-          "description": "Rs 26,000/- Per Month"
+          "description": "$93,000 - $95,932/- Per Year"
         }
       ]
     }

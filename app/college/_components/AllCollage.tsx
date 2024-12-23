@@ -98,7 +98,7 @@ const AllCollage = () => {
               </div>
               <Link
                 href={college.link}
-                className="font-bold text-xl hover:underline transition-all duration-500 ease-in-out text-gray-800"
+                className="font-bold text-center text-xl hover:underline transition-all duration-500 ease-in-out text-gray-800"
               >
                 {college.name}
               </Link>
