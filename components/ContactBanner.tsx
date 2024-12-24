@@ -23,14 +23,42 @@ import { toast } from "sonner";
 
 // List of all Indian states and union territories
 const INDIAN_STATES = [
-  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", 
-  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", 
-  "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", 
-  "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", 
-  "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", 
-  "Uttar Pradesh", "Uttarakhand", "West Bengal",
-  "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", 
-  "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
+  "Andaman and Nicobar Islands",
+  "Chandigarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
+  "Delhi",
+  "Jammu and Kashmir",
+  "Ladakh",
+  "Lakshadweep",
+  "Puducherry",
 ];
 
 // Form Schema
@@ -78,13 +106,16 @@ export default function ContactBanner() {
 
       // Prepare form data for Web3Forms
       const formData = new FormData();
-      formData.append("access_key", "86e9693b-516f-4cc3-8b81-222489adac4e"); // Replace with your actual Web3Forms access key
+      formData.append("access_key", "c9a88293-f4a6-473a-9b6d-8b5aabf7d1a8"); // Replace with your actual Web3Forms access key
       formData.append("name", values.name);
       formData.append("phone", values.phone);
       formData.append("state", values.state);
       formData.append("timestamp", currentTime);
       formData.append("source", "UPES Online Inquiry Website");
-      formData.append("page_url", typeof window !== "undefined" ? window.location.href : "Unknown");
+      formData.append(
+        "page_url",
+        typeof window !== "undefined" ? window.location.href : "Unknown"
+      );
 
       // Convert FormData to JSON
       const object = Object.fromEntries(formData);
@@ -95,9 +126,9 @@ export default function ContactBanner() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json",
         },
-        body: json
+        body: json,
       });
 
       const result = await response.json();

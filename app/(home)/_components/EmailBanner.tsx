@@ -82,11 +82,16 @@ export default function EmailBanner() {
 
     try {
       // Dynamically generate source based on interested program
-      const source = `Home Online Inquiry - ${formData.interestedProgram || 'General'}`;
+      const source = `Home Online Inquiry - ${
+        formData.interestedProgram || "General"
+      }`;
 
       // Prepare form data for Web3Forms
       const formDataToSubmit = new FormData();
-      formDataToSubmit.append("access_key", "86e9693b-516f-4cc3-8b81-222489adac4e");
+      formDataToSubmit.append(
+        "access_key",
+        "c9a88293-f4a6-473a-9b6d-8b5aabf7d1a8"
+      );
       formDataToSubmit.append("name", formData.name);
       formDataToSubmit.append("phone", formData.phone);
       formDataToSubmit.append("state", formData.state);
@@ -102,9 +107,9 @@ export default function EmailBanner() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json",
         },
-        body: json
+        body: json,
       });
 
       const result = await response.json();
