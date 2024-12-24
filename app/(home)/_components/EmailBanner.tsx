@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -9,11 +10,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Send, BookOpen, GraduationCap, Globe } from "lucide-react";
+import {
+  Send,
+  BookOpen,
+  GraduationCap,
+  Globe,
+  CheckCircle,
+} from "lucide-react";
 import { toast } from "sonner";
 
 export default function EmailBanner() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -76,6 +84,26 @@ export default function EmailBanner() {
     }));
   };
 
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      phone: "",
+      state: "",
+      interestedProgram: "",
+    });
+    setIsSubmitted(false);
+  };
+
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        resetForm();
+      }, 3000); // 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted]);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
@@ -115,20 +143,8 @@ export default function EmailBanner() {
       const result = await response.json();
 
       if (result.success) {
-        // Success Toast
-        toast.success("Request submitted successfully!", {
-          description: "We will contact you shortly.",
-          position: "top-right",
-          duration: 3000,
-        });
-
-        // Reset form
-        setFormData({
-          name: "",
-          phone: "",
-          state: "",
-          interestedProgram: "",
-        });
+        // Set submitted state
+        setIsSubmitted(true);
       } else {
         throw new Error("Form submission failed");
       }
@@ -143,6 +159,81 @@ export default function EmailBanner() {
       setIsSubmitting(false);
     }
   };
+
+  // Framer Motion Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
+  // Render Thank You Message
+  if (isSubmitted) {
+    return (
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="lg:bg-gradient-to-r bg-gradient-to-t from-orange-500 via-black to-gray-900 py-16"
+      >
+        <div className="max-w-6xl w-full mx-auto px-4 text-center">
+          <motion.div
+            variants={itemVariants}
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-12 shadow-2xl"
+          >
+            <motion.div
+              variants={itemVariants}
+              className="flex justify-center mb-6"
+            >
+              <CheckCircle className="h-16 w-16 text-green-500" />
+            </motion.div>
+
+            <motion.h2
+              variants={itemVariants}
+              className="text-4xl font-bold mb-4 text-white"
+            >
+              Thank You, {formData.name}!
+            </motion.h2>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-lg mb-6 text-gray-200"
+            >
+              We have received your inquiry for{" "}
+              {formData.interestedProgram || "our programs"}. Our team will
+              contact you shortly to provide more information.
+            </motion.p>
+
+            <motion.div variants={itemVariants}>
+              <Button
+                onClick={resetForm}
+                className="bg-orange-500 hover:bg-orange-600 text-white"
+              >
+                Submit Another Inquiry
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <div className="lg:bg-gradient-to-r bg-gradient-to-t from-orange-500 via-black to-gray-900 py-16">

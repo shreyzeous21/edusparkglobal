@@ -68,47 +68,28 @@ export async function generateMetadata({
 export function generateStaticParams() {
   const allRoutes: { program: string; slug: string }[] = [];
 
-  // BBA Courses
-  bbaCourses.bba_courses.forEach((course) => {
-    allRoutes.push({
-      program: 'bba',
-      slug: course.link.split("/").pop() || ''
+  const programMappings = {
+    'bba': bbaCourses.bba_courses,
+    'mba': bbaCourses.mba_courses,
+    'certification': bbaCourses.certifications,
+    'certifications': bbaCourses.certifications,
+    'bca': bbaCourses.bca_courses,
+    'mca': bbaCourses.mca_courses
+  };
+
+  Object.entries(programMappings).forEach(([program, courses]) => {
+    courses.forEach((course) => {
+      const slug = course.link.split("/").pop() || '';
+      if (slug) {
+        allRoutes.push({
+          program: program,
+          slug: slug
+        });
+      }
     });
   });
 
-  // MBA Courses
-  bbaCourses.mba_courses.forEach((course) => {
-    allRoutes.push({
-      program: 'mba',
-      slug: course.link.split("/").pop() || ''
-    });
-  });
-
-  // Certifications
-  bbaCourses.certifications.forEach((course) => {
-    allRoutes.push({
-      program: 'certification',
-      slug: course.link.split("/").pop() || ''
-    });
-  });
-
-  // BCA Courses
-  bbaCourses.bca_courses.forEach((course) => {
-    allRoutes.push({
-      program: 'bca',
-      slug: course.link.split("/").pop() || ''
-    });
-  });
-
-  // MCA Courses
-  bbaCourses.mca_courses.forEach((course) => {
-    allRoutes.push({
-      program: 'mca',
-      slug: course.link.split("/").pop() || ''
-    });
-  });
-
-  return allRoutes.filter(route => route.slug !== '');
+  return allRoutes;
 }
 
 const courseDetailsMap = courseDetailsData.courses;

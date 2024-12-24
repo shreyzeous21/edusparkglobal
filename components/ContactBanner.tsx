@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -19,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 
 // List of all Indian states and union territories
@@ -76,7 +78,8 @@ const formSchema = z.object({
 });
 
 export default function ContactBanner() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedData, setSubmittedData] = useState<z.infer<typeof formSchema> | null>(null);
 
   // Initialize form with zod resolver
   const form = useForm<z.infer<typeof formSchema>>({
@@ -89,9 +92,32 @@ export default function ContactBanner() {
     mode: "onTouched",
   });
 
+  // Framer Motion Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { 
+        delayChildren: 0.3,
+        staggerChildren: 0.2 
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  };
+
   // Form submission handler
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
     try {
       // Current timestamp
       const currentTime = new Date().toLocaleString("en-IN", {
@@ -106,7 +132,7 @@ export default function ContactBanner() {
 
       // Prepare form data for Web3Forms
       const formData = new FormData();
-      formData.append("access_key", "c9a88293-f4a6-473a-9b6d-8b5aabf7d1a8"); // Replace with your actual Web3Forms access key
+      formData.append("access_key", "c9a88293-f4a6-473a-9b6d-8b5aabf7d1a8");
       formData.append("name", values.name);
       formData.append("phone", values.phone);
       formData.append("state", values.state);
@@ -134,15 +160,16 @@ export default function ContactBanner() {
       const result = await response.json();
 
       if (result.success) {
+        // Set submitted state and data
+        setSubmittedData(values);
+        setIsSubmitted(true);
+
         // Success Toast
         toast.success("Request submitted successfully!", {
           description: "We will contact you shortly.",
           position: "top-right",
           duration: 3000,
         });
-
-        // Reset Form
-        form.reset();
       } else {
         throw new Error("Form submission failed");
       }
@@ -153,10 +180,79 @@ export default function ContactBanner() {
         position: "top-right",
         duration: 3000,
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
+
+  // Reset form and thank you message
+  const resetForm = () => {
+    form.reset();
+    setIsSubmitted(false);
+    setSubmittedData(null);
+  };
+
+  // Auto-close thank you message
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        resetForm();
+      }, 5000); // 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted]);
+
+  // Render Thank You Message
+  if (isSubmitted && submittedData) {
+    return (
+      <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="fixed bottom-0 left-0 right-0 z-50 w-full"
+      >
+        <div className="w-full bg-orange-500 py-4 px-2">
+          <div className="max-w-6xl mx-auto text-center">
+            <motion.div 
+              variants={itemVariants}
+              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 shadow-2xl"
+            >
+              <motion.div 
+                variants={itemVariants}
+                className="flex justify-center mb-4"
+              >
+                <CheckCircle className="h-12 w-12 text-green-500" />
+              </motion.div>
+              
+              <motion.h2 
+                variants={itemVariants}
+                className="text-2xl font-bold mb-2 text-white"
+              >
+                Thank You, {submittedData.name}!
+              </motion.h2>
+              
+              <motion.p 
+                variants={itemVariants}
+                className="text-sm mb-4 text-gray-200"
+              >
+                We have received your inquiry. 
+                Our team will contact you shortly at {submittedData.phone}.
+              </motion.p>
+              
+              <motion.div variants={itemVariants}>
+                <Button 
+                  onClick={resetForm}
+                  size="sm"
+                  className="bg-white text-orange-500 hover:bg-gray-100"
+                >
+                  Submit Another Inquiry
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <div
@@ -209,7 +305,7 @@ export default function ContactBanner() {
                   <FormItem className="flex-1 min-w-[200px]">
                     <Select
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
+                      value={field.value}
                     >
                       <FormControl>
                         <SelectTrigger className="h-10 bg-white">
@@ -230,10 +326,10 @@ export default function ContactBanner() {
               />
               <Button
                 type="submit"
-                disabled={isSubmitting}
-                className="bg-black hover:bg-black-700 text-white h-10 px-8 whitespace-nowrap"
+                disabled={form.formState.isSubmitting}
+                className="h-10 bg-white text-orange-500 hover:bg-gray-100"
               >
-                {isSubmitting ? "Submitting..." : "Get Free Counselling"}
+                {form.formState.isSubmitting ? "Submitting..." : "Get Callback"}
               </Button>
             </form>
           </Form>
