@@ -3908,7 +3908,7 @@
         }
       ]
     },
-    "certification/human-resource": {
+    "certification/renewable-energy": {
       "whyChooseThisCourse": {
         "title": "Why BBA in Operations Management",
         "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
@@ -4115,7 +4115,7 @@
         }
       ]
     },
-    "certification/renewable-energy": {
+    "certification/human-resource": {
       "whyChooseThisCourse": {
         "title": "Why BBA in Operations Management",
         "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
@@ -5358,6 +5358,834 @@
       ]
     },
     "certification/air-business-management": {
+      "whyChooseThisCourse": {
+        "title": "Why BBA in Operations Management",
+        "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
+        "programStructure": [
+          "First Year: Foundations of management, business economics, business communication, and accounting",
+          "Second Year: Operations-specific skills and knowledge",
+          "Final Semester: Mandatory Dissertation project"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundation of Management",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Business Communication",
+            "Accounting Fundamentals",
+            "Mathematics for Business"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Business Dynamics",
+          "subjects": [
+            "Organizational Behavior",
+            "Marketing Management",
+            "Financial Accounting",
+            "Business Statistics",
+            "Computer Applications"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Operations Fundamentals",
+          "subjects": [
+            "Production and Operations Management",
+            "Cost Accounting",
+            "Business Law",
+            "Managerial Economics",
+            "Research Methodology"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Advanced Operations",
+          "subjects": [
+            "Supply Chain Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Business Intelligence",
+            "Operations Strategy"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Strategic Management",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "International Business",
+            "Entrepreneurship",
+            "Operations Research"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Junior Operations Coordinator",
+              "Business Support Associate",
+              "Supply Chain Trainee",
+              "Operations Data Analyst",
+              "Procurement Assistant"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 25,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Rajesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/rajesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Anita Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/anita-sharma.jpg"
+        },
+        {
+          "name": "Dr. Vikram Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/vikram-singh.jpg"
+        },
+        {
+          "name": "Ms. Priya Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/priya-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Coordinator, Supply Chain Analyst, Business Consultant, and Procurement Specialist in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a business background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in business operations. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core business concepts."
+        },
+        {
+          "question": "What makes this BBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BBA in Operations Management program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of business operations."
+        }
+      ]
+    },
+    "certification/international-business": {
+      "whyChooseThisCourse": {
+        "title": "Why BBA in Operations Management",
+        "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
+        "programStructure": [
+          "First Year: Foundations of management, business economics, business communication, and accounting",
+          "Second Year: Operations-specific skills and knowledge",
+          "Final Semester: Mandatory Dissertation project"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundation of Management",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Business Communication",
+            "Accounting Fundamentals",
+            "Mathematics for Business"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Business Dynamics",
+          "subjects": [
+            "Organizational Behavior",
+            "Marketing Management",
+            "Financial Accounting",
+            "Business Statistics",
+            "Computer Applications"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Operations Fundamentals",
+          "subjects": [
+            "Production and Operations Management",
+            "Cost Accounting",
+            "Business Law",
+            "Managerial Economics",
+            "Research Methodology"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Advanced Operations",
+          "subjects": [
+            "Supply Chain Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Business Intelligence",
+            "Operations Strategy"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Strategic Management",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "International Business",
+            "Entrepreneurship",
+            "Operations Research"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Junior Operations Coordinator",
+              "Business Support Associate",
+              "Supply Chain Trainee",
+              "Operations Data Analyst",
+              "Procurement Assistant"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 25,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Rajesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/rajesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Anita Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/anita-sharma.jpg"
+        },
+        {
+          "name": "Dr. Vikram Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/vikram-singh.jpg"
+        },
+        {
+          "name": "Ms. Priya Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/priya-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Coordinator, Supply Chain Analyst, Business Consultant, and Procurement Specialist in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a business background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in business operations. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core business concepts."
+        },
+        {
+          "question": "What makes this BBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BBA in Operations Management program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of business operations."
+        }
+      ]
+    },
+    "certification/oil-and-gas": {
+      "whyChooseThisCourse": {
+        "title": "Why BBA in Operations Management",
+        "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
+        "programStructure": [
+          "First Year: Foundations of management, business economics, business communication, and accounting",
+          "Second Year: Operations-specific skills and knowledge",
+          "Final Semester: Mandatory Dissertation project"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundation of Management",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Business Communication",
+            "Accounting Fundamentals",
+            "Mathematics for Business"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Business Dynamics",
+          "subjects": [
+            "Organizational Behavior",
+            "Marketing Management",
+            "Financial Accounting",
+            "Business Statistics",
+            "Computer Applications"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Operations Fundamentals",
+          "subjects": [
+            "Production and Operations Management",
+            "Cost Accounting",
+            "Business Law",
+            "Managerial Economics",
+            "Research Methodology"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Advanced Operations",
+          "subjects": [
+            "Supply Chain Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Business Intelligence",
+            "Operations Strategy"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Strategic Management",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "International Business",
+            "Entrepreneurship",
+            "Operations Research"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Junior Operations Coordinator",
+              "Business Support Associate",
+              "Supply Chain Trainee",
+              "Operations Data Analyst",
+              "Procurement Assistant"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 25,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Rajesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/rajesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Anita Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/anita-sharma.jpg"
+        },
+        {
+          "name": "Dr. Vikram Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/vikram-singh.jpg"
+        },
+        {
+          "name": "Ms. Priya Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/priya-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Coordinator, Supply Chain Analyst, Business Consultant, and Procurement Specialist in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a business background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in business operations. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core business concepts."
+        },
+        {
+          "question": "What makes this BBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BBA in Operations Management program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of business operations."
+        }
+      ]
+    },
+    "certification/data-science": {
+      "whyChooseThisCourse": {
+        "title": "Why BBA in Operations Management",
+        "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",
+        "programStructure": [
+          "First Year: Foundations of management, business economics, business communication, and accounting",
+          "Second Year: Operations-specific skills and knowledge",
+          "Final Semester: Mandatory Dissertation project"
+        ]
+      },
+      "opportunities": [
+        {
+          "title": "Expert Tutors",
+          "description": "Big data and AI skills are in high demand due to 'Make in India', 'Skill India' initiatives. (Source: India Brand Equity Foundation)",
+          "source": "Indeed",
+          "cardDescription": "Job Prospects"
+        },
+        {
+          "title": "Career advantage",
+          "description": "Operations has huge future in India, poised to become global manufacturing hub. (Source: India Brand Equity Foundation)",
+          "source": "Glassdoor",
+          "cardDescription": "Career Advancement"
+        },
+        {
+          "title": "Earn Certificate",
+          "description": "Industry 4.0 tech innovations will increase demand for operations professionals. (Source: India Brand Equity Foundation)",
+          "source": "NASSCOM",
+          "cardDescription": "Industry Recognition"
+        }
+      ],
+      "curriculum": [
+        {
+          "semester": 1,
+          "title": "Foundation of Management",
+          "subjects": [
+            "Principles of Management",
+            "Business Economics",
+            "Business Communication",
+            "Accounting Fundamentals",
+            "Mathematics for Business"
+          ]
+        },
+        {
+          "semester": 2,
+          "title": "Business Dynamics",
+          "subjects": [
+            "Organizational Behavior",
+            "Marketing Management",
+            "Financial Accounting",
+            "Business Statistics",
+            "Computer Applications"
+          ]
+        },
+        {
+          "semester": 3,
+          "title": "Operations Fundamentals",
+          "subjects": [
+            "Production and Operations Management",
+            "Cost Accounting",
+            "Business Law",
+            "Managerial Economics",
+            "Research Methodology"
+          ]
+        },
+        {
+          "semester": 4,
+          "title": "Advanced Operations",
+          "subjects": [
+            "Supply Chain Management",
+            "Financial Management",
+            "Human Resource Management",
+            "Business Intelligence",
+            "Operations Strategy"
+          ]
+        },
+        {
+          "semester": 5,
+          "title": "Strategic Management",
+          "subjects": [
+            "Strategic Management",
+            "Project Management",
+            "International Business",
+            "Entrepreneurship",
+            "Operations Research"
+          ]
+        },
+        {
+          "semester": 6,
+          "title": "Dissertation and Specialization",
+          "subjects": [
+            "Dissertation Project",
+            "Operations Management Capstone",
+            "Industry Internship",
+            "Advanced Operations Techniques",
+            "Professional Development"
+          ]
+        }
+      ],
+      "careerProspects": {
+        "title": "Career Prospects in Operations Management",
+        "description": "Explore diverse career opportunities across different experience levels",
+        "careerLevels": {
+          "entry": {
+            "title": "Entry-Level Roles",
+            "roles": [
+              "Junior Operations Coordinator",
+              "Business Support Associate",
+              "Supply Chain Trainee",
+              "Operations Data Analyst",
+              "Procurement Assistant"
+            ]
+          },
+          "mid": {
+            "title": "Mid-Level Roles",
+            "roles": [
+              "Operations Manager",
+              "Supply Chain Analyst",
+              "Business Consultant",
+              "Procurement Specialist",
+              "Logistics Coordinator"
+            ]
+          },
+          "experienced": {
+            "title": "Senior-Level Roles",
+            "roles": [
+              "Senior Operations Director",
+              "Global Supply Chain Head",
+              "Chief Operating Officer (COO)",
+              "Strategic Operations Consultant",
+              "Enterprise Operations Strategist"
+            ]
+          }
+        }
+      },
+      "careerServices": {
+        "title": "Career Services",
+        "description": "Our comprehensive career services guarantee your career preparedness and employability for the professional world.",
+        "services": [
+          "Career Orientation",
+          "LinkedIn/Resume building guidance",
+          "Mentorship by industry experts",
+          "Interview preparation"
+        ]
+      },
+      "feesAndFinancing": {
+        "title": "Flexible Fee Payment Options",
+        "description": "Our flexible and budget-friendly fee payment options are designed to make your education journey as smooth as possible.",
+        "options": [
+          {
+            "title": "Easy EMI Plan",
+            "details": "Study stress-free and focus on smaller, manageable payments over 24 months."
+          },
+          {
+            "title": "Semester-wise Fee",
+            "details": "Opt for our straightforward semester-wise fee structure and pay just INR 25,000 per semester (total 6 semesters)"
+          }
+        ]
+      },
+      "faculties": [
+        {
+          "name": "Dr. Rajesh Kumar",
+          "designation": "Professor & Head of Department",
+          "expertise": "Operations Strategy",
+          "image": "/faculty/rajesh-kumar.jpg"
+        },
+        {
+          "name": "Prof. Anita Sharma",
+          "designation": "Senior Lecturer",
+          "expertise": "Supply Chain Management",
+          "image": "/faculty/anita-sharma.jpg"
+        },
+        {
+          "name": "Dr. Vikram Singh",
+          "designation": "Associate Professor",
+          "expertise": "Business Analytics",
+          "image": "/faculty/vikram-singh.jpg"
+        },
+        {
+          "name": "Ms. Priya Patel",
+          "designation": "Industry Expert",
+          "expertise": "Operational Excellence",
+          "image": "/faculty/priya-patel.jpg"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What career opportunities are available after completing BBA in Operations Management?",
+          "answer": "Graduates can pursue roles like Operations Coordinator, Supply Chain Analyst, Business Consultant, and Procurement Specialist in various industries including manufacturing, retail, logistics, and consulting."
+        },
+        {
+          "question": "Is this program suitable for students without a business background?",
+          "answer": "Yes, the program is designed to provide a comprehensive foundation in business operations. Our curriculum includes foundational courses that help students from diverse academic backgrounds understand core business concepts."
+        },
+        {
+          "question": "What makes this BBA program unique?",
+          "answer": "Our program focuses on practical, industry-relevant skills, includes hands-on projects, provides industry certifications, and offers mentorship from experienced professionals in operations management."
+        },
+        {
+          "question": "Are there internship opportunities during the course?",
+          "answer": "Yes, we have tie-ups with leading companies that provide internship opportunities for our students, allowing them to gain real-world experience and build professional networks."
+        },
+        {
+          "question": "What is the duration of the BBA in Operations Management program?",
+          "answer": "The program is a 3-year full-time undergraduate degree, divided into 6 semesters, with a comprehensive curriculum covering various aspects of business operations."
+        }
+      ]
+    },
+    "certification/power-management": {
       "whyChooseThisCourse": {
         "title": "Why BBA in Operations Management",
         "description": "BBA is one of the most popular and sought-after bachelor's degree programs pursued by students after Grade 12. The BBA with specialization in Operations Management offers students the skills and knowledge needed to understand core business processes, people management, and strategies.",

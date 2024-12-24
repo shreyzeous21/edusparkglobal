@@ -109,6 +109,7 @@ const bcaComponents: { title: string; href: string }[] = [
   { title: "New Age Technology", href: "/upes-online/bca/new-age-technology" },
   { title: "Data Analytics", href: "/upes-online/bca/data-analytics" },
 ];
+
 const graduationComponents: { title: string; href: string }[] = [
   {
     title: "Under Graduate Work-Integrated",
@@ -151,7 +152,7 @@ const certifications: { title: string; href: string }[] = [
   },
   {
     title: "Financial Management",
-    href: "/upes-online/certification/finance-management",
+    href: "/upes-online/certification/financial-management",
   },
   {
     title: "Project Management",
@@ -160,6 +161,22 @@ const certifications: { title: string; href: string }[] = [
   {
     title: "Air Business Management",
     href: "/upes-online/certification/air-business-management",
+  },
+  {
+    title: "International Management",
+    href: "/upes-online/certification/international-management",
+  },
+  {
+    title: "Oil and Gas",
+    href: "/upes-online/certification/oil-and-gas",
+  },
+  {
+    title: "Data Science",
+    href: "/upes-online/certification/data-science",
+  },
+  {
+    title: "Power Management",
+    href: "/upes-online/certification/power-management",
   },
 ];
 
