@@ -20,6 +20,13 @@ export const generateMetadata = async ({
   };
 };
 
+export function generateStaticParams() {
+  return [
+    { location: 'rochester', slug: 'accelerated-bsn' },
+    { location: 'oklahoma', slug: 'accelerated-bsn' }
+  ];
+}
+
 const nursingProgramDetails = {
   "rochester": {
     name: "University MRC",

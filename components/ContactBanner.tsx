@@ -20,11 +20,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState, useEffect } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
 // Initialize EmailJS globally
-emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '3XgNPJmb2DL32lABX');
+emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "3XgNPJmb2DL32lABX");
 
 // Form Schema
 const formSchema = z.object({
@@ -36,12 +36,34 @@ const formSchema = z.object({
 
 // States List
 const states = [
-  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", 
-  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", 
-  "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", 
-  "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", 
-  "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", 
-  "West Bengal"
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
 ];
 
 export default function ContactBanner() {
@@ -52,7 +74,6 @@ export default function ContactBanner() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "wd",
-      email: "wd",
       phone: "wd",
       state: "wdwd",
     },
@@ -64,29 +85,31 @@ export default function ContactBanner() {
     setIsSubmitting(true);
     try {
       // EmailJS Configuration
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_SERVICE_ID || 'service_cg2kfvp';
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || 'template_d5qjdus';
+      const serviceId =
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_SERVICE_ID || "service_cg2kfvp";
+      const templateId =
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID ||
+        "template_d5qjdus";
 
       // Send Email
       await emailjs.send(serviceId, templateId, {
         name: values.name,
-        email: values.email,
         phone: values.phone,
         state: values.state,
         reply_to: values.email,
       });
 
       // Success Toast
-      toast.success('Request submitted successfully!', {
-        description: 'We will contact you shortly.',
+      toast.success("Request submitted successfully!", {
+        description: "We will contact you shortly.",
       });
 
       // Reset Form
       form.reset();
     } catch (error) {
-      console.error('Failed to send email:', error);
-      toast.error('Failed to submit request.', {
-        description: 'Please try again later.',
+      console.error("Failed to send email:", error);
+      toast.error("Failed to submit request.", {
+        description: "Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -105,7 +128,10 @@ export default function ContactBanner() {
   }, []);
 
   return (
-    <div id="contact-banner" className="fixed bottom-0 left-0 right-0 z-50 w-full">
+    <div
+      id="contact-banner"
+      className="fixed bottom-0 left-0 right-0 z-50 w-full"
+    >
       <div className="w-full bg-orange-500 py-4 px-2">
         <div className="max-w-6xl mx-auto">
           <Form {...form}>
@@ -119,7 +145,11 @@ export default function ContactBanner() {
                 render={({ field }) => (
                   <FormItem className="flex-1 min-w-[200px]">
                     <FormControl>
-                      <Input placeholder="Name" {...field} className="h-10 bg-white" />
+                      <Input
+                        placeholder="Name"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -131,7 +161,11 @@ export default function ContactBanner() {
                 render={({ field }) => (
                   <FormItem className="flex-1 min-w-[200px]">
                     <FormControl>
-                      <Input placeholder="Phone Number" {...field} className="h-10 bg-white" />
+                      <Input
+                        placeholder="Phone Number"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -143,7 +177,11 @@ export default function ContactBanner() {
                 render={({ field }) => (
                   <FormItem className="flex-1 min-w-[200px]">
                     <FormControl>
-                      <Input placeholder="Email" {...field} className="h-10 bg-white" />
+                      <Input
+                        placeholder="Email"
+                        {...field}
+                        className="h-10 bg-white"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -154,21 +192,24 @@ export default function ContactBanner() {
                 name="state"
                 render={({ field }) => (
                   <FormItem className="flex-1 min-w-[200px]">
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
                       <FormControl>
                         <SelectTrigger className="h-10 bg-white">
                           <SelectValue placeholder="Select State" />
                         </SelectTrigger>
                       </FormControl>
-                        <SelectContent>
-                          {states.map((state) => (
-                            <SelectItem key={state} value={state}>
-                              {state}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
+                      <SelectContent>
+                        {states.map((state) => (
+                          <SelectItem key={state} value={state}>
+                            {state}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -177,7 +218,7 @@ export default function ContactBanner() {
                 disabled={isSubmitting}
                 className="bg-black hover:bg-black-700 text-white h-10 px-8 whitespace-nowrap"
               >
-                {isSubmitting ? 'Submitting...' : 'Get Free Counselling'}
+                {isSubmitting ? "Submitting..." : "Get Free Counselling"}
               </Button>
             </form>
           </Form>

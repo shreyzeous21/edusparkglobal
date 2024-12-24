@@ -1014,4 +1014,11 @@ const Page = ({ params }: { params: { slug: string } }) => {
   );
 };
 
+export function generateStaticParams() {
+  return [
+    { slug: 'under-graduate-work-integrated-program' },
+    { slug: 'post-graduate-work-integrated-program' }
+  ];
+}
+
 export default Page;

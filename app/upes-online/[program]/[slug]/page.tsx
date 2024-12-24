@@ -27,7 +27,7 @@ import ContactBanner from "@/components/ContactBanner";
 export async function generateMetadata({
   params,
 }: {
-  params: { program: string; slug: string };
+  params: { program: any; slug: any };
 }): Promise<Metadata> {
   let courses: any[] = [];
   switch (params.program) {
@@ -65,6 +65,52 @@ export async function generateMetadata({
   };
 }
 
+export function generateStaticParams() {
+  const allRoutes: { program: string; slug: string }[] = [];
+
+  // BBA Courses
+  bbaCourses.bba_courses.forEach((course) => {
+    allRoutes.push({
+      program: 'bba',
+      slug: course.link.split("/").pop() || ''
+    });
+  });
+
+  // MBA Courses
+  bbaCourses.mba_courses.forEach((course) => {
+    allRoutes.push({
+      program: 'mba',
+      slug: course.link.split("/").pop() || ''
+    });
+  });
+
+  // Certifications
+  bbaCourses.certifications.forEach((course) => {
+    allRoutes.push({
+      program: 'certification',
+      slug: course.link.split("/").pop() || ''
+    });
+  });
+
+  // BCA Courses
+  bbaCourses.bca_courses.forEach((course) => {
+    allRoutes.push({
+      program: 'bca',
+      slug: course.link.split("/").pop() || ''
+    });
+  });
+
+  // MCA Courses
+  bbaCourses.mca_courses.forEach((course) => {
+    allRoutes.push({
+      program: 'mca',
+      slug: course.link.split("/").pop() || ''
+    });
+  });
+
+  return allRoutes.filter(route => route.slug !== '');
+}
+
 const courseDetailsMap = courseDetailsData.courses;
 
 const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
@@ -96,10 +142,9 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
   );
 
   // Get additional course details from the mapping
-  const additionalDetails = courseDetailsMap[
-    `${params.program}/${params.slug}`
-  ] || {
-    whyChooseThisCourse: null,
+  const additionalDetails = (courseDetailsMap &&
+    courseDetailsMap[`${params.program}/${params.slug}`]) || {
+    whyChooseThisCourse: [],
   };
 
   // If no course found, return not found
@@ -147,7 +192,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
 
   return (
     <div className="flex flex-col gap-10">
-      <ContactBanner/>
+      <ContactBanner />
       <section className="flex flex-col">
         <h1
           className="h-auto text-black text-4xl font-bold flex items-center justify-center"
