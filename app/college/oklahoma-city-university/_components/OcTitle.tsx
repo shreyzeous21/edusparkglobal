@@ -11,40 +11,41 @@ import {
 import Link from "next/link";
 import React from "react";
 
-const RmcTitle = () => {
+const OcTitle = () => {
   const universityInfo = [
     {
-      title: "University Rochester Medical Center (URMC)",
+      title: "Oklahoma City University",
       rating: 4.8,
-      description:
-        "The University of Rochester Medical Center (URMC) is one of the nation’s leading academic medical centers. It forms the centerpiece of the University of Rochester’s health research, teaching and patient care missions.",
+      description: `The College of Health Professions receive accreditation from the
+Accreditation Commission for Education in Nursing (ACEN), the Oklahoma
+Board of Nursing and other related accreditation organizations`,
       email: "info@upesonline.com",
-      phone: "1-844-876-6300 (toll-free)",
+      phone: "+1 405-208-5000",
       logos: [
         {
           name: "Facebook",
           icon: <Facebook size={20} />,
-          link: "https://www.facebook.com/UniversityofRochesterMedicalCenter",
+          link: "https://www.facebook.com/oklahomacityuniversity",
         },
         {
           name: "Linkedin",
           icon: <Linkedin size={20} />,
-          link: "https://www.linkedin.com/company/university-of-rochester-medical-center",
+          link: "https://www.linkedin.com/school/oklahoma-city-university/",
         },
         {
           name: "Instagram",
           icon: <Instagram size={20} />,
-          link: "https://www.instagram.com/urochestermedicine/",
+          link: "https://www.instagram.com/oklahomacityuniversity/",
         },
         {
           name: "Twitter",
           icon: <Twitter size={20} />,
-          link: "https://x.com/ur_med",
+          link: "https://x.com/OKCU",
         },
         {
           name: "Youtube",
           icon: <Youtube size={20} />,
-          link: "https://www.youtube.com/user/urmcpr",
+          link: "https://www.youtube.com/oklahomacityuniversity",
         },
       ],
     },
@@ -56,9 +57,9 @@ const RmcTitle = () => {
       <div className="flex flex-col lg:flex-row gap-5 justify-center lg:justify-between items-center w-full px-8 py-8 relative z-10">
         <div className="">
           <img
-            src="/2.png"
-            alt="UPES Logo"
-            className="h-50 w-auto"
+            src="/1.png"
+            alt="okla Logo"
+            className="h-50 w-auto "
           />
         </div>
         <div className="flex gap-4 py-10 flex-col w-full mx-auto justify-center lg:items-start items-center">
@@ -108,4 +109,4 @@ const RmcTitle = () => {
   );
 };
 
-export default RmcTitle;
+export default OcTitle;

@@ -22,7 +22,7 @@ import { Trophy, ExternalLink } from "lucide-react";
 import NetworkStripe from "../../_components/Network";
 import { CompanyStripe } from "../../_components/Company";
 import ContactBanner from "@/components/ContactBanner";
-import { EnrollNowModal } from '@/components/EnrollNowModal';
+import { EnrollNowModal } from "@/components/EnrollNowModal";
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -260,7 +260,11 @@ export default function Page({
             </div>
 
             <div className="space-y-4">
-              <EnrollNowModal courseName={`${params.program.toUpperCase()} in ${course.title}`} />
+              <EnrollNowModal
+                courseName={`${params.program.toUpperCase()} in ${
+                  course.title
+                }`}
+              />
             </div>
           </div>
         </div>
@@ -566,164 +570,6 @@ export default function Page({
           </div>
         </Card>
       )}
-      <div className="max-w-6xl mx-auto px-4">
-        <h1>{course.title}</h1>
-
-        {/* Detailed rendering with courseDetails */}
-        {courseDetails ? (
-          <div>
-            {/* Why Choose This Course Section */}
-            {courseDetails.whyChooseThisCourse && (
-              <div>
-                <h2>
-                  {courseDetails.whyChooseThisCourse?.title ||
-                    "About the Course"}
-                </h2>
-                <p>
-                  {courseDetails.whyChooseThisCourse?.description ||
-                    "No description available."}
-                </p>
-
-                {courseDetails.whyChooseThisCourse?.programStructure && (
-                  <div>
-                    <h3>Program Structure</h3>
-                    <ul>
-                      {(
-                        courseDetails.whyChooseThisCourse.programStructure || []
-                      ).map((structure, index) => (
-                        <li key={index}>{structure}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Opportunities Section */}
-            {courseDetails.opportunities && (
-              <div>
-                <h2>Opportunities</h2>
-                <div className="grid grid-cols-3 gap-4">
-                  {(courseDetails.opportunities || []).map(
-                    (opportunity, index) => (
-                      <div key={index} className="border p-4">
-                        <h3>{opportunity.title || "Opportunity"}</h3>
-                        <p>
-                          {opportunity.description ||
-                            "No description available."}
-                        </p>
-                        <small>Source: {opportunity.source || "N/A"}</small>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Curriculum Section */}
-            {courseDetails.curriculum && (
-              <div>
-                <h2>Curriculum</h2>
-                {(courseDetails.curriculum || []).map((semester, index) => (
-                  <div key={index}>
-                    <h3>
-                      {semester.semester
-                        ? `Semester ${semester.semester}:`
-                        : semester.module
-                        ? `Module ${semester.module}:`
-                        : "Curriculum Section:"}
-                      {semester.title || "Untitled"}
-                    </h3>
-                    <ul>
-                      {(semester.subjects || semester.topics || []).map(
-                        (subject, subIndex) => (
-                          <li key={subIndex}>{subject}</li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Career Prospects Section */}
-            {courseDetails.careerProspects && (
-              <div>
-                <h2>
-                  {courseDetails.careerProspects?.title || "Career Prospects"}
-                </h2>
-                <p>
-                  {courseDetails.careerProspects?.description ||
-                    "No description available."}
-                </p>
-
-                {courseDetails.careerProspects?.careerLevels && (
-                  <div>
-                    <h3>Career Levels</h3>
-                    {Object.entries(
-                      courseDetails.careerProspects.careerLevels || {}
-                    ).map(([level, details]) => (
-                      <div key={level}>
-                        <h4>{details?.title || "Career Level"}</h4>
-                        <ul>
-                          {(details?.roles || []).map((role, index) => (
-                            <li key={index}>{role}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Additional Sections */}
-            {courseDetails.careerServices && (
-              <div>
-                <h2>
-                  {courseDetails.careerServices?.title || "Career Services"}
-                </h2>
-                <p>
-                  {courseDetails.careerServices?.description ||
-                    "No description available."}
-                </p>
-                <ul>
-                  {(courseDetails.careerServices?.services || []).map(
-                    (service, index) => (
-                      <li key={index}>{service}</li>
-                    )
-                  )}
-                </ul>
-              </div>
-            )}
-
-            {courseDetails.feesAndFinancing && (
-              <div>
-                <h2>
-                  {courseDetails.feesAndFinancing?.title ||
-                    "Fees and Financing"}
-                </h2>
-                <p>
-                  {courseDetails.feesAndFinancing?.description ||
-                    "No description available."}
-                </p>
-                <div>
-                  {(courseDetails.feesAndFinancing?.options || []).map(
-                    (option, index) => (
-                      <div key={index}>
-                        <h3>{option.title || "Payment Option"}</h3>
-                        <p>{option.details || "No details available."}</p>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        ) : (
-          <p>Additional course details not available.</p>
-        )}
-      </div>
     </div>
   );
 }

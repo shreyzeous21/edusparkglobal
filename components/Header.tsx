@@ -54,7 +54,7 @@ const mbaComponents: { title: string; href: string }[] = [
   { title: "Power Management", href: "/upes-online/mba/power-management" },
   {
     title: "Financial Management",
-    href: "/upes-online/mba/finance-management",
+    href: "/upes-online/mba/financial-management",
   },
 ];
 

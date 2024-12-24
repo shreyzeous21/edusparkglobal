@@ -1,14 +1,14 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import { Metadata } from "next";
 import React from "react";
-import RmcTitle from "./_components/RmcTitle";
-import RmcContent from "./_components/RmcContent";
-import RmcCourses from "./_components/RmcCourses";
-import CostTable from "./_components/RmcCostTable";
+import OcTitle from "./_components/OcTitle";
+import OcContent from "./_components/OcContent";
+import OcCourses from "./_components/OcCourses";
+import OcCostTable from "./_components/OcCostTable";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Rochester Medical Center (UMRC) - EduSpark Global",
+    title: "Oklahoma City University - EduSpark Global",
     description: "Discover more about us.",
   };
 }
@@ -27,16 +27,16 @@ const page = () => {
           }}
         >
           <span className="flex flex-col items-center">
-            <h1>University Rochester Medical Center (UMRC)</h1>
+            <h1>Oklahoma City University (OCU)</h1>
             <Breadcrumb />
           </span>
         </h1>
       </section>
       <div className="w-full px-4 flex justify-center flex-col gap-10">
-        <RmcTitle />
-        <RmcContent />
-        <CostTable />
-        <RmcCourses />
+        <OcTitle />
+        <OcContent />
+        <OcCostTable />
+        <OcCourses />
       </div>
     </div>
   );

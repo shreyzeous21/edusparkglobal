@@ -99,31 +99,6 @@
           "description": "$50,000 - $60,000/- Per Year"
         }
       ]
-    },
-    {
-      "name": "MGH Institute of Health Professions",
-      "established": "Since 1873",
-      "location": "Rochester",
-      "image": "/MGH.jpeg",
-      "link": "/college/mgh-institute-of-health-professions",
-      "details": [
-        {
-          "title": "Course Offered",
-          "description": "Nursing"
-        },
-        {
-          "title": "Accreditation",
-          "description": "BSN Program "
-        },
-        {
-          "title": "Ranking",
-          "description": "#2 in New England"
-        },
-        {
-          "title": "Fee Starting",
-          "description": "$93,000 - $95,932/- Per Year"
-        }
-      ]
     }
   ]
 }
