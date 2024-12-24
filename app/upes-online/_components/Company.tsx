@@ -15,6 +15,19 @@ const companyLogos = [
   "/mc.jpg",
   "/nissan.jpg",
   "/wipro.jpg",
+  "/A.png",
+  "/B.png",
+  "/C.png",
+  "/D.png",
+  "/E.png",
+  "/F.png",
+  "/G.png",
+  "/H.png",
+  "/I.png",
+  "/J.png",
+  "/K.png",
+  "/L.png",
+  "/M.png",
 ];
 
 export const CompanyStripe: React.FC = () => {
@@ -27,12 +40,12 @@ export const CompanyStripe: React.FC = () => {
           <motion.div
             className="flex gap-12 items-center"
             animate={{
-              x: [0, -1 * (duplicatedLogos.length * 100)],
+              x: [0, -1 * (duplicatedLogos.length * 200)],
               transition: {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 10,
+                  duration: 30,
                   ease: "linear",
                 },
               },
