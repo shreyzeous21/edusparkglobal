@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -19,113 +19,113 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
-// Initialize EmailJS globally
-emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "3XgNPJmb2DL32lABX");
+// List of all Indian states and union territories
+const INDIAN_STATES = [
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", 
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", 
+  "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", 
+  "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", 
+  "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", 
+  "Uttar Pradesh", "Uttarakhand", "West Bengal",
+  "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", 
+  "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
+];
 
 // Form Schema
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Enter a valid email address." }),
-  phone: z.string().min(10, { message: "Enter a 10-digit phone number." }),
-  state: z.string().min(1, { message: "Select a state." }),
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters" })
+    .max(50, { message: "Name cannot exceed 50 characters" }),
+  phone: z.string().regex(/^[6-9]\d{9}$/, { message: "Invalid phone number" }),
+  state: z
+    .string({
+      required_error: "Please select a state",
+    })
+    .min(1, { message: "Please select a state" }),
 });
-
-// States List
-const states = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-];
 
 export default function ContactBanner() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Form Hook
+  // Initialize form with zod resolver
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "wd",
-      phone: "wd",
-      state: "wdwd",
+      name: "",
+      phone: "",
+      state: "",
     },
     mode: "onTouched",
   });
 
-  // Submit Handler
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  // Form submission handler
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      // EmailJS Configuration
-      const serviceId =
-        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_SERVICE_ID || "service_cg2kfvp";
-      const templateId =
-        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID ||
-        "template_d5qjdus";
-
-      // Send Email
-      await emailjs.send(serviceId, templateId, {
-        name: values.name,
-        phone: values.phone,
-        state: values.state,
-        reply_to: values.email,
+      // Current timestamp
+      const currentTime = new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour12: true,
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
       });
 
-      // Success Toast
-      toast.success("Request submitted successfully!", {
-        description: "We will contact you shortly.",
+      // Prepare form data for Web3Forms
+      const formData = new FormData();
+      formData.append("access_key", "86e9693b-516f-4cc3-8b81-222489adac4e"); // Replace with your actual Web3Forms access key
+      formData.append("name", values.name);
+      formData.append("phone", values.phone);
+      formData.append("state", values.state);
+      formData.append("timestamp", currentTime);
+      formData.append("source", "UPES Online Inquiry Website");
+      formData.append("page_url", typeof window !== "undefined" ? window.location.href : "Unknown");
+
+      // Convert FormData to JSON
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      // Send form data to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: json
       });
 
-      // Reset Form
-      form.reset();
+      const result = await response.json();
+
+      if (result.success) {
+        // Success Toast
+        toast.success("Request submitted successfully!", {
+          description: "We will contact you shortly.",
+          position: "top-right",
+          duration: 3000,
+        });
+
+        // Reset Form
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Failed to submit form:", error);
       toast.error("Failed to submit request.", {
         description: "Please try again later.",
+        position: "top-right",
+        duration: 3000,
       });
     } finally {
       setIsSubmitting(false);
     }
-  }
-
-  // Padding Fix for Banner
-  useEffect(() => {
-    const contactBanner = document.getElementById("contact-banner");
-    if (contactBanner) {
-      document.body.style.paddingBottom = `${contactBanner.offsetHeight}px`;
-      return () => {
-        document.body.style.paddingBottom = "0";
-      };
-    }
-  }, []);
+  };
 
   return (
     <div
@@ -173,22 +173,6 @@ export default function ContactBanner() {
               />
               <FormField
                 control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="flex-1 min-w-[200px]">
-                    <FormControl>
-                      <Input
-                        placeholder="Email"
-                        {...field}
-                        className="h-10 bg-white"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
                 name="state"
                 render={({ field }) => (
                   <FormItem className="flex-1 min-w-[200px]">
@@ -202,7 +186,7 @@ export default function ContactBanner() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        {states.map((state) => (
+                        {INDIAN_STATES.map((state) => (
                           <SelectItem key={state} value={state}>
                             {state}
                           </SelectItem>
