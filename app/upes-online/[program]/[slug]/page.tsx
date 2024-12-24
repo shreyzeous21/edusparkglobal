@@ -22,6 +22,7 @@ import { Trophy, ExternalLink } from "lucide-react";
 import NetworkStripe from "../../_components/Network";
 import { CompanyStripe } from "../../_components/Company";
 import ContactBanner from "@/components/ContactBanner";
+import { EnrollNowModal } from '@/components/EnrollNowModal';
 
 // Dynamic metadata generation
 export async function generateMetadata({
@@ -259,11 +260,7 @@ export default function Page({
             </div>
 
             <div className="space-y-4">
-              <Link href="/contact" className="w-full block">
-                <Button className="w-full" variant="default" size="lg">
-                  Get the Course
-                </Button>
-              </Link>
+              <EnrollNowModal courseName={`${params.program.toUpperCase()} in ${course.title}`} />
             </div>
           </div>
         </div>

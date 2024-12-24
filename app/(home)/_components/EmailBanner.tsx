@@ -137,7 +137,10 @@ export default function EmailBanner() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: json,
+        body: JSON.stringify({
+          ...JSON.parse(json),
+          subject: `Enrollment Inquiry from EduSpark Global: Home`,
+        }),
       });
 
       const result = await response.json();

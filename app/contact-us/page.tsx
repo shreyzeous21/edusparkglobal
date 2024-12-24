@@ -7,6 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Contact Us - EduSpark Global",
     description: "Discover more about us.",
+    icons:"/title.png"
   };
 }
 
