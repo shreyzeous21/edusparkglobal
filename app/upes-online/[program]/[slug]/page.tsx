@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import bbaCourses from "@/public/bba.json";
+import courseDetailsData from "@/public/course-details.json";
 import Link from "next/link";
 import {
   Accordion,
@@ -17,7 +18,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import courseDetailsData from "@/public/course-details.json";
 import { Trophy, ExternalLink } from "lucide-react";
 import NetworkStripe from "../../_components/Network";
 import { CompanyStripe } from "../../_components/Company";
@@ -38,8 +38,7 @@ export async function generateMetadata({
       courses = bbaCourses.mba_courses;
       break;
     case "certification":
-    case "certifications":
-      courses = bbaCourses.certifications;
+      courses = bbaCourses.certification;
       break;
     case "bca":
       courses = bbaCourses.bca_courses;
@@ -69,21 +68,20 @@ export function generateStaticParams() {
   const allRoutes: { program: string; slug: string }[] = [];
 
   const programMappings = {
-    'bba': bbaCourses.bba_courses,
-    'mba': bbaCourses.mba_courses,
-    'certification': bbaCourses.certifications,
-    'certifications': bbaCourses.certifications,
-    'bca': bbaCourses.bca_courses,
-    'mca': bbaCourses.mca_courses
+    bba: bbaCourses.bba_courses,
+    mba: bbaCourses.mba_courses,
+    certification: bbaCourses.certification,
+    bca: bbaCourses.bca_courses,
+    mca: bbaCourses.mca_courses,
   };
 
   Object.entries(programMappings).forEach(([program, courses]) => {
     courses.forEach((course) => {
-      const slug = course.link.split("/").pop() || '';
+      const slug = course.link.split("/").pop() || "";
       if (slug) {
         allRoutes.push({
           program: program,
-          slug: slug
+          slug: slug,
         });
       }
     });
@@ -94,39 +92,53 @@ export function generateStaticParams() {
 
 const courseDetailsMap = courseDetailsData.courses;
 
-const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
-  let courses: any[] = [];
-  switch (params.program) {
-    case "bba":
-      courses = bbaCourses.bba_courses;
-      break;
-    case "mba":
-      courses = bbaCourses.mba_courses;
-      break;
-    case "certification":
-    case "certifications":
-      courses = bbaCourses.certifications;
-      break;
-    case "bca":
-      courses = bbaCourses.bca_courses;
-      break;
-    case "mca":
-      courses = bbaCourses.mca_courses;
-      break;
-    default:
-      courses = [];
-  }
+export default function Page({
+  params,
+}: {
+  params: { program?: any; slug?: any };
+}) {
+  // Updated program mappings to handle certification route
+  const programMappings = {
+    bba: bbaCourses.bba_courses,
+    mba: bbaCourses.mba_courses,
+    certification: bbaCourses.certification,
+    bca: bbaCourses.bca_courses,
+    mca: bbaCourses.mca_courses,
+  };
 
-  // Find the course from the JSON data
+  // Fetch course details from external JSON or other sources
+  const getCourseDetails = () => {
+    try {
+      // Construct the full slug
+      const fullSlug = `${params.program}/${params.slug}`;
+
+      // Check if the course exists in courseDetailsData
+      if (
+        courseDetailsData &&
+        courseDetailsData.courses &&
+        courseDetailsData.courses[fullSlug]
+      ) {
+        return courseDetailsData.courses[fullSlug];
+      }
+
+      // If not found in courses, return null
+      return null;
+    } catch (error) {
+      console.error("Error fetching course details:", error);
+      return null;
+    }
+  };
+
+  // Get courses based on program
+  const courses = programMappings[params.program] || [];
+
+  // Get course details
+  const courseDetails = getCourseDetails();
+
+  // Find the course
   const course = courses.find(
     (course) => course.link.split("/").pop() === params.slug
   );
-
-  // Get additional course details from the mapping
-  const additionalDetails = (courseDetailsMap &&
-    courseDetailsMap[`${params.program}/${params.slug}`]) || {
-    whyChooseThisCourse: [],
-  };
 
   // If no course found, return not found
   if (!course) {
@@ -220,7 +232,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
         <div className="grid md:grid-cols-1 gap-8 items-center">
           <div className="space-y-6 w-full">
             <h2 className="text-3xl font-bold">
-              {additionalDetails.whyChooseThisCourse?.title ||
+              {courseDetails.whyChooseThisCourse?.title ||
                 `${params.program.toUpperCase()} in ${course.title}`}
             </h2>
 
@@ -260,7 +272,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
       <CompanyStripe />
 
       {/* Curriculum Section */}
-      {additionalDetails.curriculum && (
+      {courseDetails.curriculum && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4  bg-white">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-center">
@@ -272,56 +284,54 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
           </div>
 
           <Accordion type="single" collapsible className="w-full">
-            {additionalDetails.curriculum.map(
-              (semester: any, index: number) => (
-                <AccordionItem
-                  value={`semester-${semester.semester}`}
-                  key={index}
-                >
-                  <AccordionTrigger>
-                    <div className="flex items-center">
-                      <span className="mr-4 text-xl font-semibold text-primary">
-                        Semester {semester.semester}
-                      </span>
-                      <span className="text-gray-600">{semester.title}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="grid md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
-                      {semester.subjects.map(
-                        (subject: string, subIndex: number) => (
-                          <div
-                            key={subIndex}
-                            className="flex items-center space-x-2"
-                          >
-                            <Check className="text-green-500 w-5 h-5" />
-                            <span>{subject}</span>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              )
-            )}
+            {courseDetails.curriculum.map((semester: any, index: number) => (
+              <AccordionItem
+                value={`semester-${semester.semester}`}
+                key={index}
+              >
+                <AccordionTrigger>
+                  <div className="flex items-center">
+                    <span className="mr-4 text-xl font-semibold text-primary">
+                      Semester {semester.semester}
+                    </span>
+                    <span className="text-gray-600">{semester.title}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="grid md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
+                    {semester.subjects.map(
+                      (subject: string, subIndex: number) => (
+                        <div
+                          key={subIndex}
+                          className="flex items-center space-x-2"
+                        >
+                          <Check className="text-green-500 w-5 h-5" />
+                          <span>{subject}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </Card>
       )}
 
       {/* Career Prospects Section */}
-      {additionalDetails.careerProspects && (
+      {courseDetails.careerProspects && (
         <Card className="max-w-6xl mx-auto px-4 py-4 w-full bg-white">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-center">
-              {additionalDetails.careerProspects.title}
+              {courseDetails.careerProspects.title}
             </h2>
             <p className="text-center text-gray-600 mt-2">
-              {additionalDetails.careerProspects.description}
+              {courseDetails.careerProspects.description}
             </p>
           </div>
 
           <Accordion type="single" collapsible className="w-full">
-            {Object.entries(additionalDetails.careerProspects.careerLevels).map(
+            {Object.entries(courseDetails.careerProspects.careerLevels).map(
               ([level, data], index) => (
                 <AccordionItem value={`career-${level}`} key={index}>
                   <AccordionTrigger>
@@ -353,18 +363,18 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
       )}
 
       {/* Career Services Section */}
-      {additionalDetails.careerServices && (
+      {courseDetails.careerServices && (
         <Card className="max-w-6xl mx-auto px-4 py-4 w-full bg-white">
           <div className=" mx-auto text-center flex flex-col gap-4">
             <h2 className="text-3xl font-bold ">
-              {additionalDetails.careerServices.title}
+              {courseDetails.careerServices.title}
             </h2>
             <p className="text-gray-600">
-              {additionalDetails.careerServices.description}
+              {courseDetails.careerServices.description}
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {additionalDetails.careerServices.services.map(
+              {courseDetails.careerServices.services.map(
                 (service: string, index: number) => (
                   <div
                     key={index}
@@ -381,20 +391,20 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
       )}
 
       {/* Fees and Financing Section */}
-      {additionalDetails.feesAndFinancing && (
+      {courseDetails.feesAndFinancing && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-gradient-to-br from-blue-50 to-white">
           <div className=" mx-auto">
             <div className="text-center mb-4">
               <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                {additionalDetails.feesAndFinancing.title}
+                {courseDetails.feesAndFinancing.title}
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                {additionalDetails.feesAndFinancing.description}
+                {courseDetails.feesAndFinancing.description}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {additionalDetails.feesAndFinancing.options.map(
+              {courseDetails.feesAndFinancing.options.map(
                 (option: any, index: number) => (
                   <div
                     key={index}
@@ -457,7 +467,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {additionalDetails.opportunities?.map((opportunity, index) => (
+          {courseDetails.opportunities?.map((opportunity, index) => (
             <Card
               key={index}
               className="hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 border-border"
@@ -492,7 +502,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
       </Card>
 
       {/* Faculty Section */}
-      {additionalDetails.faculties && (
+      {courseDetails.faculties && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
           <div className=" mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Meet Our Faculty</h2>
@@ -502,36 +512,34 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {additionalDetails.faculties.map(
-                (faculty: any, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-gray-100 p-6 rounded-lg flex items-center space-x-4 hover:bg-gray-200 transition-colors"
-                  >
-                    <Image
-                      src={faculty.image}
-                      alt={faculty.name}
-                      width={60}
-                      height={60}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-800">
-                        {faculty.name}
-                      </h3>
-                      <p className="text-gray-600">{faculty.designation}</p>
-                      <p className="text-gray-600">{faculty.expertise}</p>
-                    </div>
+              {courseDetails.faculties.map((faculty: any, index: number) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 p-6 rounded-lg flex items-center space-x-4 hover:bg-gray-200 transition-colors"
+                >
+                  <Image
+                    src={faculty.image}
+                    alt={faculty.name}
+                    width={60}
+                    height={60}
+                    className="rounded-full"
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      {faculty.name}
+                    </h3>
+                    <p className="text-gray-600">{faculty.designation}</p>
+                    <p className="text-gray-600">{faculty.expertise}</p>
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
         </Card>
       )}
       <NetworkStripe />
       {/* FAQs Section */}
-      {additionalDetails.faqs && (
+      {courseDetails.faqs && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">
           <div className=" mx-auto">
             <div className="text-center mb-2">
@@ -543,7 +551,7 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
               </p>
             </div>
             <Accordion type="single" collapsible className="">
-              {additionalDetails.faqs.map((faq, index) => (
+              {courseDetails.faqs.map((faq, index) => (
                 <div key={index} className="border-border">
                   <div>
                     <AccordionItem value={`item-${index}`} className="w-full">
@@ -561,8 +569,164 @@ const Page = ({ params }: { params: { program?: any; slug?: any } }) => {
           </div>
         </Card>
       )}
+      <div className="max-w-6xl mx-auto px-4">
+        <h1>{course.title}</h1>
+
+        {/* Detailed rendering with courseDetails */}
+        {courseDetails ? (
+          <div>
+            {/* Why Choose This Course Section */}
+            {courseDetails.whyChooseThisCourse && (
+              <div>
+                <h2>
+                  {courseDetails.whyChooseThisCourse?.title ||
+                    "About the Course"}
+                </h2>
+                <p>
+                  {courseDetails.whyChooseThisCourse?.description ||
+                    "No description available."}
+                </p>
+
+                {courseDetails.whyChooseThisCourse?.programStructure && (
+                  <div>
+                    <h3>Program Structure</h3>
+                    <ul>
+                      {(
+                        courseDetails.whyChooseThisCourse.programStructure || []
+                      ).map((structure, index) => (
+                        <li key={index}>{structure}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Opportunities Section */}
+            {courseDetails.opportunities && (
+              <div>
+                <h2>Opportunities</h2>
+                <div className="grid grid-cols-3 gap-4">
+                  {(courseDetails.opportunities || []).map(
+                    (opportunity, index) => (
+                      <div key={index} className="border p-4">
+                        <h3>{opportunity.title || "Opportunity"}</h3>
+                        <p>
+                          {opportunity.description ||
+                            "No description available."}
+                        </p>
+                        <small>Source: {opportunity.source || "N/A"}</small>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Curriculum Section */}
+            {courseDetails.curriculum && (
+              <div>
+                <h2>Curriculum</h2>
+                {(courseDetails.curriculum || []).map((semester, index) => (
+                  <div key={index}>
+                    <h3>
+                      {semester.semester
+                        ? `Semester ${semester.semester}:`
+                        : semester.module
+                        ? `Module ${semester.module}:`
+                        : "Curriculum Section:"}
+                      {semester.title || "Untitled"}
+                    </h3>
+                    <ul>
+                      {(semester.subjects || semester.topics || []).map(
+                        (subject, subIndex) => (
+                          <li key={subIndex}>{subject}</li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Career Prospects Section */}
+            {courseDetails.careerProspects && (
+              <div>
+                <h2>
+                  {courseDetails.careerProspects?.title || "Career Prospects"}
+                </h2>
+                <p>
+                  {courseDetails.careerProspects?.description ||
+                    "No description available."}
+                </p>
+
+                {courseDetails.careerProspects?.careerLevels && (
+                  <div>
+                    <h3>Career Levels</h3>
+                    {Object.entries(
+                      courseDetails.careerProspects.careerLevels || {}
+                    ).map(([level, details]) => (
+                      <div key={level}>
+                        <h4>{details?.title || "Career Level"}</h4>
+                        <ul>
+                          {(details?.roles || []).map((role, index) => (
+                            <li key={index}>{role}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Additional Sections */}
+            {courseDetails.careerServices && (
+              <div>
+                <h2>
+                  {courseDetails.careerServices?.title || "Career Services"}
+                </h2>
+                <p>
+                  {courseDetails.careerServices?.description ||
+                    "No description available."}
+                </p>
+                <ul>
+                  {(courseDetails.careerServices?.services || []).map(
+                    (service, index) => (
+                      <li key={index}>{service}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+            )}
+
+            {courseDetails.feesAndFinancing && (
+              <div>
+                <h2>
+                  {courseDetails.feesAndFinancing?.title ||
+                    "Fees and Financing"}
+                </h2>
+                <p>
+                  {courseDetails.feesAndFinancing?.description ||
+                    "No description available."}
+                </p>
+                <div>
+                  {(courseDetails.feesAndFinancing?.options || []).map(
+                    (option, index) => (
+                      <div key={index}>
+                        <h3>{option.title || "Payment Option"}</h3>
+                        <p>{option.details || "No details available."}</p>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <p>Additional course details not available.</p>
+        )}
+      </div>
     </div>
   );
-};
-
-export default Page;
+}

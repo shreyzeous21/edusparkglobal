@@ -65,7 +65,7 @@ const bbaComponents: { title: string; href: string }[] = [
   },
   {
     title: "Financial Management",
-    href: "/upes-online/bba/finance-management",
+    href: "/upes-online/bba/financial-management",
   },
   { title: "Human Resource", href: "/upes-online/bba/human-resource" },
   {
@@ -123,43 +123,43 @@ const graduationComponents: { title: string; href: string }[] = [
 const certifications: { title: string; href: string }[] = [
   {
     title: "Logistic & Supply Chain",
-    href: "/upes-online/certifications/logistics-and-supply-chain",
+    href: "/upes-online/certification/logistics-and-supply-chain",
   },
   {
     title: "Industrial Safety",
-    href: "/upes-online/certifications/industry-safety",
+    href: "/upes-online/certification/industrial-safety",
   },
   {
     title: "Renewable Energy",
-    href: "/upes-online/certifications/renewable-energy",
+    href: "/upes-online/certification/renewable-energy",
   },
   {
     title: "Human Resource",
-    href: "/upes-online/certifications/human-resource",
+    href: "/upes-online/certification/human-resource",
   },
   {
     title: "Business Analytics",
-    href: "/upes-online/certifications/business-analytics",
+    href: "/upes-online/certification/business-analytics",
   },
   {
     title: "Marketing Management",
-    href: "/upes-online/certifications/marketing-management",
+    href: "/upes-online/certification/marketing-management",
   },
   {
     title: "Operations Management",
-    href: "/upes-online/certifications/operations-management",
+    href: "/upes-online/certification/operations-management",
   },
   {
     title: "Financial Management",
-    href: "/upes-online/certifications/finance-management",
+    href: "/upes-online/certification/finance-management",
   },
   {
     title: "Project Management",
-    href: "/upes-online/certifications/project-management",
+    href: "/upes-online/certification/project-management",
   },
   {
     title: "Air Business Management",
-    href: "/upes-online/certifications/air-business-management",
+    href: "/upes-online/certification/air-business-management",
   },
 ];
 

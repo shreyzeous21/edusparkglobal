@@ -1,10 +1,10 @@
 "use client";
 
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
@@ -32,7 +32,7 @@ interface CourseData {
   mba_courses: Course[];
   ug: Course[];
   pg: Course[];
-  certifications: Course[];
+  certification: Course[];
   bca_courses: Course[];
   mca_courses: Course[];
   nursing: Course[];
@@ -44,7 +44,7 @@ const CoursesPage = () => {
     mba_courses: [],
     ug: [],
     pg: [],
-    certifications: [],
+    certification: [],
     bca_courses: [],
     mca_courses: [],
     nursing: [],
@@ -66,7 +66,7 @@ const CoursesPage = () => {
           ...data.mba_courses,
           ...data.ug,
           ...data.pg,
-          ...data.certifications,
+          ...data.certification,
           ...data.bca_courses,
           ...data.mca_courses,
           ...data.nursing,
@@ -91,7 +91,7 @@ const CoursesPage = () => {
       mba_courses: filterBySchool(courseData.mba_courses),
       ug: filterBySchool(courseData.ug),
       pg: filterBySchool(courseData.pg),
-      certifications: filterBySchool(courseData.certifications),
+      certification: filterBySchool(courseData.certification),
       bca_courses: filterBySchool(courseData.bca_courses),
       mca_courses: filterBySchool(courseData.mca_courses),
       nursing: filterBySchool(courseData.nursing),
@@ -163,14 +163,14 @@ const CoursesPage = () => {
           </TabsList>
 
           {/* Mobile View - Accordion */}
-          <Accordion 
-            type="single" 
-            collapsible 
+          <Accordion
+            type="single"
+            collapsible
             defaultValue="All"
             className="w-full lg:hidden"
           >
             <AccordionItem value="All">
-              <AccordionTrigger 
+              <AccordionTrigger
                 className="
                   bg-orange-500 
                   text-white 
@@ -189,10 +189,12 @@ const CoursesPage = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {schools.filter(school => school !== "All").map((school) => (
-              <AccordionItem key={school} value={school}>
-                <AccordionTrigger 
-                  className="
+            {schools
+              .filter((school) => school !== "All")
+              .map((school) => (
+                <AccordionItem key={school} value={school}>
+                  <AccordionTrigger
+                    className="
                     bg-gray-100 
                     px-4 
                     py-2 
@@ -201,24 +203,20 @@ const CoursesPage = () => {
                     transition-colors 
                     duration-300
                   "
-                >
-                  {school}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <AllCourses courses={getCoursesBySchool(school)} />
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+                  >
+                    {school}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <AllCourses courses={getCoursesBySchool(school)} />
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
           </Accordion>
 
           {/* Desktop View - Tabs Content */}
           <div className="hidden lg:flex-grow lg:block">
             {schools.map((school) => (
-              <TabsContent 
-                key={school} 
-                value={school} 
-                className="space-y-6"
-              >
+              <TabsContent key={school} value={school} className="space-y-6">
                 <AllCourses courses={getCoursesBySchool(school)} />
               </TabsContent>
             ))}
