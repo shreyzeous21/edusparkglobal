@@ -7,12 +7,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  output: "export",
-  trailingSlash: true,  // Important for static export
-  reactStrictMode: true,
+  // output: "export",
+  // trailingSlash: true,  // Important for static export
+  // reactStrictMode: true,
   
-  // Increase static generation timeout if needed
-  staticPageGenerationTimeout: 60
+  // // Increase static generation timeout if needed
+  // staticPageGenerationTimeout: 60
 }; 
 
 export default nextConfig;
