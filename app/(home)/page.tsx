@@ -2,7 +2,6 @@ import React from "react";
 import HeroSlider from "./_components/HeroSlider";
 import TopFeatures from "@/components/TopFeatures";
 import HomeBand from "./_components/HomeBand";
-import { Separator } from "@/components/ui/separator";
 import MbaCart from "./_components/MbaCart";
 import BbaCart from "./_components/BbaCart";
 import EmailBanner from "./_components/EmailBanner";
@@ -18,11 +17,11 @@ const Home = () => {
       <TopFeatures />
       <HomeBand />
       <HomeCollage />
-      <Separator />
+     
       <AllCart />
-      <Separator />
+     
       <MbaCart />
-      <Separator />
+     
       <BbaCart />
       <EmailBanner />
       <TestimonialsSection />

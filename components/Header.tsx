@@ -238,7 +238,7 @@ export function Header() {
                       className="w-full justify-start"
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href="/about">About Us</Link>
+                      <Link href="/about-us">About Us</Link>
                     </Button>
                   </li>
                   <li>
@@ -377,7 +377,7 @@ export function Header() {
                       className="w-full justify-start"
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href="/blog">Blog</Link>
+                      <Link href="/blogs">Blog</Link>
                     </Button>
                   </li>
                   <li>
@@ -397,7 +397,7 @@ export function Header() {
                       className="w-full justify-start"
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href="/contact" className="">
+                      <Link href="/contact-us" className="">
                         Contact Us
                       </Link>
                     </Button>
@@ -429,7 +429,7 @@ export function Header() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/about" legacyBehavior passHref>
+              <Link href="/about-us" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
@@ -571,7 +571,7 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/blog" legacyBehavior passHref>
+              <Link href="/blogs" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >
@@ -589,7 +589,7 @@ export function Header() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/contact" legacyBehavior passHref>
+              <Link href="/contact-us" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} text-lg bg-transparent`}
                 >

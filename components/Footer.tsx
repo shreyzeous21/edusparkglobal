@@ -99,11 +99,11 @@ const Footer = () => {
   // Footer links array
   const footerLinks: FooterLink[] = [
     { text: "Home", href: "/" },
-    { text: "About Us", href: "/about" },
+    { text: "About Us", href: "/about-us" },
     { text: "Courses", href: "/courses" },
-    { text: "Blog", href: "/blog" },
+    { text: "Blog", href: "/blogs" },
     { text: "Colleges", href: "/college" },
-    { text: "Contact Us", href: "/contact" },
+    { text: "Contact Us", href: "/contact-us" },
     { text: "Privacy Policy", href: "/p&p" },
     { text: "Terms of Use", href: "/terms" },
   ];
@@ -381,7 +381,9 @@ const Footer = () => {
             <h1 className="mb-2 text-xl font-bold">Learning Paths</h1>
             <Separator className="mb-2" />
             <div>
-              <h2 className="mb-1 text-xl flex items-center gap-2 font-semibold">Graduation <Separator className="bg-white w-10" /></h2>
+              <h2 className="mb-1 text-xl flex items-center gap-2 font-semibold">
+                Graduation <Separator className="bg-white w-10" />
+              </h2>
               <ul>
                 {graduationComponents.map((component, index) => (
                   <Link key={index} href={component.href}>
@@ -439,8 +441,6 @@ const Footer = () => {
             the opportunity to succeed.
           </p>
         </div>
-
-        <Separator />
 
         {/* 3 - Social Links */}
         <div className="flex flex-row justify-center py-3 gap-4 flex-wrap">

@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 import FooterUpper from "@/components/FooterUpper";
 import { Suspense } from "react";
+export const dynamic = "error";
 
 const roboto = Roboto({
   variable: "--font-roboto",
