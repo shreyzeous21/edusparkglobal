@@ -538,7 +538,8 @@ export default function Page({
           </div>
         </Card>
       )}
-      <NetworkStripe />
+      <CompanyStripe />
+      {/* <NetworkStripe /> */}
       {/* FAQs Section */}
       {courseDetails.faqs && (
         <Card className="max-w-6xl w-full mx-auto px-4 py-4 bg-white">

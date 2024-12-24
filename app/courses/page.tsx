@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
 import AllCourses from "./_components/AllCourses";
 import Breadcrumb from "@/components/Breadcrumb";
+import Head from "next/head";
 
 interface Course {
   image: string;
@@ -102,7 +103,7 @@ const CoursesPage = () => {
     <div className="w-full">
       <section className="bg-orange-50">
         <h1
-          className="h-auto text-black text-4xl font-bold flex items-center justify-center"
+          className="h-auto text-black text-4xl font-bold  text-center flex items-center justify-center"
           style={{
             backgroundImage: 'url("/breadcrumb_bg.jpg")',
             backgroundSize: "cover",
