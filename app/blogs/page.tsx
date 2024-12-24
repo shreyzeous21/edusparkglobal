@@ -1,13 +1,12 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import { Metadata } from "next";
-import React from "react";
-import ContactForm from "./_components/ContactForm";
+import React, { Suspense } from "react";
+import BlogList from "./_components/BlogList";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Contact Us - EduSpark Global",
-    description: "Discover more about us.",
-    icons: "/title.png",
+    title: "Blogs - EduSpark Global",
+    description: "Discover our latest blog posts.",
   };
 }
 
@@ -25,12 +24,19 @@ const page = () => {
           }}
         >
           <span className="flex flex-col items-center">
-            <h1>Contact Us</h1>
+            <h1>Blogs</h1>
             <Breadcrumb />
           </span>
         </h1>
       </section>
-      <ContactForm />
+      
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-10">
+          <div className="h-5 w-5 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+        </div>
+      }>
+        <BlogList />
+      </Suspense>
     </div>
   );
 };

@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ["images.unsplash.com"],
+  },
   // output: "export",
   // trailingSlash: true,  // Important for static export
   // reactStrictMode: true,
