@@ -16,16 +16,16 @@ const nextConfig: NextConfig = {
     config.resolve.fallback = { fs: false, net: false, tls: false };
     return config;
   },
-  // Add this to handle dynamic routes in static export
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      ...defaultPathMap,
-      '/': { page: '/' },
-    };
-  },
+  // // Add this to handle dynamic routes in static export
+  // exportPathMap: async function (
+  //   defaultPathMap,
+  //   { dev, dir, outDir, distDir, buildId }
+  // ) {
+  //   return {
+  //     ...defaultPathMap,
+  //     '/': { page: '/' },
+  //   };
+  // },
 };
 
 export default nextConfig;
