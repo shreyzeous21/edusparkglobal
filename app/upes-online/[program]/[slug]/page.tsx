@@ -162,9 +162,15 @@ export default function Page({
     ];
 
     return (
-      <nav aria-label="Breadcrumb" className="flex items-center  text-sm">
+      <nav
+        aria-label="Breadcrumb"
+        className="flex items-center justify-center mx-auto w-full gap-2 text-center text-sm"
+      >
         {breadcrumbItems.map((item, index) => (
-          <div key={index} className="flex items-center font-normal">
+          <div
+            key={index}
+            className="flex items-center text-center font-normal"
+          >
             {index > 0 && <span className="mx-2 text-gray-500">/</span>}
             <Link
               href={item.href}
