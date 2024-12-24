@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
 const networkLogos = [
-  "/network/a.png",
-  "/network/b.png",
-  "/network/c.png",
-  "/network/d.png",
-  "/network/e.png",
-  "/network/f.png",
-  "/network/g.png",
-  "/network/h.png",
-  "/network/i.png",
-  "/network/j.png",
-  "/network/k.png",
-  "/network/l.png",
-  "/network/m.png",
+  "/a.png",
+  "/b.png",
+  "/c.png",
+  "/d.png",
+  "/e.png",
+  "/f.png",
+  "/g.png",
+  "/h.png",
+  "/i.png",
+  "/j.png",
+  "/k.png",
+  "/l.png",
+  "/m.png",
 ];
 
 export const NetworkStripe: React.FC = () => {

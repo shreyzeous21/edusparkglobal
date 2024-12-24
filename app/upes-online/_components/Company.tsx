@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
 const companyLogos = [
-  "/company/accenture.jpg",
-  "/company/adecco.jpg",
-  "/company/amazon.jpg",
-  "/company/hsbc.jpg",
-  "/company/jp.jpg",
-  "/company/kpmg.jpg",
-  "/company/larsen.jpg",
-  "/company/mc.jpg",
-  "/company/nissan.jpg",
-  "/company/wipro.jpg",
+  "/accenture.jpg",
+  "/adecco.jpg",
+  "/amazon.jpg",
+  "/hsbc.jpg",
+  "/jp.jpg",
+  "/kpmg.jpg",
+  "/larsen.jpg",
+  "/mc.jpg",
+  "/nissan.jpg",
+  "/wipro.jpg",
 ];
 
 export const CompanyStripe: React.FC = () => {
