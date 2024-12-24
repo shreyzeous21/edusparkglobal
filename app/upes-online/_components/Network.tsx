@@ -24,7 +24,7 @@ export const NetworkStripe: React.FC = () => {
   const duplicatedLogos = [...networkLogos, ...networkLogos];
 
   return (
-    <Card className="max-w-6xl mx-auto bg-background/50 backdrop-blur-sm border-none">
+    <Card className="lg:max-w-6xl w-full mx-auto bg-background/50 backdrop-blur-sm border-none">
       <CardContent className="py-8 overflow-hidden">
         <div className="flex items-center justify-center">
           <motion.div
@@ -35,7 +35,7 @@ export const NetworkStripe: React.FC = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 15,
+                  duration: 13,
                   ease: "linear",
                 },
               },

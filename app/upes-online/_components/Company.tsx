@@ -21,18 +21,18 @@ export const CompanyStripe: React.FC = () => {
   const duplicatedLogos = [...companyLogos, ...companyLogos];
 
   return (
-    <Card className="max-w-6xl mx-auto bg-background/50 backdrop-blur-sm border-none">
+    <Card className="lg:max-w-6xl w-full mx-auto bg-background/50 backdrop-blur-sm border-none">
       <CardContent className="py-8 overflow-hidden">
         <div className="flex items-center justify-center">
           <motion.div
             className="flex gap-12 items-center"
             animate={{
-              x: [0, -1 * (duplicatedLogos.length * 200)],
+              x: [0, -1 * (duplicatedLogos.length * 100)],
               transition: {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 15,
+                  duration: 10,
                   ease: "linear",
                 },
               },

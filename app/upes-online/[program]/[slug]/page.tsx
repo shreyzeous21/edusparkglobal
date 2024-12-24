@@ -512,19 +512,19 @@ export default function Page({
               to providing students with a world-class education.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex  flex-col lg:flex-row mx-auto w-full justify-center gap-6">
               {courseDetails.faculties.map((faculty: any, index: number) => (
                 <div
                   key={index}
                   className="bg-gray-100 p-6 rounded-lg flex items-center space-x-4 hover:bg-gray-200 transition-colors"
                 >
-                  <Image
+                  {/* <Image
                     src={faculty.image}
                     alt={faculty.name}
                     width={60}
                     height={60}
                     className="rounded-full"
-                  />
+                  /> */}
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">
                       {faculty.name}
